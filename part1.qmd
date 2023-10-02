@@ -1,6 +1,6 @@
 ---
-title: "Simplemenu"
-subtitle: "For Reveal.js and Quarto"
+title: "Introduciton to Machine Learning"
+subtitle: "Part of Machine Learning Techniques"
 bibliography: biblio.bib
 format:
   revealjs:
@@ -23,10 +23,7 @@ revealjs-plugins:
 ## Table of Contents {data-state="hide-menubar"}
 <ul class="menu"><ul>
 
-# Slide 1 {data-name="Regular slide"}
-A paragraph with some text and a [link](http://hakim.se).
-
-# What is Artificial Intelligence ? {data-stack-name="What is AI"}
+# What is Artificial Intelligence ? {data-stack-name="What is AI ?"}
 
 ## Can Machine Think ?
 
@@ -70,6 +67,28 @@ What if A is a machine ?
 
 Would C be **as often** wrong ?
 
+## A Modern Experiment featuring the Immitation Game
+
+*Human or Not? A Gamified Approach to the Turing Test* @jannai2023
+
+2-players game online
+
+- One ask questions and shall guess "Human" or "Bot"
+- The other answers and may be replaced with a bot
+- Bots are complex LLM models (e.g. GPT-3)
+
+## Turing test: Current outcomes 
+
+- 73% Chance to recognize a real person
+- 60% chance to recognize a bot
+
+- Strategy not working:
+  - Grammar, Orthograph, Recent events
+
+- Strategy working:
+  - Known issues and bias / Jailbreak
+  - Halucination
+
 ## Beyond The Turing test
 
 ::: columns
@@ -80,11 +99,19 @@ Would C be **as often** wrong ?
 <iframe width="100%" height="200%" src="https://www.youtube.com/embed/NAihcvDGaP8?si=8B8JlPnQ1wr57zVw&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>:::
 :::
 
-# More demos {data-name="More demos"}
+## What is intelligence
 
-For more demos go to the [Simplemenu plugin](https://github.com/Martinomagnifico/reveal.js-simplemenu) for Reveal.js. 
-Not all of the options in the regular plugin are available in the Quarto plugin.
+- Task specific
+- Field Specific
 
-## OK
 
-test
+Art
+
+## Conclusion {data-name="More demos"}
+
+- Many kind of intelligence
+  - task-specific
+  - field-specific
+
+## References
+
