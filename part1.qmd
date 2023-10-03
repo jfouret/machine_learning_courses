@@ -29,8 +29,8 @@ revealjs-plugins:
 
 @Turing1950
 
-- What is a machine ?
-- What is think ?
+- Defining a machine
+- Understanding "thinking"
 
 ## The Imitation Game
 
@@ -44,68 +44,99 @@ Context:
 
 Rules:
 
-- A, B as X and Y for C
+- A and B are known as X and Y to C
 - C interrogates X and Y
-- Answers are typewritten
+- Responses are typewritten
 :::
 
 ::: column
-- Aim for C: 
-  - ‘X is A and Y is B’
-  - ‘X is B and Y is A’
-- Aim for A:
-  - Fool C
-- Aim for B
-  - Help C
+Objectives:
+
+- C's Goal: 
+  - Determine 'X is A and Y is B' or 'X is B and Y is A'
+- A's Goal:
+  - Deceive C
+- B's Goal:
+  - Assist C
 
 :::
 :::
 
-## Play with a Machine ?
-
-What if A is a machine ?
+## What if A is a machine ?
 
 Would C be **as often** wrong ?
 
-## A Modern Experiment featuring the Immitation Game
+## A Modern Experiment: The Imitation Game Revisited
 
 *Human or Not? A Gamified Approach to the Turing Test* @jannai2023
 
-2-players game online
+Online 2-player game:
 
-- One ask questions and shall guess "Human" or "Bot"
-- The other answers and may be replaced with a bot
-- Bots are complex LLM models (e.g. GPT-3)
+- One player asks questions and must guess "Human" or "Bot"
+- The other player responds and might be substituted by a bot
+- Bots are advanced LLM models (e.g., GPT-3)
 
 ## Turing test: Current outcomes 
 
 - 73% Chance to recognize a real person
 - 60% chance to recognize a bot
 
-- Strategy not working:
-  - Grammar, Orthograph, Recent events
+Ineffective strategies:
+  - Checking grammar, spelling, recent events
 
-- Strategy working:
-  - Known issues and bias / Jailbreak
-  - Halucination
+Effective strategies:
+  - Recognizing known issues and biases
+  - Identifying hallucinations
 
 ## Beyond The Turing test
 
 ::: columns
 ::: column
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Weakness_of_Turing_test_1.svg" alt="Alternative text" style="width:100%; height:100%"/>
+
 :::
 ::: column
-<iframe width="100%" height="200%" src="https://www.youtube.com/embed/NAihcvDGaP8?si=8B8JlPnQ1wr57zVw&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>:::
+
+<iframe width="100%" height="200%" src="https://www.youtube.com/embed/NAihcvDGaP8?si=8B8JlPnQ1wr57zVw&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+:::
 :::
 
-## What is intelligence
 
-- Task specific
-- Field Specific
+## Historical Definitions of AI
 
+- John McCarthy:
+"Artificial Intelligence is the science and engineering of making intelligent machines, especially intelligent computer programs."
+  - **Reference**: McCarthy, J. (2007). Stanford University.
 
-Art
+- Marvin Minsky:
+- Artificial Intelligence is "the science of making machines do things that would require intelligence if done by men."
+  - **Reference**: Minsky, M. (1968). MIT Press.=
+
+## Recent Definitions of AI
+
+-  Luc Julia:
+"There is no intelligence in AI. It's just pure mathematical optimization."
+  - **Reference**: Julia, L. (2019). "La Voix de l'IA". First Editions.
+
+# What is intelligence {data-stack-name="What is Intelligence ?"}
+
+## Dimensions of Intelligence
+
+- Task-specific intelligence
+- Field-specific intelligence
+- Emotional intelligence
+- Social intelligence
+- Creative intelligence
+- and so on ...
+
+## Measuring Intelligence
+
+- IQ Tests: Strengths and Limitations
+- Multiple Intelligences Theory (Gardner 1983)
+- Fluid vs. Crystallized Intelligence
+
+## Measuring IA 
 
 ## Conclusion {data-name="More demos"}
 
