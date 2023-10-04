@@ -35,33 +35,42 @@ revealjs-plugins:
 
 ## The Imitation Game
 
+<div style="font-size: 75%;">
+
+
 ::: columns
 ::: column
-Context:
+**Context:**
 
-- A: Man
-- B: Woman
-- C: Interrogator
+- <span class="bordered"> A </span> &rarr; <span class="bordered"> Man </span>
+- <span class="bordered"> B </span> &rarr; <span class="bordered"> Woman </span>
+- <span class="bordered"> C </span> &rarr; <span class="bordered"> Interrogator </span>
 
-Rules:
+**Rules:**
 
-- A and B are known as X and Y to C
-- C interrogates X and Y
+- Genders of <span class="bordered"> A </span> and <span class="bordered"> B </span> are hidden to <span class="bordered"> C </span>
+- <span class="bordered"> C </span> interrogates them
 - Responses are typewritten
 :::
 
 ::: column
-Objectives:
+**Objectives:**
 
-- C's Goal: 
-  - Determine 'X is A and Y is B' or 'X is B and Y is A'
-- A's Goal:
-  - Deceive C
-- B's Goal:
-  - Assist C
+- For <span class="bordered"> C </span>:
+
+*Determine the Gender of <span class="bordered"> A </span> and <span class="bordered"> B </span>*
+
+- For <span class="bordered"> A </span>:
+  *Deceive <span class="bordered"> C </span>*
+
+- For <span class="bordered"> B </span>:
+  *Assist <span class="bordered"> C </span>*
 
 :::
 :::
+
+</div>
+
 
 ## What if A is a machine ?
 
@@ -71,23 +80,30 @@ Would C be **as often** wrong ?
 
 *Human or Not? A Gamified Approach to the Turing Test* @jannai2023
 
-Online 2-player game:
+**Online 2-player game:**
 
-- One player asks questions and must guess "Human" or "Bot"
-- The other player responds and might be substituted by a bot
-- Bots are advanced LLM models (e.g., GPT-3)
+- One player asks questions and must guess **"Human"** or **"Bot"**
+- The **other player** responds and **might be substituted** by a bot
+- Bots are **advanced LLM models** (e.g., GPT-3)
 
 ## Turing test: Current outcomes 
 
-- 73% Chance to recognize a real person
-- 60% chance to recognize a bot
+::: {.box}
+**73%** Chance to recognize **a real person**
+:::
 
-Ineffective strategies:
-  - Checking grammar, spelling, recent events
+::: {.box}
+**60%** chance to recognize **a bot**
+:::
 
-Effective strategies:
-  - Recognizing known issues and biases
-  - Identifying hallucinations
+**Ineffective strategies:**
+
+- Checking grammar, spelling, recent events
+
+**Effective strategies:**
+
+- Recognizing known issues and biases
+- Identifying hallucinations
 
 ## Beyond The Turing test
 
@@ -96,21 +112,26 @@ Effective strategies:
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Weakness_of_Turing_test_1.svg" alt="Alternative text" style="width:100%; height:100%"/>
 
 :::
-::: column
+::: column 
 
-<iframe width="100%" height="200%" src="https://www.youtube.com/embed/NAihcvDGaP8?si=8B8JlPnQ1wr57zVw&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+::: {.video-container}
+
+<iframe width="100%" height="auto" src="https://www.youtube.com/embed/NAihcvDGaP8?si=8B8JlPnQ1wr57zVw&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+:::
 
 :::
 :::
 
 
-## Historical Definitions of AI @dartmouth1955
+## Pionneered Definitions of AI
+
+<span style="font-size: 75%;"> @dartmouth1955 </span>
 
 <img src="img/dartmouth_title.PNG" alt="" style="border: 2px solid black; display: block; margin: auto;">
 
 <img src="img/dartmouth_def.PNG" alt="" style="border: 2px solid black; display: block; margin: auto;">
 
-<div style="font-size: 75%;">
+<div style="font-size: 70%;">
 *"**Artificial Intelligence** is the science and engineering of making intelligent machines, especially intelligent computer programs.*"
 
 <div class="origin-citation">
@@ -128,18 +149,40 @@ from Marvin Minsky (1968). MIT Press.
 </div>
 
 ## Alternative definitions
-<div style="font-size: 65%;">
-- Human-oriented
-  - *We call **programs intelligent** if they exhibit behaviors that would be regarded intelligent if they were exhibited by **human beings**.* - Herbert Simon
-  - ***AI** is the attempt to make **computers** do what **people** think computers cannot do.* - Douglas Baker
-  - ***AI** is the study of how to make **computers** do things at which, at the moment, **people** are better.* - Elaine Rich and Kevin Knight
+<div style="font-size: 50%;">
 
-- Mathematics-oriented
-  - ***AI** is the study of techniques for **solving exponentially hard problems** in polynomial time by exploiting knowledge about the problem domain.* - Elaine Rich
-  - *There is no **intelligence** in **AI**. It's just pure **mathematical optimization***. - Julia Luc
+::: {.centered}
+**Human-oriented**
+:::
 
-- Intelligence-oriented
-  - ***Physicists** ask what kind of place this universe is and seek to characterize its behavior systematically. **Biologists** ask what it means for a physical system to be living. We in **AI** wonder what kind of **information-processing system** can ask such questions.* - Avron Barr and Edward Feigenbaum
+::: {.box}
+
+"*We call **programs intelligent** if they exhibit behaviors that would be regarded intelligent if they were exhibited by **human beings**.*" - Herbert Simon
+
+"***AI** is the attempt to make **computers** do what **people** think computers cannot do.*" -- Douglas Baker
+
+"***AI** is the study of how to make **computers** do things at which, at the moment, **people** are better.*" -- Elaine Rich and Kevin Knight
+
+:::
+
+::: {.centered}
+**Mathematics-oriented**
+:::
+
+::: {.box}
+"***AI** is the study of techniques for **solving exponentially hard problems** in polynomial time by exploiting knowledge about the problem domain.*" -- Elaine Rich
+
+"*There is no **intelligence** in **AI**. It's just pure **mathematical optimization***." -- Julia Luc
+:::
+
+::: {.centered}
+**Intelligence-oriented**
+:::
+
+::: {.box}
+"***Physicists** ask what kind of place this universe is and seek to characterize its behavior systematically. **Biologists** ask what it means for a physical system to be living. We in **AI** wonder what kind of **information-processing system** can ask such questions.*" -- Avron Barr and Edward Feigenbaum
+:::
+
 </div>
 
 ## Levels of AI
@@ -151,14 +194,16 @@ from Marvin Minsky (1968). MIT Press.
 
 # What is intelligence {data-stack-name="What is Intelligence ?"}
 
+
 ## Dimensions of Intelligence
 
-- Task-specific intelligence
-- Field-specific intelligence
-- Emotional intelligence
-- Social intelligence
-- Creative intelligence
-- and so on ...
+- **Task-specific intelligence**: Mastery in specific tasks, e.g., playing chess or solving mathematical problems.
+- **Field-specific intelligence**: Expertise in a particular domain, such as medicine or music.
+- **Emotional intelligence**: Ability to recognize, understand, and manage our own emotions and to recognize, understand, and influence the emotions of others. (Salovey & Mayer, 1990)
+- **Social intelligence**: Ability to understand and navigate social situations and dynamics.
+- **Creative intelligence**: Ability to produce novel and valuable ideas.
+- **Practical intelligence**: Ability to solve real-world problems, often termed "street smarts".
+
 
 ## Measuring Intelligence
 
@@ -184,7 +229,26 @@ from Marvin Minsky (1968). MIT Press.
 - Doesn't "understand" or "feel" in the way humans do.
 - Can process information faster and more accurately than humans.
 
-## Measuring IA 
+## Measuring Narrow IA intelligence
+
+Precision / Specificity for classification
+Regression coeficient for regression
+
+Will be extensively discussed later.
+
+## Measuring Artificial General intelligence
+
+General exams
+- AI2 Reasoning Challenge
+- HellaSwag
+- MMLU
+- TruthfulQA
+
+Field-specific exams
+- University exams (Bar exam, MAth exams)
+- MAth challenge
+
+
 
 # What is Machine Learning? {data-stack-name="What is ML?"}
 
@@ -204,9 +268,7 @@ Machine Learning is a subset of AI where machines can learn from data.
 - Backpropagation (1980s)
 - Deep Learning Revolution (2010s)
 
-# Major Dates and Periods {data-stack-name="History"}
-
-## Timeline of AI and ML
+## Major Dates and Periods 
 
 - 1950: Turing's "Computing Machinery and Intelligence"
 - 1956: Dartmouth Workshop - Birth of AI
@@ -216,7 +278,7 @@ Machine Learning is a subset of AI where machines can learn from data.
 - 2020s: Emergence of Large Language Models
 
 
-## Conclusion {data-name="More demos"}
+## Conclusion {data-name="Conclusion"}
 
 - Many kind of intelligence
   - task-specific
