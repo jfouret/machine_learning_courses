@@ -11,6 +11,7 @@ format:
     background-transition: fade
     controls-layout: bottom-right
     menu: false
+    css: style.css
     section-divs: true
     simplemenu:
         barhtml:
@@ -103,21 +104,50 @@ Effective strategies:
 :::
 
 
-## Historical Definitions of AI
+## Historical Definitions of AI @dartmouth1955
 
-- John McCarthy:
-"Artificial Intelligence is the science and engineering of making intelligent machines, especially intelligent computer programs."
-  - **Reference**: McCarthy, J. (2007). Stanford University.
+<img src="img/dartmouth_title.PNG" alt="" style="border: 2px solid black; display: block; margin: auto;">
 
-- Marvin Minsky:
-- Artificial Intelligence is "the science of making machines do things that would require intelligence if done by men."
-  - **Reference**: Minsky, M. (1968). MIT Press.=
+<img src="img/dartmouth_def.PNG" alt="" style="border: 2px solid black; display: block; margin: auto;">
 
-## Recent Definitions of AI
+<div style="font-size: 75%;">
+*"**Artificial Intelligence** is the science and engineering of making intelligent machines, especially intelligent computer programs.*"
 
--  Luc Julia:
-"There is no intelligence in AI. It's just pure mathematical optimization."
-  - **Reference**: Julia, L. (2019). "La Voix de l'IA". First Editions.
+<div class="origin-citation">
+From John McCarty (2007). Stanford University.
+</div>
+
+<hr style="height:1px;border:none;color:#333;background-color:#333;">
+
+***Artificial Intelligence** is "the science of making machines do things that would require intelligence if done by men."*
+<div class="origin-citation">
+from Marvin Minsky (1968). MIT Press.
+</div>
+
+<hr style="height:1px;border:none;color:#333;background-color:#333;">
+</div>
+
+## Alternative definitions
+<div style="font-size: 65%;">
+- Human-oriented
+  - *We call **programs intelligent** if they exhibit behaviors that would be regarded intelligent if they were exhibited by **human beings**.* - Herbert Simon
+  - ***AI** is the attempt to make **computers** do what **people** think computers cannot do.* - Douglas Baker
+  - ***AI** is the study of how to make **computers** do things at which, at the moment, **people** are better.* - Elaine Rich and Kevin Knight
+
+- Mathematics-oriented
+  - ***AI** is the study of techniques for **solving exponentially hard problems** in polynomial time by exploiting knowledge about the problem domain.* - Elaine Rich
+  - *There is no **intelligence** in **AI**. It's just pure **mathematical optimization***. - Julia Luc
+
+- Intelligence-oriented
+  - ***Physicists** ask what kind of place this universe is and seek to characterize its behavior systematically. **Biologists** ask what it means for a physical system to be living. We in **AI** wonder what kind of **information-processing system** can ask such questions.* - Avron Barr and Edward Feigenbaum
+</div>
+
+## Levels of AI
+
+1. **Narrow AI**: Specialized in one task. E.g., voice assistants.
+2. **General AI (AGI)**: Can perform any intellectual task that a human can.
+3. **Superintelligent AI**: Surpasses human abilities. It's speculative and doesn't exist yet.
+
 
 # What is intelligence {data-stack-name="What is Intelligence ?"}
 
@@ -136,7 +166,55 @@ Effective strategies:
 - Multiple Intelligences Theory (Gardner 1983)
 - Fluid vs. Crystallized Intelligence
 
+## What Makes Human Intelligence Unique?
+
+- **Adaptability**: Ability to learn and adapt to new environments and challenges.
+- **Emotional Intelligence**: Recognizing and understanding emotions in oneself and others.
+- **Abstract Thinking**: Conceptualizing ideas and making connections between unrelated domains.
+- **Creativity**: Generating novel ideas and solutions.
+
+## Animal Intelligence
+
+- Animals exhibit specialized intelligence suited for their environment.
+- E.g., Dolphins have social intelligence, Octopuses show problem-solving abilities.
+
+## Machine Intelligence
+
+- Operates based on algorithms and data.
+- Doesn't "understand" or "feel" in the way humans do.
+- Can process information faster and more accurately than humans.
+
 ## Measuring IA 
+
+# What is Machine Learning? {data-stack-name="What is ML?"}
+
+## Definition
+
+Machine Learning is a subset of AI where machines can learn from data.
+
+## Types of Machine Learning
+
+- Supervised Learning
+- Unsupervised Learning
+- Reinforcement Learning
+
+## Major Milestones in ML
+
+- Perceptrons (1950s)
+- Backpropagation (1980s)
+- Deep Learning Revolution (2010s)
+
+# Major Dates and Periods {data-stack-name="History"}
+
+## Timeline of AI and ML
+
+- 1950: Turing's "Computing Machinery and Intelligence"
+- 1956: Dartmouth Workshop - Birth of AI
+- 1980s: Rise of Expert Systems
+- 1990s: Machine Learning Gains Popularity
+- 2010s: Deep Learning Era Begins
+- 2020s: Emergence of Large Language Models
+
 
 ## Conclusion {data-name="More demos"}
 
