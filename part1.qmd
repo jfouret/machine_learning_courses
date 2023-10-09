@@ -196,10 +196,10 @@ from Marvin Minsky (1968). MIT Press.
 
 ## Theories of intelligence
 
-- Spearman Two factor Theory
-- Multiple Intelligence
-- Emotional Intelligence
-- Fluid vs. Crystallized Intelligence
+- Two factor Theory (Spearmann)
+- Multiple Intelligence (Gardner)
+- Emotional Intelligence (Goleman)
+- Fluid vs. Crystallized Intelligence (Cattell)
 
 ## What Makes Human Intelligence Unique ?
 
@@ -261,26 +261,18 @@ Machine Learning is a subset of AI where machines can learn from data.
 - Theory-driven
 - Data-driven
 
-## Machine learning vs human learning
+## Machine learning vs Human learning
 
-Machine learn through optimization.
-- Numerical optimizations with objective function
-- Reinforcement learning
-- Genetic algorithms
+
+- Machine learn through optimization.
+  - Numerical optimizations with objective function
+  - Reinforcement learning
+  - Genetic algorithms
+
+<div style="font-size: 75%;">
+</div>
 
 Optimization can be see widely such as PCA is a optimization to maximize variance.
-
-## Types of Machine Learning
-
-- Supervised Learning
-- Unsupervised Learning
-- Reinforcement Learning
-
-## Major Milestones in ML
-
-- Perceptrons (1950s)
-- Backpropagation (1980s)
-- Deep Learning Revolution (2010s)
 
 ## Major Dates and Periods 
 
@@ -293,9 +285,74 @@ Optimization can be see widely such as PCA is a optimization to maximize varianc
 
 ## Conclusion {data-name="Conclusion"}
 
-- Many kind of intelligence
-  - task-specific
-  - field-specific
+- Artificial intelligence is a wide concept with multiple definitions
+  - human-oriented
+  - mathematic-oriented
+  - intelligence-centered
+- Intelligence is a a wide notion when applied to human.
+- Machine intelligence
+
+## Plan for the teaching
+
+<div style="font-size: 50%;">
+
+::: columns
+::: column
+
+:::{.box}
+
+<p class="separator"><span>25/10 PM</span></p>
+
+- Introduction : (1h30)
+- I. Reminders and Foundations (2h30)
+
+<p class="separator"><span>26/10 AM</span></p>
+
+- TP (2h)
+  - Data transformation / PCA
+  - Maximum likelihood to fit distributions
+  - Cross-entropy from ML demonstration
+- II Base of Machine Learning 
+  - A: Typology and nommenclatures (1h)
+  - B: Evaluation metrics (1h)
+
+TODO for next time -> Examples of ML algorithms
+
+(one for notation)
+:::
+:::
+
+::: column
+::: {.box}
+<p class="separator"><span>08/11 PM</span></p>
+
+- TP (1h30)
+  - Q&A on examples on ML algorithms
+  - Linear regression with few data 
+  - Linear (logistic) regression with multiple features
+  - Bias-Variance decomposition of Loss
+- II.C Bottlenecks and Issues (30m)
+- III. Advanced Techniques of Machine Learning
+  - A. Feature engineering (1h)
+  - C. Model engineering 1/2 (1h)
+
+<p class="separator"><span>09/11 AM</span></p>
+- III.C Model engineering 2/2 (1h30)
+- TP (2h30)
+
+:::
+:::
+
+:::
+</div>
+
+## follow 
+- 
+
+
+- 
+
+
 
 ## References
 
