@@ -187,41 +187,34 @@ from Marvin Minsky (1968). MIT Press.
 
 ## Levels of AI
 
-1. **Narrow AI**: Specialized in one task. E.g., voice assistants.
+1. **Narrow AI**: Specialized in one task. *Translation*
+2. **Broad AI**: Multimodel/Multitask. *ChatBot*
 2. **General AI (AGI)**: Can perform any intellectual task that a human can.
 3. **Superintelligent AI**: Surpasses human abilities. It's speculative and doesn't exist yet.
 
-
 # What is intelligence {data-stack-name="What is Intelligence ?"}
 
+## Theories of intelligence
 
-## Dimensions of Intelligence
-
-- **Task-specific intelligence**: Mastery in specific tasks, e.g., playing chess or solving mathematical problems.
-- **Field-specific intelligence**: Expertise in a particular domain, such as medicine or music.
-- **Emotional intelligence**: Ability to recognize, understand, and manage our own emotions and to recognize, understand, and influence the emotions of others. (Salovey & Mayer, 1990)
-- **Social intelligence**: Ability to understand and navigate social situations and dynamics.
-- **Creative intelligence**: Ability to produce novel and valuable ideas.
-- **Practical intelligence**: Ability to solve real-world problems, often termed "street smarts".
-
-
-## Measuring Intelligence
-
-- IQ Tests: Strengths and Limitations
-- Multiple Intelligences Theory (Gardner 1983)
+- Spearman Two factor Theory
+- Multiple Intelligence
+- Emotional Intelligence
 - Fluid vs. Crystallized Intelligence
 
-## What Makes Human Intelligence Unique?
+## What Makes Human Intelligence Unique ?
 
-- **Adaptability**: Ability to learn and adapt to new environments and challenges.
+<div style="font-size: 75%;">
+- **Instinct**: Innate behaviour *Respiration*
+- **Memory**: The capacity to recall knowledge and events.
+- **Learn**: The capability to acquire knowledge and skills.
+- **Logic and Reason**: Ability to applies rules of logic to reach conclusions.
 - **Emotional Intelligence**: Recognizing and understanding emotions in oneself and others.
-- **Abstract Thinking**: Conceptualizing ideas and making connections between unrelated domains.
+- **Abstraction/Concepts**: Conceptualizing ideas and making connections between unrelated domains.
 - **Creativity**: Generating novel ideas and solutions.
+- An so on ...
+</div>
 
-## Animal Intelligence
-
-- Animals exhibit specialized intelligence suited for their environment.
-- E.g., Dolphins have social intelligence, Octopuses show problem-solving abilities.
+&rarr; Human intelligence is multifaceted.
 
 ## Machine Intelligence
 
@@ -229,32 +222,53 @@ from Marvin Minsky (1968). MIT Press.
 - Doesn't "understand" or "feel" in the way humans do.
 - Can process information faster and more accurately than humans.
 
+## Measuring human intelligence
+
+- IQ Tests
+- Complex and contraversary
+- Educational exams
+- no single definitive method
+
 ## Measuring Narrow IA intelligence
 
-Precision / Specificity for classification
-Regression coeficient for regression
-
-Will be extensively discussed later.
+- Precision / Specificity for classification
+- Regression coeficient for regression
+- Will be extensively discussed later.
 
 ## Measuring Artificial General intelligence
 
-General exams
-- AI2 Reasoning Challenge
-- HellaSwag
-- MMLU
-- TruthfulQA
+- **General Tests**:
+  - AI2 Reasoning Challenge
+  - HellaSwag
+  - MMLU
+  - TruthfulQA
+- **Field-specific Exams**:
+  - University exams (e.g., Bar exam, Math exams)
+  - Math challenges
 
-Field-specific exams
-- University exams (Bar exam, MAth exams)
-- MAth challenge
-
-
+&rarr; AGI measurement is closer to human intelligence assessment.
 
 # What is Machine Learning? {data-stack-name="What is ML?"}
 
 ## Definition
 
 Machine Learning is a subset of AI where machines can learn from data.
+
+## What is a machine
+
+- Logical model
+- Mathematical model
+- Theory-driven
+- Data-driven
+
+## Machine learning vs human learning
+
+Machine learn through optimization.
+- Numerical optimizations with objective function
+- Reinforcement learning
+- Genetic algorithms
+
+Optimization can be see widely such as PCA is a optimization to maximize variance.
 
 ## Types of Machine Learning
 
@@ -276,7 +290,6 @@ Machine Learning is a subset of AI where machines can learn from data.
 - 1990s: Machine Learning Gains Popularity
 - 2010s: Deep Learning Era Begins
 - 2020s: Emergence of Large Language Models
-
 
 ## Conclusion {data-name="Conclusion"}
 
