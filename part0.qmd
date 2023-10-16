@@ -1,12 +1,13 @@
 ---
 title: "Introduction to Machine Learning"
-subtitle: "Part 0 of Machine Learning Techniques"
+subtitle: "Intro - Machine Learning Techniques"
 bibliography: biblio.bib
 format:
   revealjs:
     title-slide-attributes:
         data-state: "hide-menubar"
     center: true
+    slide-number: true
     transition: slide
     background-transition: fade
     controls-layout: bottom-right
@@ -203,7 +204,7 @@ from Marvin Minsky (1968). MIT Press.
 
 ## What Makes Human Intelligence Unique ?
 
-<div style="font-size: 75%;">
+<div style="font-size: 65%;">
 - **Instinct**: Innate behaviour *Respiration*
 - **Memory**: The capacity to recall knowledge and events.
 - **Learn**: The capability to acquire knowledge and skills.

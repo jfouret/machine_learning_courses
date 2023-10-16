@@ -8,6 +8,7 @@ format:
         data-state: "hide-menubar"
     center: true
     transition: slide
+    slide-number: true
     background-transition: fade
     controls-layout: bottom-right
     menu: false
