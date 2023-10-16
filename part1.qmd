@@ -1,6 +1,6 @@
 ---
 title: "Introduciton to Machine Learning"
-subtitle: "Part of Machine Learning Techniques"
+subtitle: "Part 0 of Machine Learning Techniques"
 bibliography: biblio.bib
 format:
   revealjs:
@@ -24,335 +24,649 @@ revealjs-plugins:
 ## Table of Contents {data-state="hide-menubar"}
 <ul class="menu"><ul>
 
-# What is Artificial Intelligence ? {data-stack-name="What is AI ?"}
+# A: Probability Theory {data-stack-name="Proba Theory"}
 
-## Can Machine Think ?
+## Probability
 
-@Turing1950
+- **Definition**: The likelihood of an event to occur
+- $\Omega$: All possible events
+- Example with probability tree
 
-- Defining a machine
-- Understanding "thinking"
+<img src="img/proba_tree.svg" alt="" style="border: 2px solid black; display: block; margin: auto;" width="15%" height="auto">
 
-## The Imitation Game
+- $$\sum_{\omega \in \Omega}\mathbb{P}(\omega) = 1$$
 
-<div style="font-size: 75%;">
+## Union, Intersect and conditional
 
+- **Union**: $\mathbb{P}(A \cup B) = \mathbb{P}(A) + \mathbb{P}(B)$
+- **Intersect**: $\mathbb{P}(A \cap B) = \mathbb{P}(A) \times \mathbb{P}(B)$
+- **Conditional**: $P(A|B) = \frac{P(A \cap B)}{P(B)}$
+- **Bayes Theorem**:
+$$
+P(A|B) = \frac{P(B|A)P(A)}{P(B)}
+$$
 
-::: columns
-::: column
-**Context:**
+## Total Probability Theorem - Marginal
 
-- <span class="bordered"> A </span> &rarr; <span class="bordered"> Man </span>
-- <span class="bordered"> B </span> &rarr; <span class="bordered"> Woman </span>
-- <span class="bordered"> C </span> &rarr; <span class="bordered"> Interrogator </span>
+- $\Omega = \{A, B_1, ..., B_n\}$
+- $$P(A) = \sum_{i} P(A|B_i)P(B_i)$$
+- $$P(A) = \sum_{i} P(A \cap B_i)$$
 
-**Rules:**
+## Random variable
 
-- Genders of <span class="bordered"> A </span> and <span class="bordered"> B </span> are hidden to <span class="bordered"> C </span>
-- <span class="bordered"> C </span> interrogates them
-- Responses are typewritten
-:::
+<div style="font-size: 85%;">
 
-::: column
-**Objectives:**
-
-- For <span class="bordered"> C </span>:
-
-*Determine the Gender of <span class="bordered"> A </span> and <span class="bordered"> B </span>*
-
-- For <span class="bordered"> A </span>:
-  *Deceive <span class="bordered"> C </span>*
-
-- For <span class="bordered"> B </span>:
-  *Assist <span class="bordered"> C </span>*
-
-:::
-:::
+- **Probability Space** $(\Omega, \mathcal{F}, \mathbb{P})$:
+  - $\Omega$: Sample space containing all possible outcomes.
+  - $\mathcal{F}$: set of events, subsets of $\Omega$ to which we assign probabilities.
+  - $\mathbb{P}$: Probability measure assigning a probability to each event in $\mathcal{F}$.
+  
+- **Measurable Space** E where values or intervals are associated with events.
+  - Examples: $\mathbb{R}$, $\mathbb{R}^+$, $\mathbb{N}$ or $\{0,1\}$
+  
+- **Definition**: A random variable $X$ is a measurable function $\Omega \mapsto E$
 
 </div>
 
+## Discrete vs Continuous
 
-## What if A is a machine ?
+- Discrete: Countable and finite within any range.
+- Continuous: Uncountable and infinite within any range.
 
-Would C be **as often** wrong ?
+## Distribution function
 
-## A Modern Experiment: The Imitation Game Revisited
+- **Cumulative distribution function**: $F_X(x) = \mathbb{P}(X \leq x)$
 
-*Human or Not? A Gamified Approach to the Turing Test* @jannai2023
+- **Density function** for continuous variables:
+  - $f(x)$ such that $\mathbb{P}(a \leq X \leq b) = \int_a^b f(x) dx$
+  - $F_X(x) = \int_{-\infty}^x f(u) du$
 
-**Online 2-player game:**
+## Moments of Random variables
+<div style="font-size: 85%;">
 
-- One player asks questions and must guess **"Human"** or **"Bot"**
-- The **other player** responds and **might be substituted** by a bot
-- Bots are **advanced LLM models** (e.g., GPT-3)
+- **Expectation**: 
+  - Discrete: $E(X) = \sum_{i} x_i P(X=x_i)$ 
+  - Continuous: $E(X) = \int x f(x) dx$
 
-## Turing test: Current outcomes 
+- The n<sup>th</sup> **raw moment**: $\mu'_n = E(X^n)$
+- The n<sup>th</sup> **central moment**: $\mu_n = E[(X-E(X))^n]$
 
-::: {.box}
-**73%** Chance to recognize **a real person**
-:::
+- **Variance**: second central moment $\mu_2$
+  - $\text{Var}(X) = E[(X - E(X))^2]$
+  - $\text{Var}(X) = E(X^2) - [E(X)]^2$
 
-::: {.box}
-**60%** chance to recognize **a bot**
-:::
+- **Standard deviation** $\sigma$ is defined such as $\sigma^2 = \text{Var}(X)$
+</div>
+## Standardized moments
 
-**Ineffective strategies:**
+<img src="img/kurtosis_pdfs.svg" alt="" class="top-right-figure" style="height: auto; width: 35%;">
 
-- Checking grammar, spelling, recent events
+<div style="font-size: 90%;">
+- The n<sup>th</sup> standardized moment $\gamma_k = \frac{\mu_k}{(\sigma)^k}$
+- $\gamma_1 = 0$, $\gamma_2 = 1$
 
-**Effective strategies:**
+- **Skewness** the 3rd standardized moment:
+  - Skewness is a measure of **assymetry** around the function mean or location.
+- **Kurtosis** the 3rd standardized moment:
+  - *(from Greek: κυρτός, kyrtos or kurtos, meaning "curved, arching")*
+  - Kurtosis is a measure of **tailedness**
+</div>
 
-- Recognizing known issues and biases
-- Identifying hallucinations
-
-## Beyond The Turing test
+## Continuous Law : Normal
 
 ::: columns
 ::: column
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Weakness_of_Turing_test_1.svg" alt="Alternative text" style="width:100%; height:100%"/>
+<div style="font-size: 85%;">
+- Normal(Gaussian) distribution
+- 2 parameters
+  - $\mu$ -- *location* or *mean*
+  - $\sigma > 0$ -- *standard deviation*
+
+|Moment|Value|
+|---|---|
+|$E(X)$ | $\mu$ |
+|$\text{Var}(X)$ | $\sigma^2$ |
+|Skewness | 0 |
+|Kurtosis | 3 |
+</div>
+:::
+::: column
+<img src="img/law_normal.svg" alt="" style="border: 2px solid black; display: block; margin: auto;" width="auto" height="auto">
+
+$f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$
+:::
+:::
+
+## Continuous Law : Gamma
+
+::: columns
+::: column
+<div style="font-size: 80%;">
+- Gamma distribution (Real Positive)
+- 2 parameters
+  - $\alpha > 0$ -- *shape*
+  - $\sigma > 0$ -- *rate*
+
+|Moment|Value|
+|---|---|
+|$E(X)$ | $\frac{\alpha}{\lambda}$ |
+|$\text{Var}(X)$ | $\frac{\alpha}{\lambda^2}$ |
+|Skewness | $\frac{2}{\sqrt{\alpha}}$ |
+|Kurtosis | $3 + \frac{6}{\alpha}$ |
+</div>
+:::
+::: column
+<img src="img/law_gamma.svg" alt="" style="border: 2px solid black; display: block; margin: auto;" width="auto" height="auto">
+
+$f(x) = \frac{\lambda^\alpha x^{\alpha-1}}{\Gamma(\alpha)} e^{-\lambda x}$
 
 :::
-::: column 
-
-::: {.video-container}
-
-<iframe width="100%" height="auto" src="https://www.youtube.com/embed/NAihcvDGaP8?si=8B8JlPnQ1wr57zVw&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 :::
 
-:::
-:::
+## Other laws
+
+- **Uniform**
+- **Beta**: for continuous values between 0 and 1
+- **Binomial/Bernouilli**: Positive discrete
+
+## Law of Large Numbers (LLN)
+
+- **Defintions** 
+  As the number of independent trials increases, the sample average converges to the expected value.
+
+- For any $\epsilon > 0$
+  - $\lim_{n \to \infty} \mathbb{P}\left(|\bar{X}_n - \mu| > \epsilon\right) = 0$
+  as $n \rightarrow \infty$,
+  - $\bar{X}_n$ is the sample average of n observations.
+
+## LLN in ML
+
+- **Model Training**:
+  Given more training data, the model's performance on the training data (like the loss) tends to stabilize, providing a more reliable estimate of its generalization to unseen data (if no bias).
+
+- **Evaluation Metrics**:
+  As we evaluate a model on more samples, metrics like accuracy, F1 score, or Mean Squared Error will converge to a more consistent value, representing the model's true performance.
+
+## Central limit theorem
+
+The distribution of the sum (or average) of a large number of independent, identically distributed random variables approaches a normal (Gaussian) distribution, regardless of the original distribution of the variables.
+
+- Given $X_1, X_2, ...$ independent and identically distributed with mean $\mu$ and variance $\sigma^2$
+
+  $\frac{\bar{X}_n - \mu}{\sigma/\sqrt{n}} \xrightarrow{n \to \infty} \mathcal{N}(0,1)$
+
+## Central limit theorem in ML
+
+<div style="font-size: 75%;">
+
+- In the ML context:
+  - the **sampling distribution** tends to be normal
+  - regardless the true distribution
+
+- Prediction errors **tend** to be normally distributed when:
+  - the sampling increase, when working in aggregate/batch
+  - the model complexity increase (number of parameters)
+
+- **Ensemble Methods**:
+  - Aggregation of models
+
+- **K-fold validation**:
+  - Splits of training/validation
+  - metrics tend to be normally distributed
+
+</div>
+
+## Hypothesis testing
+
+- Systematic method used in statistics
+- Evaluate two competing statements
+- Which is more consistent with the observed data ?
+- Often based on assumptions on underlying distributions/dependencies ?
+
+## Hypothesis testing: Null hypothesis
+
+- The **null hypothesis ($H_0$)** is a statement about a population
+- About one or several parameters (e.g. $\mu$)
+- Typically, $H_0$ represents
+  - the status quo ($\mu = 0$)
+  - a situation of no effect or no difference ($\mu_1 = \mu_2$)
+
+## Hypothesis testing: Power/ errors
+
+<div style="font-size: 80%;">
+
+Two types of errors in hypothesis testing (@neyman1933):
+
+- **Type I error (False positive)**: 
+  - Rejecting $H_0$ when it is actually true. 
+  - Denoted by $\alpha$ (alpha)
+  - aka *significance level*.
+- **Type II error (False negative)**: 
+  - Not rejecting $H_0$ when it is false. 
+  - denoted by $\beta$ (beta)
+  - power of a test is $\pi = 1-\beta$ 
+  - The power is the probability of correctly rejecting a false $H_0$.
+
+</div>
+
+## Hypothesis testing: Test statictic 
+<div style="font-size: 80%;">
+A **test statistic** is a 
+
+- Standardized value calculated from sample data
+- The realization of a random variable with a known distribution
+</div>
+<div style="font-size: 80%;">
+When testing for 
+<span style = "border: 1px solid red;">$H_0: \mu_X = \mu_0$</span>
+  $t = \frac{\bar{\mu_X} - 0}{\bar{\sigma_X}\sqrt{n}}$ with:
+<div style="font-size: 75%;">
+- $\bar{\mu_X}$: sample mean
+- $\bar{\sigma_X}$: sample standard deviation
+- $n$: sample size
+</div>
+In case where $X \sim \mathcal{N}(0,1)$, then $X \sim \mathcal{S}(\nu)$ (@student1908)
+
+$\nu$ is the degrees of freedom ($n-1$) $\to$ shape of the student-distribution.
+</div>
+
+## Hypothesis testing:P-Value
+
+<div style="font-size: 75%;">
+
+The **p-value** measures the evidence against a null hypothesis.
+
+Mathematically:
+
+- $P(T \geq t \,|\, H_0 \, \text{is true})$ for right-tailed tests
+- $P(T \leq t \,|\, H_0 \, \text{is true})$ for left-tailed tests
+
+It is the probability of observing a test statistic:
+
+- as extreme, or more extreme, than from the sample
+- assuming that the null hypothesis is true. 
+- if low, then data are inconsistent with $H_0$.
+
+General guideline:
+
+- If $p-value \leq \alpha$, then reject $H_0$, else do not reject.
+</div>
+
+# B. Statistical Modelling {data-stack-name="Stat. Model."}
+
+## Fixed effects
+
+Parameter(s) in a model that do not vary across sampling. 
+
+Example: Linear regression with fixed effects
 
 
-## Pionneered Definitions of AI
+$$
+\left\{
+  \begin{array}{ll} 
+    y_{i} = \alpha + \beta x_{i} + \epsilon_{i} \\
+    \epsilon_{i} \sim \mathcal{N}(0,1) 
+    \end{array}
+\right.
+$$
+Where $\alpha$ and $\beta$ are fixed effects.
 
-<span style="font-size: 75%;"> @dartmouth1955 </span>
+All the sampling variation is absobed in the error.
 
-<img src="img/dartmouth_title.PNG" alt="" style="border: 2px solid black; display: block; margin: auto;">
+$\rightarrow$ Mostly used in ML
 
-<img src="img/dartmouth_def.PNG" alt="" style="border: 2px solid black; display: block; margin: auto;">
+## Random effect
+
+<div style="font-size: 80%;">
+
+Parameters are random variables
+
+Example: Linear regression with random effects:
+
+$$
+\left\{
+  \begin{array}{ll} 
+    y_{it} = \alpha_i + \beta_i x_{it} + \epsilon_{it} \\
+    \alpha_i \sim \mathcal{N}(\mu_\alpha, \tau^2_\alpha) \\
+    \beta_i \sim \mathcal{N}(\mu_\beta, \tau^2_\beta) \\
+    \epsilon_{it} \sim \mathcal{N}(0, \sigma^2)
+    \end{array}
+\right.
+$$
+
+- $t \to$ sampling/observation
+- $i \to$ group (e.g. gender if y is size)
+
+</div>
+
+## Mixed Effects
+
+- Generalization
+- Parameters can be either
+  - Fixed (fixed effect)
+  - Random variable (randome effect)
+
+## Multilevel/Hierarchical models
 
 <div style="font-size: 70%;">
-*"**Artificial Intelligence** is the science and engineering of making intelligent machines, especially intelligent computer programs.*"
 
-<div class="origin-citation">
-From John McCarty (2007). Stanford University.
-</div>
+A type of mixed-effects model where data is nested within multiple levels of groups.
 
-<hr style="height:1px;border:none;color:#333;background-color:#333;">
+$$
+\left\{
+  \begin{array}{ll} 
+    y_{ijkt} =  \alpha_i + \beta_j x_j + \gamma_k z_k + \epsilon_{ijkt} \\
+    \alpha_i \sim \mathcal{N}(\mu_{\alpha}, \sigma) \\
+    \beta_j \sim \mathcal{N}(\mu_{\beta}, \sigma) \\
+    \gamma_k \sim \mathcal{N}(\mu_{\gamma}, \sigma) \\
+    \epsilon_{ijkt} \sim \mathcal{N}(0, 1)
+    \end{array}
+\right.
+$$
 
-***Artificial Intelligence** is "the science of making machines do things that would require intelligence if done by men."*
-<div class="origin-citation">
-from Marvin Minsky (1968). MIT Press.
-</div>
-
-<hr style="height:1px;border:none;color:#333;background-color:#333;">
-</div>
-
-## Alternative definitions
-<div style="font-size: 50%;">
-
-::: {.centered}
-**Human-oriented**
-:::
-
-::: {.box}
-
-"*We call **programs intelligent** if they exhibit behaviors that would be regarded intelligent if they were exhibited by **human beings**.*" - Herbert Simon
-
-"***AI** is the attempt to make **computers** do what **people** think computers cannot do.*" -- Douglas Baker
-
-"***AI** is the study of how to make **computers** do things at which, at the moment, **people** are better.*" -- Elaine Rich and Kevin Knight
-
-:::
-
-::: {.centered}
-**Mathematics-oriented**
-:::
-
-::: {.box}
-"***AI** is the study of techniques for **solving exponentially hard problems** in polynomial time by exploiting knowledge about the problem domain.*" -- Elaine Rich
-
-"*There is no **intelligence** in **AI**. It's just pure **mathematical optimization***." -- Julia Luc
-:::
-
-::: {.centered}
-**Intelligence-oriented**
-:::
-
-::: {.box}
-"***Physicists** ask what kind of place this universe is and seek to characterize its behavior systematically. **Biologists** ask what it means for a physical system to be living. We in **AI** wonder what kind of **information-processing system** can ask such questions.*" -- Avron Barr and Edward Feigenbaum
-:::
+- $i \to$ student-level / no features
+- $j \to$ classroom-level / $x_j$ feature like class size
+- $k \to$ school-level / $z_k$ feature like school budget
+- $t \to$ sampling/obsevation (multiple tests)
 
 </div>
 
-## Levels of AI
+## Nested models
 
-1. **Narrow AI**: Specialized in one task. *Translation*
-2. **Broad AI**: Multimodel/Multitask. *ChatBot*
-2. **General AI (AGI)**: Can perform any intellectual task that a human can.
-3. **Superintelligent AI**: Surpasses human abilities. It's speculative and doesn't exist yet.
+- A specificity from another model
+- Example: no school effect: $\gamma_k = 0$
+- Important for hypothesis testing with a test elaborated to compare nested models (seen after)
 
-# What is intelligence {data-stack-name="What is Intelligence ?"}
+# C. Model Inference {data-stack-name="Inference"}
 
-## Theories of intelligence
+## Likelihood definition for a model
 
-- Two factor Theory (Spearmann)
-- Multiple Intelligence (Gardner)
-- Emotional Intelligence (Goleman)
-- Fluid vs. Crystallized Intelligence (Cattell)
+<div style="font-size: 70%;">
 
-## What Makes Human Intelligence Unique ?
+The likelihood is a probability defined for a model
+$$
+\mathbb{P}_\mathcal{M}( y | \theta)
+$$
 
-<div style="font-size: 75%;">
-- **Instinct**: Innate behaviour *Respiration*
-- **Memory**: The capacity to recall knowledge and events.
-- **Learn**: The capability to acquire knowledge and skills.
-- **Logic and Reason**: Ability to applies rules of logic to reach conclusions.
-- **Emotional Intelligence**: Recognizing and understanding emotions in oneself and others.
-- **Abstraction/Concepts**: Conceptualizing ideas and making connections between unrelated domains.
-- **Creativity**: Generating novel ideas and solutions.
-- An so on ...
-</div>
+with:
 
-&rarr; Human intelligence is multifaceted.
-
-## Machine Intelligence
-
-- Operates based on algorithms and data.
-- Doesn't "understand" or "feel" in the way humans do.
-- Can process information faster and more accurately than humans.
-
-## Measuring human intelligence
-
-- IQ Tests
-- Complex and contraversary
-- Educational exams
-- no single definitive method
-
-## Measuring Narrow IA intelligence
-
-- Precision / Specificity for classification
-- Regression coeficient for regression
-- Will be extensively discussed later.
-
-## Measuring Artificial General intelligence
-
-- **General Tests**:
-  - AI2 Reasoning Challenge
-  - HellaSwag
-  - MMLU
-  - TruthfulQA
-- **Field-specific Exams**:
-  - University exams (e.g., Bar exam, Math exams)
-  - Math challenges
-
-&rarr; AGI measurement is closer to human intelligence assessment.
-
-# What is Machine Learning? {data-stack-name="What is ML?"}
-
-## Definition
-
-Machine Learning is a subset of AI where machines can learn from data.
-
-## What is a machine
-
-- Logical model
-- Mathematical model
-- Theory-driven
-- Data-driven
-
-## Machine learning vs Human learning
-
-
-- Machine learn through optimization.
-  - Numerical optimizations with objective function
-  - Reinforcement learning
-  - Genetic algorithms
-
-<div style="font-size: 75%;">
-</div>
-
-Optimization can be see widely such as PCA is a optimization to maximize variance.
-
-## Major Dates and Periods 
-
-- 1950: Turing's "Computing Machinery and Intelligence"
-- 1956: Dartmouth Workshop - Birth of AI
-- 1980s: Rise of Expert Systems
-- 1990s: Machine Learning Gains Popularity
-- 2010s: Deep Learning Era Begins
-- 2020s: Emergence of Large Language Models
-
-## Conclusion {data-name="Conclusion"}
-
-- Artificial intelligence is a wide concept with multiple definitions
-  - human-oriented
-  - mathematic-oriented
-  - intelligence-centered
-- Intelligence is a a wide notion when applied to human.
-- Machine intelligence
-
-## Plan for the teaching
-
-<div style="font-size: 50%;">
-
-::: columns
-::: column
+- $\mathcal{M}$ the model
+- $\theta$ the parameters
+- $y$ the observations / measurements / sampling
 
 :::{.box}
-
-<p class="separator"><span>25/10 PM</span></p>
-
-- Introduction : (1h30)
-- I. Reminders and Foundations (2h30)
-
-<p class="separator"><span>26/10 AM</span></p>
-
-- TP (2h)
-  - Data transformation / PCA
-  - Maximum likelihood to fit distributions
-  - Cross-entropy from ML demonstration
-- II Base of Machine Learning 
-  - A: Typology and nommenclatures (1h)
-  - B: Evaluation metrics (1h)
-
-TODO for next time -> Examples of ML algorithms
-
-(one for notation)
-:::
+- The probability of the parameters given the observation and a model
+- How well the model explains the observed data ?
 :::
 
-::: column
-::: {.box}
-<p class="separator"><span>08/11 PM</span></p>
+The likelihood is a function of the parameters $\mathcal{L}_{\mathcal{M}}(\theta) = \mathcal{L}(\theta)$
 
-- TP (1h30)
-  - Q&A on examples on ML algorithms
-  - Linear regression with few data 
-  - Linear (logistic) regression with multiple features
-  - Bias-Variance decomposition of Loss
-- II.C Bottlenecks and Issues (30m)
-- III. Advanced Techniques of Machine Learning
-  - A. Feature engineering (1h)
-  - C. Model engineering 1/2 (1h)
-
-<p class="separator"><span>09/11 AM</span></p>
-- III.C Model engineering 2/2 (1h30)
-- TP (2h30)
-
-:::
-:::
-
-:::
 </div>
 
-## follow 
-- 
+## Maximum Likelihood Estimation (MLE)
+
+<div style="font-size: 80%;">
+
+- MLE aims to find the parameters $\theta$ that maximizes the likelihood function $\mathcal{L}(\theta)$.
+
+$$\hat{\theta}_{MLE} = \arg \max_{\theta} \mathcal{L}(\theta)$$
+
+- $\hat{\theta}_{MLE}$ is the *maximum likehood estimates*
+- inferred from likelihood maximization
+
+</div>
+
+## MLE and fixed effects, normal
+
+<div style="font-size: 80%;">
+
+Fixed effect model and normally distributed error
+
+$$
+\left\{
+  \begin{array}{ll} 
+    y_{i} = f_{\theta}(xi) + \epsilon_{i} \\
+    \epsilon_{i} \sim \mathcal{N}(0,\sigma) 
+    \end{array}
+\right.
+$$
+
+From the normal density function: $\mathbb{P}(\epsilon_i | \theta) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp \left( -\frac{(\epsilon_i)^2}{2\sigma^2} \right)$
+
+or $\epsilon_i = y_i - \hat{y_i}$
+
+Then : $\mathcal{L}(\theta) = \prod_{i=1}^{n} \mathbb{P}(\epsilon_i | \theta)$
+
+</div>
 
 
-- 
+## From Likelihood to loss: Least Square
 
+$$
+log(\mathcal{L}(\theta)) = - \frac{n}{2} log(2 \pi \sigma) -  \frac{1}{2 \sigma^2} \sum_i{(y_i - \hat{y_i})^2}
+$$
 
+$$
+log(\mathcal{L}(\theta)) \propto  - \sum_i{(y_i - \hat{y_i})^2}
+$$
+
+$$
+\arg \max_{\theta} \mathcal{L}(\theta) = \arg \min_{\theta} \sum_i{(y_i - \hat{y_i})^2}
+$$
+
+$\to$ Least squared is equivalent to MLE in such problem
+
+## Information Criteria for model selection
+
+Used to balance fit and complexity. Two common criteria:
+
+- AIC: $-2\log(\mathcal{L}) + 2k$
+- BIC: $-2\log(\mathcal{L}) + k\log(n)$
+
+Where $L$ is likelihood, $k$ is number of parameters, and $n$ is sample size.
+
+## Likelihood ratio test for nested model
+
+Given:
+
+- $\mathcal{L}_1$: likelihood under the full (or complex) model.
+- $\mathcal{L}_0$: likelihood under the restricted (or simpler) model.
+
+- Test statistic: $D = -2(\log(\mathcal{L}_0) - \log(\mathcal{L}_1))$
+- **Wilks' Theorem** $D \xrightarrow{n \to \infty} \chi^2$
+
+## General linear regression (GLR)
+
+<div style="font-size: 80%;">
+
+A general linear problem can be defined as:
+$$Y = XB + U$$
+
+Where:
+
+- $Y$ is an $n \times m$ matrix of $n$ observations of $m$ variables.
+- $X$ is an $n \times p$ matrix of $n$ observations of $p$ features.
+- $B$ is an $p \times m$ matrix of fixed-effect parameters for each pair variable-feature.
+- $U$ is an $n \times m$ matrix for errors.
+
+</div>
+
+## GLR: Minimize the SSR
+
+- $SSR(B) = (Y - XB)^T (Y - XB)$
+- $SSR(B) = Y^T Y − Y^T X B − B^T X^T Y + B^T X^T X B$
+- $\Delta SSR(B) = 0 - X^TY - X^TY + 2 X^T X B$
+- $\Delta SSR(B) = - 2X^TY + 2 X^T X B$
+
+To find the optimum of $SSR(B)$, we try to resolve $\Delta SSR(B) = 0$, ie the equation:
+
+$$X^TY =  X^T X B$$
+
+## GLR: Analytical resolution
+
+If $X^T X$ is invertible, then 
+
+$$\hat{B} = (X^T X)^{-1} X^TY$$
+
+For $X$ to be invertible, it needs to be a full rank matrix:
+
+- No feature (column in $X$) can be expressed as a linear combination of other features
+- $n \geq p$
+- Non-zero variance for a feature
+
+## Grid search optimization
+
+- Systematic search through a pre-defined space for parameters.
+- Evaluates each combination to find the best.
+- Example for minimization
+
+```pseudo
+Initialize: parameter space Θ, best_score = ∞
+for each parameter combination θ in Θ do
+    Compute score S using θ
+    if S < best_score then
+        best_score = S
+        best_parameters = θ
+    end if
+end for
+Return best_parameters
+```
+
+## Newton Optimization
+
+Iterative method using gradient and Hessian to find parameter values that maximize or minimize the objective.
+
+```pseudo
+Initialize: parameter vector θ, tolerance ε, max_iterations M
+for i = 1 to M do
+    Compute the gradient ∇f(θ) and the Hessian H(θ)
+    Update θ: θ = θ - H(θ)^-1 ∇f(θ)
+    if ||∇f(θ)|| < ε then
+        break
+    end if
+end for
+Return θ
+```
+
+## Simplex Optimization
+
+Nelder-Mead method; moves a simplex in the parameter space toward optimal values.
+
+```pseudo
+Initialize: simplex vertices θ_1, θ_2, ..., θ_n+1
+while termination criteria not met do
+    Order the vertices by objective function value
+    Compute centroid of all but worst vertex
+    Reflect worst vertex over centroid
+    if reflection improved then
+        Try expansion
+    else
+        Try contraction or reduction
+    end if
+end while
+Return best vertex
+```
+
+## Gradient descent Optimization
+
+Iterative method adjusting parameters in the direction of steepest decrease of the objective function.
+
+```pseudo
+Initialize: parameter vector θ, learning rate α, tolerance ε, max_iterations M
+for i = 1 to M do
+    Compute the gradient ∇f(θ)
+    Update θ: θ = θ - α ∇f(θ)
+    if ||∇f(θ)|| < ε then
+        break
+    end if
+end for
+Return θ
+```
+
+## BFGS Optimization
+
+Quasi-Newton method; approximates the inverse Hessian to update parameters.
+
+```pseudo
+Initialize: parameter vector θ, inverse Hessian approximation B, tolerance ε, max_iterations M
+for i = 1 to M do
+    Compute the gradient ∇f(θ)
+    Compute the search direction p = -B ∇f(θ)
+    Perform line search to find step size α
+    Update θ: θ = θ + αp
+    Update B using the BFGS update formula
+    if ||∇f(θ)|| < ε then
+        break
+    end if
+end for
+Return θ
+```
+
+## Jacobian/Hessian in Optimization
+
+- For some objective function, it might be complex to get the analytical functino for the the gradient or the hessian.
+
+- Gradiant/Hessian can be point-approximated by numerical methods.
+
+- Some optimization methods don't require computation of the 
+full Jacobian or Hessian, reducing computational demand.
+
+## Boundaries
+
+In optimization, constraints can be set to ensure parameter values to remain within desired bounds.
+
+## Stochastic Gradient Descent
+
+SGD; updates parameters using a randomly chosen subset of the data. Suitable for large datasets.
+
+```pseudo
+Initialize: parameter vector θ, learning rate α, tolerance ε, max_iterations M, batch_size b
+for i = 1 to M do
+    Randomly select a mini-batch of size b from the data
+    Compute the gradient ∇f(θ) using the mini-batch
+    Update θ: θ = θ - α ∇f(θ)
+    if average change in θ over recent iterations < ε then
+        break
+    end if
+end for
+Return θ
+```
+
+## The Bayesian framework
+
+<div style="font-size: 80%;">
+
+- Posterior probability: $\mathbb{P}(\theta | y)$
+- Prior: $\mathbb{P}(\theta)$
+- Likelihood: $\mathcal{L}(\theta) = \mathbb{P}( y | \theta)$
+
+$$ \mathbb{P}(\theta | y) = \mathcal{L}(\theta) \mathbb{P}(\theta)$$
+
+- Expectation in either likelihood (frequentism) or posterior (Bayesian)
+- Maximum Posterior optimization is equivalent to MLE with uniform priors.
+
+</div>
+
+# D. Important Definitions {data-stack-name="Definitions"}
+
+## X, Data or Features
+
+## Y, Targets, Predicted Values or Transformed Values
+
+## M/F, Model and Hyperparameters
+
+## Predict, Transform, Fit and Infer
+
+## Conclusion
+
+- Probability theory is essential
+
+- Statistical models at the core of ML
+
+- Likelihood function and maximization
+
+- From likelihood to Least Square
+
+- Solving through optimization
 
 ## References
-

@@ -22,6 +22,22 @@
     text-align: center; /* center the text */
 }
 
+.top-right-figure {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border: 2px solid black;
+    width: 100%;
+  }
+
+.text-box {
+    border-radius: 10px;
+    border: 2px grey solid;
+    background: black;
+    padding: 0cm 0% 0% 0%;
+    color: white;
+}
+
 .separator{
     display: flex;
     flex-direction: row;

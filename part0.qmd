@@ -1,0 +1,361 @@
+---
+title: "Introduction to Machine Learning"
+subtitle: "Part 0 of Machine Learning Techniques"
+bibliography: biblio.bib
+format:
+  revealjs:
+    title-slide-attributes:
+        data-state: "hide-menubar"
+    center: true
+    transition: slide
+    background-transition: fade
+    controls-layout: bottom-right
+    menu: false
+    css: style.css
+    section-divs: true
+    simplemenu:
+        barhtml:
+            header: "<div class='menubar'><ul class='menu'></ul><div>"
+        scale: 0.67
+revealjs-plugins:
+  - simplemenu
+---
+
+## Table of Contents {data-state="hide-menubar"}
+<ul class="menu"><ul>
+
+# What is Artificial Intelligence ? {data-stack-name="What is AI ?"}
+
+## Can Machine Think ?
+
+@Turing1950
+
+- Defining a machine
+- Understanding "thinking"
+
+## The Imitation Game
+
+<div style="font-size: 75%;">
+
+
+::: columns
+::: column
+**Context:**
+
+- <span class="bordered"> A </span> &rarr; <span class="bordered"> Man </span>
+- <span class="bordered"> B </span> &rarr; <span class="bordered"> Woman </span>
+- <span class="bordered"> C </span> &rarr; <span class="bordered"> Interrogator </span>
+
+**Rules:**
+
+- Genders of <span class="bordered"> A </span> and <span class="bordered"> B </span> are hidden to <span class="bordered"> C </span>
+- <span class="bordered"> C </span> interrogates them
+- Responses are typewritten
+:::
+
+::: column
+**Objectives:**
+
+- For <span class="bordered"> C </span>:
+
+*Determine the Gender of <span class="bordered"> A </span> and <span class="bordered"> B </span>*
+
+- For <span class="bordered"> A </span>:
+  *Deceive <span class="bordered"> C </span>*
+
+- For <span class="bordered"> B </span>:
+  *Assist <span class="bordered"> C </span>*
+
+:::
+:::
+
+</div>
+
+
+## What if A is a machine ?
+
+Would C be **as often** wrong ?
+
+## A Modern Experiment: The Imitation Game Revisited
+
+*Human or Not? A Gamified Approach to the Turing Test* @jannai2023
+
+**Online 2-player game:**
+
+- One player asks questions and must guess **"Human"** or **"Bot"**
+- The **other player** responds and **might be substituted** by a bot
+- Bots are **advanced LLM models** (e.g., GPT-3)
+
+## Turing test: Current outcomes 
+
+::: {.box}
+**73%** Chance to recognize **a real person**
+:::
+
+::: {.box}
+**60%** chance to recognize **a bot**
+:::
+
+**Ineffective strategies:**
+
+- Checking grammar, spelling, recent events
+
+**Effective strategies:**
+
+- Recognizing known issues and biases
+- Identifying hallucinations
+
+## Beyond The Turing test
+
+::: columns
+::: column
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Weakness_of_Turing_test_1.svg" alt="Alternative text" style="width:100%; height:100%"/>
+
+:::
+::: column 
+
+::: {.video-container}
+
+<iframe width="100%" height="auto" src="https://www.youtube.com/embed/NAihcvDGaP8?si=8B8JlPnQ1wr57zVw&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+:::
+
+:::
+:::
+
+
+## Pionneered Definitions of AI
+
+<span style="font-size: 75%;"> @dartmouth1955 </span>
+
+<img src="img/dartmouth_title.PNG" alt="" style="border: 2px solid black; display: block; margin: auto;">
+
+<img src="img/dartmouth_def.PNG" alt="" style="border: 2px solid black; display: block; margin: auto;">
+
+<div style="font-size: 70%;">
+*"**Artificial Intelligence** is the science and engineering of making intelligent machines, especially intelligent computer programs.*"
+
+<div class="origin-citation">
+From John McCarty (2007). Stanford University.
+</div>
+
+<hr style="height:1px;border:none;color:#333;background-color:#333;">
+
+***Artificial Intelligence** is "the science of making machines do things that would require intelligence if done by men."*
+<div class="origin-citation">
+from Marvin Minsky (1968). MIT Press.
+</div>
+
+<hr style="height:1px;border:none;color:#333;background-color:#333;">
+</div>
+
+## Alternative definitions
+<div style="font-size: 50%;">
+
+::: {.centered}
+**Human-oriented**
+:::
+
+::: {.box}
+
+"*We call **programs intelligent** if they exhibit behaviors that would be regarded intelligent if they were exhibited by **human beings**.*" - Herbert Simon
+
+"***AI** is the attempt to make **computers** do what **people** think computers cannot do.*" -- Douglas Baker
+
+"***AI** is the study of how to make **computers** do things at which, at the moment, **people** are better.*" -- Elaine Rich and Kevin Knight
+
+:::
+
+::: {.centered}
+**Mathematics-oriented**
+:::
+
+::: {.box}
+"***AI** is the study of techniques for **solving exponentially hard problems** in polynomial time by exploiting knowledge about the problem domain.*" -- Elaine Rich
+
+"*There is no **intelligence** in **AI**. It's just pure **mathematical optimization***." -- Julia Luc
+:::
+
+::: {.centered}
+**Intelligence-oriented**
+:::
+
+::: {.box}
+"***Physicists** ask what kind of place this universe is and seek to characterize its behavior systematically. **Biologists** ask what it means for a physical system to be living. We in **AI** wonder what kind of **information-processing system** can ask such questions.*" -- Avron Barr and Edward Feigenbaum
+:::
+
+</div>
+
+## Levels of AI
+
+1. **Narrow AI**: Specialized in one task. *Translation*
+2. **Broad AI**: Multimodel/Multitask. *ChatBot*
+2. **General AI (AGI)**: Can perform any intellectual task that a human can.
+3. **Superintelligent AI**: Surpasses human abilities. It's speculative and doesn't exist yet.
+
+# What is intelligence {data-stack-name="What is Intelligence ?"}
+
+## Theories of intelligence
+
+- Two factor Theory (Spearmann)
+- Multiple Intelligence (Gardner)
+- Emotional Intelligence (Goleman)
+- Fluid vs. Crystallized Intelligence (Cattell)
+
+## What Makes Human Intelligence Unique ?
+
+<div style="font-size: 75%;">
+- **Instinct**: Innate behaviour *Respiration*
+- **Memory**: The capacity to recall knowledge and events.
+- **Learn**: The capability to acquire knowledge and skills.
+- **Logic and Reason**: Ability to applies rules of logic to reach conclusions.
+- **Emotional Intelligence**: Recognizing and understanding emotions in oneself and others.
+- **Abstraction/Concepts**: Conceptualizing ideas and making connections between unrelated domains.
+- **Creativity**: Generating novel ideas and solutions.
+- An so on ...
+</div>
+
+&rarr; Human intelligence is multifaceted.
+
+## Machine Intelligence
+
+- Operates based on algorithms and data.
+- Doesn't "understand" or "feel" in the way humans do.
+- Can process information faster and more accurately than humans.
+
+## Measuring human intelligence
+
+- IQ Tests
+- Complex and contraversary
+- Educational exams
+- no single definitive method
+
+## Measuring Narrow IA intelligence
+
+- Precision / Specificity for classification
+- Regression coeficient for regression
+- Will be extensively discussed later.
+
+## Measuring Artificial General intelligence
+
+<div style="font-size: 75%;">
+- **General Tests**:
+  - AI2 Reasoning Challenge
+  - HellaSwag
+  - MMLU
+  - TruthfulQA
+- **Field-specific Exams**:
+  - University exams (e.g., Bar exam, Math exams)
+  - Math challenges
+
+&rarr; AGI measurement is closer to human intelligence assessment.
+
+</div>
+
+# What is Machine Learning? {data-stack-name="What is ML?"}
+
+## Definition
+
+Machine Learning is a subset of AI where machines can learn from data.
+
+## What is a machine
+
+- Logical model
+- Mathematical model
+- Theory-driven
+- Data-driven
+
+## Machine learning vs Human learning
+
+- Machine learn through optimization.
+  - Numerical optimizations with objective function
+  - Reinforcement learning
+  - Genetic algorithms
+
+Optimization can be see widely such as PCA is a optimization to maximize variance.
+
+## Major Dates and Periods 
+
+- 1950: Turing's "Computing Machinery and Intelligence"
+- 1956: Dartmouth Workshop - Birth of AI
+- 1980s: Rise of Expert Systems
+- 1990s: Machine Learning Gains Popularity
+- 2010s: Deep Learning Era Begins
+- 2020s: Emergence of Large Language Models
+
+## Conclusion {data-name="Conclusion"}
+
+- Artificial intelligence is a wide concept with multiple definitions
+  - human-oriented
+  - mathematic-oriented
+  - intelligence-centered
+- Intelligence is a a wide notion when applied to human.
+- Machine intelligence
+
+## Objectives
+
+- Definition of Machine Learning
+- Mathematics and Statistics
+- Implement and train models
+- Knowledge and best practices
+  - Feature engineering
+  - Model engineering
+
+## Planning
+
+<div style="font-size: 40%;">
+
+::: columns
+::: column
+
+:::{.box}
+
+<p class="separator"><span>25/10 PM</span></p>
+
+- <span class="text-box">Part 0</span> Introduction : -- *1h30*
+- <span class="text-box">Part 1</span> Reminders and Foundations -- *1h30*
+  - Theory of probability -- *30min*
+  - Statistical modelling -- *15min*
+  - Model inference -- *45min*
+  - Important definitions -- *30min*
+- <span class="text-box">TP 0</span> -- *1h*
+  - Fitting probability law
+  - Model selection / Fixed effect (type of errors)
+
+<p class="separator"><span>26/10 AM</span></p>
+
+- <span class="text-box">TP 1</span> -- *2h*
+  - Data transformation / PCA
+  - Proof: Cross-entropy from likelihood
+- <span class="text-box">Part 2</span>  Base of Machine Learning 1/2 -- *2h*
+  - A: Typology and nommenclatures -- *1h*
+  - B: Evaluation metrics -- *1h*
+:::
+:::
+
+::: column
+::: {.box}
+<p class="separator"><span>08/11 PM</span></p>
+
+- <span class="text-box">TP 1</span> -- *1h30*
+  - Linear regression with few data 
+  - Linear (logistic) regression with multiple features
+  - Bias-Variance decomposition of Loss
+- <span class="text-box">Part 2</span> Base of Machine Learning 1/2 -- *30min*
+  - C: Bottlenecks and Issues -- *30min*
+- <span class="text-box">Part 3</span>  Advanced Machine Learning --*2h*
+  - A: Feature engineering -- *1h*
+  - B: Model engineering 1/2 -- *1h*
+
+<p class="separator"><span>09/11 AM</span></p>
+- <span class="text-box">Part 3</span>  Advanced Machine Learning --*2h*
+  - B: Model engineering 2/2 -- *1h30*
+- <span class="text-box">TP 3</span> -- *2h30*
+
+:::
+:::
+
+:::
+</div>
+
+## References
+
