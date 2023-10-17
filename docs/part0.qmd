@@ -1,6 +1,6 @@
 ---
-title: "Introduction to Machine Learning"
-subtitle: "Intro - Machine Learning Techniques"
+title: "Machine Learning Techniques - 0"
+subtitle: "Introduction to Artificial Intelligence and Machine Learning"
 bibliography: biblio.bib
 format:
   revealjs:

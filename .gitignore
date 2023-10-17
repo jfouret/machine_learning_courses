@@ -1,3 +1,4 @@
-/_extensions
-/*.html
+docs/_extensions
+_extensions
 /*_files
+/.quarto/

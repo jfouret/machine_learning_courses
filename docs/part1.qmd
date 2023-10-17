@@ -1,6 +1,6 @@
 ---
-title: "Introduciton to Machine Learning"
-subtitle: "Part 0 of Machine Learning Techniques"
+title: "Machine Learning Techniques - 1"
+subtitle: "Mathematical foundations to Modelling and ML"
 bibliography: biblio.bib
 format:
   revealjs:
