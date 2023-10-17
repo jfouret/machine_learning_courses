@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Docs"
+  title: "ML Techniques"
   navbar:
     left:
       - href: index.qmd
