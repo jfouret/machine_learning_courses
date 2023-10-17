@@ -26,7 +26,7 @@ revealjs-plugins:
 
 # What is Artificial Intelligence ? {data-stack-name="What is AI ?"}
 
-## Can Machine Think ?
+## Can Machines Think ?
 
 @Turing1950
 
@@ -192,7 +192,7 @@ from Marvin Minsky (1968). MIT Press.
 2. **General AI (AGI)**: Can perform any intellectual task that a human can.
 3. **Superintelligent AI**: Surpasses human abilities. It's speculative and doesn't exist yet.
 
-# What is intelligence {data-stack-name="What is Intelligence ?"}
+# What is intelligence ? {data-stack-name="What is Intelligence ?"}
 
 ## Theories of intelligence
 
@@ -207,11 +207,11 @@ from Marvin Minsky (1968). MIT Press.
 - **Instinct**: Innate behaviour *Respiration*
 - **Memory**: The capacity to recall knowledge and events.
 - **Learn**: The capability to acquire knowledge and skills.
-- **Logic and Reason**: Ability to applies rules of logic to reach conclusions.
+- **Logic and Reason**: Ability to apply rules of logic to reach conclusions.
 - **Emotional Intelligence**: Recognizing and understanding emotions in oneself and others.
 - **Abstraction/Concepts**: Conceptualizing ideas and making connections between unrelated domains.
 - **Creativity**: Generating novel ideas and solutions.
-- An so on ...
+- And so on ...
 </div>
 
 &rarr; Human intelligence is multifaceted.
@@ -225,14 +225,14 @@ from Marvin Minsky (1968). MIT Press.
 ## Measuring human intelligence
 
 - IQ Tests
-- Complex and contraversary
+- Complex and Controversial
 - Educational exams
-- no single definitive method
+- No single definitive method
 
-## Measuring Narrow IA intelligence
+## Measuring Narrow AI
 
 - Precision / Specificity for classification
-- Regression coeficient for regression
+- Regression coefficient for regression
 - Will be extensively discussed later.
 
 ## Measuring Artificial General intelligence
@@ -257,21 +257,21 @@ from Marvin Minsky (1968). MIT Press.
 
 Machine Learning is a subset of AI where machines can learn from data.
 
-## What is a machine
+## What is a machine ?
 
 - Logical model
-- Mathematical model
-- Theory-driven
-- Data-driven
+- Mathematical function
+- Statistical model
+- Rule-based Process
 
-## Machine learning vs Human learning
+## Machine Learning
 
 - Machine learn through optimization.
   - Numerical optimizations with objective function
   - Reinforcement learning
   - Genetic algorithms
 
-Optimization can be see widely such as PCA is a optimization to maximize variance.
+The term optimization is used loosely, i.e. PCA is an optimization to maximize variance.
 
 ## Major Dates and Periods 
 
@@ -288,7 +288,7 @@ Optimization can be see widely such as PCA is a optimization to maximize varianc
   - human-oriented
   - mathematic-oriented
   - intelligence-centered
-- Intelligence is a a wide notion when applied to human.
+- Intelligence is a a wide notion when applied to humans.
 - Machine intelligence
 
 ## Objectives
@@ -327,7 +327,7 @@ Optimization can be see widely such as PCA is a optimization to maximize varianc
   - Data transformation / PCA
   - Proof: Cross-entropy from likelihood
 - <span class="text-box">Part 2</span>  Base of Machine Learning 1/2 -- *2h*
-  - A: Typology and nommenclatures -- *1h*
+  - A: Typology and nomenclatures -- *1h*
   - B: Evaluation metrics -- *1h*
 :::
 :::
