@@ -371,11 +371,11 @@
     "text": "Table of Contents"
   },
   {
-    "objectID": "part0.html#can-machine-think",
-    "href": "part0.html#can-machine-think",
+    "objectID": "part0.html#can-machines-think",
+    "href": "part0.html#can-machines-think",
     "title": "Machine Learning Techniques - 0",
-    "section": "Can Machine Think ?",
-    "text": "Can Machine Think ?\nTuring (1950)\n\nDefining a machine\nUnderstanding “thinking”"
+    "section": "Can Machines Think ?",
+    "text": "Can Machines Think ?\nTuring (1950)\n\nDefining a machine\nUnderstanding “thinking”"
   },
   {
     "objectID": "part0.html#the-imitation-game",
@@ -445,7 +445,7 @@
     "href": "part0.html#what-makes-human-intelligence-unique",
     "title": "Machine Learning Techniques - 0",
     "section": "What Makes Human Intelligence Unique ?",
-    "text": "What Makes Human Intelligence Unique ?\n\n\nInstinct: Innate behaviour Respiration\nMemory: The capacity to recall knowledge and events.\nLearn: The capability to acquire knowledge and skills.\nLogic and Reason: Ability to applies rules of logic to reach conclusions.\nEmotional Intelligence: Recognizing and understanding emotions in oneself and others.\nAbstraction/Concepts: Conceptualizing ideas and making connections between unrelated domains.\nCreativity: Generating novel ideas and solutions.\nAn so on …\n\n\n→ Human intelligence is multifaceted."
+    "text": "What Makes Human Intelligence Unique ?\n\n\nInstinct: Innate behaviour Respiration\nMemory: The capacity to recall knowledge and events.\nLearn: The capability to acquire knowledge and skills.\nLogic and Reason: Ability to apply rules of logic to reach conclusions.\nEmotional Intelligence: Recognizing and understanding emotions in oneself and others.\nAbstraction/Concepts: Conceptualizing ideas and making connections between unrelated domains.\nCreativity: Generating novel ideas and solutions.\nAnd so on …\n\n\n→ Human intelligence is multifaceted."
   },
   {
     "objectID": "part0.html#machine-intelligence",
@@ -459,14 +459,14 @@
     "href": "part0.html#measuring-human-intelligence",
     "title": "Machine Learning Techniques - 0",
     "section": "Measuring human intelligence",
-    "text": "Measuring human intelligence\n\nIQ Tests\nComplex and contraversary\nEducational exams\nno single definitive method"
+    "text": "Measuring human intelligence\n\nIQ Tests\nComplex and Controversial\nEducational exams\nNo single definitive method"
   },
   {
-    "objectID": "part0.html#measuring-narrow-ia-intelligence",
-    "href": "part0.html#measuring-narrow-ia-intelligence",
+    "objectID": "part0.html#measuring-narrow-ai",
+    "href": "part0.html#measuring-narrow-ai",
     "title": "Machine Learning Techniques - 0",
-    "section": "Measuring Narrow IA intelligence",
-    "text": "Measuring Narrow IA intelligence\n\nPrecision / Specificity for classification\nRegression coeficient for regression\nWill be extensively discussed later."
+    "section": "Measuring Narrow AI",
+    "text": "Measuring Narrow AI\n\nPrecision / Specificity for classification\nRegression coefficient for regression\nWill be extensively discussed later."
   },
   {
     "objectID": "part0.html#measuring-artificial-general-intelligence",
@@ -486,15 +486,15 @@
     "objectID": "part0.html#what-is-a-machine",
     "href": "part0.html#what-is-a-machine",
     "title": "Machine Learning Techniques - 0",
-    "section": "What is a machine",
-    "text": "What is a machine\n\nLogical model\nMathematical model\nTheory-driven\nData-driven"
+    "section": "What is a machine ?",
+    "text": "What is a machine ?\n\nLogical model\nMathematical function\nStatistical model\nRule-based Process"
   },
   {
-    "objectID": "part0.html#machine-learning-vs-human-learning",
-    "href": "part0.html#machine-learning-vs-human-learning",
+    "objectID": "part0.html#machine-learning",
+    "href": "part0.html#machine-learning",
     "title": "Machine Learning Techniques - 0",
-    "section": "Machine learning vs Human learning",
-    "text": "Machine learning vs Human learning\n\nMachine learn through optimization.\n\nNumerical optimizations with objective function\nReinforcement learning\nGenetic algorithms\n\n\nOptimization can be see widely such as PCA is a optimization to maximize variance."
+    "section": "Machine Learning",
+    "text": "Machine Learning\n\nMachine learn through optimization.\n\nNumerical optimizations with objective function\nReinforcement learning\nGenetic algorithms\n\n\nThe term optimization is used loosely, i.e. PCA is an optimization to maximize variance."
   },
   {
     "objectID": "part0.html#major-dates-and-periods",
@@ -508,7 +508,7 @@
     "href": "part0.html#conclusion",
     "title": "Machine Learning Techniques - 0",
     "section": "Conclusion",
-    "text": "Conclusion\n\nArtificial intelligence is a wide concept with multiple definitions\n\nhuman-oriented\nmathematic-oriented\nintelligence-centered\n\nIntelligence is a a wide notion when applied to human.\nMachine intelligence"
+    "text": "Conclusion\n\nArtificial intelligence is a wide concept with multiple definitions\n\nhuman-oriented\nmathematic-oriented\nintelligence-centered\n\nIntelligence is a a wide notion when applied to humans.\nMachine intelligence"
   },
   {
     "objectID": "part0.html#objectives",
@@ -522,7 +522,7 @@
     "href": "part0.html#planning",
     "title": "Machine Learning Techniques - 0",
     "section": "Planning",
-    "text": "Planning\n\n\n\n\n\n25/10 PM\n\n\nPart 0 Introduction : – 1h30\nPart 1 Reminders and Foundations – 1h30\n\nTheory of probability – 30min\nStatistical modelling – 15min\nModel inference – 45min\nImportant definitions – 30min\n\nTP 0 – 1h\n\nFitting probability law\nModel selection / Fixed effect (type of errors)\n\n\n\n26/10 AM\n\n\nTP 1 – 2h\n\nData transformation / PCA\nProof: Cross-entropy from likelihood\n\nPart 2 Base of Machine Learning 1/2 – 2h\n\nA: Typology and nommenclatures – 1h\nB: Evaluation metrics – 1h\n\n\n\n\n\n\n08/11 PM\n\n\nTP 1 – 1h30\n\nLinear regression with few data\nLinear (logistic) regression with multiple features\nBias-Variance decomposition of Loss\n\nPart 2 Base of Machine Learning 1/2 – 30min\n\nC: Bottlenecks and Issues – 30min\n\nPart 3 Advanced Machine Learning –2h\n\nA: Feature engineering – 1h\nB: Model engineering 1/2 – 1h\n\n\n\n09/11 AM\n\n\nPart 3 Advanced Machine Learning –2h\n\nB: Model engineering 2/2 – 1h30\n\nTP 3 – 2h30"
+    "text": "Planning\n\n\n\n\n\n25/10 PM\n\n\nPart 0 Introduction : – 1h30\nPart 1 Reminders and Foundations – 1h30\n\nTheory of probability – 30min\nStatistical modelling – 15min\nModel inference – 45min\nImportant definitions – 30min\n\nTP 0 – 1h\n\nFitting probability law\nModel selection / Fixed effect (type of errors)\n\n\n\n26/10 AM\n\n\nTP 1 – 2h\n\nData transformation / PCA\nProof: Cross-entropy from likelihood\n\nPart 2 Base of Machine Learning 1/2 – 2h\n\nA: Typology and nomenclatures – 1h\nB: Evaluation metrics – 1h\n\n\n\n\n\n\n08/11 PM\n\n\nTP 1 – 1h30\n\nLinear regression with few data\nLinear (logistic) regression with multiple features\nBias-Variance decomposition of Loss\n\nPart 2 Base of Machine Learning 1/2 – 30min\n\nC: Bottlenecks and Issues – 30min\n\nPart 3 Advanced Machine Learning –2h\n\nA: Feature engineering – 1h\nB: Model engineering 1/2 – 1h\n\n\n\n09/11 AM\n\n\nPart 3 Advanced Machine Learning –2h\n\nB: Model engineering 2/2 – 1h30\n\nTP 3 – 2h30"
   },
   {
     "objectID": "part0.html#references",
