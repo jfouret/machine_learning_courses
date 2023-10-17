@@ -1,0 +1,7 @@
+---
+title: "Machine Learning Techniques"
+---
+
+- [Introduction to Artificial Intelligence and Machine Learning](part0.html)
+- [Mathematical foundations to Modelling and ML](part1.html)
+

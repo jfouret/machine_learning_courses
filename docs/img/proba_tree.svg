@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="57.009857mm"
+   height="42.586727mm"
+   viewBox="0 0 57.009857 42.586727"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="proba_tree.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="160.02541"
+     inkscape:cy="138.16828"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="240.42842"
+       y="259.16309"
+       width="74.938728"
+       height="34.346916"
+       id="rect1948" />
+    <rect
+       x="240.42842"
+       y="259.16309"
+       width="74.938728"
+       height="34.346916"
+       id="rect1948-7" />
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-62.63163,-111.8887)">
+    <text
+       xml:space="preserve"
+       transform="matrix(0.6203007,0,0,0.76496285,-56.261009,-92.175902)"
+       id="text1946"
+       style="font-weight:bold;font-size:16px;line-height:1.95;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';white-space:pre;shape-inside:url(#rect1948)"><tspan
+         x="240.42773"
+         y="278.92031"
+         id="tspan8899">head</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.69456921,0,0,0.73160422,-72.180361,-49.749608)"
+       id="text1946-7"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;line-height:1.95;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect1948-7)"><tspan
+         x="240.42773"
+         y="278.92031"
+         id="tspan8901">tail</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 90.876211,119.3783 62.787203,134.24896"
+       id="path4284" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 90.876211,119.3783 62.787203,134.24896"
+       id="path4284-4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.660718;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 91.146911,148.78864 62.787203,134.24896"
+       id="path4284-4-1" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:6.32401px;line-height:1.95;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';stroke-width:0.395251"
+       x="71.168037"
+       y="120.85767"
+       id="text7718"
+       transform="scale(0.98537102,1.0148462)"><tspan
+         sodipodi:role="line"
+         id="tspan7716"
+         style="stroke-width:0.395251"
+         x="71.168037"
+         y="120.85767">0.5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:5.93162px;line-height:1.95;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';stroke-width:0.370726"
+       x="76.824387"
+       y="138.83478"
+       id="text7718-8"
+       transform="scale(0.92423069,1.081981)"><tspan
+         sodipodi:role="line"
+         id="tspan7716-3"
+         style="stroke-width:0.370726"
+         x="76.824387"
+         y="138.83478">0.5</tspan></text>
+  </g>
+</svg>

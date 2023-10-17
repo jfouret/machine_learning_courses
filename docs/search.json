@@ -1,0 +1,534 @@
+[
+  {
+    "objectID": "part1.html#table-of-contents",
+    "href": "part1.html#table-of-contents",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Table of Contents",
+    "text": "Table of Contents"
+  },
+  {
+    "objectID": "part1.html#probability",
+    "href": "part1.html#probability",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Probability",
+    "text": "Probability\n\nDefinition: The likelihood of an event to occur\n\\(\\Omega\\): All possible events\nExample with probability tree\n\n\n\n\\[\\sum_{\\omega \\in \\Omega}\\mathbb{P}(\\omega) = 1\\]"
+  },
+  {
+    "objectID": "part1.html#union-intersect-and-conditional",
+    "href": "part1.html#union-intersect-and-conditional",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Union, Intersect and conditional",
+    "text": "Union, Intersect and conditional\n\nUnion: \\(\\mathbb{P}(A \\cup B) = \\mathbb{P}(A) + \\mathbb{P}(B)\\)\nIntersect: \\(\\mathbb{P}(A \\cap B) = \\mathbb{P}(A) \\times \\mathbb{P}(B)\\)\nConditional: \\(P(A|B) = \\frac{P(A \\cap B)}{P(B)}\\)\nBayes Theorem: \\[\nP(A|B) = \\frac{P(B|A)P(A)}{P(B)}\n\\]"
+  },
+  {
+    "objectID": "part1.html#total-probability-theorem---marginal",
+    "href": "part1.html#total-probability-theorem---marginal",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Total Probability Theorem - Marginal",
+    "text": "Total Probability Theorem - Marginal\n\n\\(\\Omega = \\{A, B_1, ..., B_n\\}\\)\n\\[P(A) = \\sum_{i} P(A|B_i)P(B_i)\\]\n\\[P(A) = \\sum_{i} P(A \\cap B_i)\\]"
+  },
+  {
+    "objectID": "part1.html#random-variable",
+    "href": "part1.html#random-variable",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Random variable",
+    "text": "Random variable\n\n\nProbability Space \\((\\Omega, \\mathcal{F}, \\mathbb{P})\\):\n\n\\(\\Omega\\): Sample space containing all possible outcomes.\n\\(\\mathcal{F}\\): set of events, subsets of \\(\\Omega\\) to which we assign probabilities.\n\\(\\mathbb{P}\\): Probability measure assigning a probability to each event in \\(\\mathcal{F}\\).\n\nMeasurable Space E where values or intervals are associated with events.\n\nExamples: \\(\\mathbb{R}\\), \\(\\mathbb{R}^+\\), \\(\\mathbb{N}\\) or \\(\\{0,1\\}\\)\n\nDefinition: A random variable \\(X\\) is a measurable function \\(\\Omega \\mapsto E\\)"
+  },
+  {
+    "objectID": "part1.html#discrete-vs-continuous",
+    "href": "part1.html#discrete-vs-continuous",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Discrete vs Continuous",
+    "text": "Discrete vs Continuous\n\nDiscrete: Countable and finite within any range.\nContinuous: Uncountable and infinite within any range."
+  },
+  {
+    "objectID": "part1.html#distribution-function",
+    "href": "part1.html#distribution-function",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Distribution function",
+    "text": "Distribution function\n\nCumulative distribution function: \\(F_X(x) = \\mathbb{P}(X \\leq x)\\)\nDensity function for continuous variables:\n\n\\(f(x)\\) such that \\(\\mathbb{P}(a \\leq X \\leq b) = \\int_a^b f(x) dx\\)\n\\(F_X(x) = \\int_{-\\infty}^x f(u) du\\)"
+  },
+  {
+    "objectID": "part1.html#moments-of-random-variables",
+    "href": "part1.html#moments-of-random-variables",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Moments of Random variables",
+    "text": "Moments of Random variables\n\n\nExpectation:\n\nDiscrete: \\(E(X) = \\sum_{i} x_i P(X=x_i)\\)\nContinuous: \\(E(X) = \\int x f(x) dx\\)\n\nThe nth raw moment: \\(\\mu'_n = E(X^n)\\)\nThe nth central moment: \\(\\mu_n = E[(X-E(X))^n]\\)\nVariance: second central moment \\(\\mu_2\\)\n\n\\(\\text{Var}(X) = E[(X - E(X))^2]\\)\n\\(\\text{Var}(X) = E(X^2) - [E(X)]^2\\)\n\nStandard deviation \\(\\sigma\\) is defined such as \\(\\sigma^2 = \\text{Var}(X)\\)"
+  },
+  {
+    "objectID": "part1.html#standardized-moments",
+    "href": "part1.html#standardized-moments",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Standardized moments",
+    "text": "Standardized moments\n\n\n\nThe nth standardized moment \\(\\gamma_k = \\frac{\\mu_k}{(\\sigma)^k}\\)\n\\(\\gamma_1 = 0\\), \\(\\gamma_2 = 1\\)\nSkewness the 3rd standardized moment:\n\nSkewness is a measure of assymetry around the function mean or location.\n\nKurtosis the 3rd standardized moment:\n\n(from Greek: κυρτός, kyrtos or kurtos, meaning “curved, arching”)\nKurtosis is a measure of tailedness"
+  },
+  {
+    "objectID": "part1.html#continuous-law-normal",
+    "href": "part1.html#continuous-law-normal",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Continuous Law : Normal",
+    "text": "Continuous Law : Normal\n\n\n\n\nNormal(Gaussian) distribution\n2 parameters\n\n\\(\\mu\\) – location or mean\n\\(\\sigma &gt; 0\\) – standard deviation\n\n\n\n\n\nMoment\nValue\n\n\n\n\n\\(E(X)\\)\n\\(\\mu\\)\n\n\n\\(\\text{Var}(X)\\)\n\\(\\sigma^2\\)\n\n\nSkewness\n0\n\n\nKurtosis\n3\n\n\n\n\n\n\n\\(f(x) = \\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}\\)"
+  },
+  {
+    "objectID": "part1.html#continuous-law-gamma",
+    "href": "part1.html#continuous-law-gamma",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Continuous Law : Gamma",
+    "text": "Continuous Law : Gamma\n\n\n\n\nGamma distribution (Real Positive)\n2 parameters\n\n\\(\\alpha &gt; 0\\) – shape\n\\(\\sigma &gt; 0\\) – rate\n\n\n\n\n\nMoment\nValue\n\n\n\n\n\\(E(X)\\)\n\\(\\frac{\\alpha}{\\lambda}\\)\n\n\n\\(\\text{Var}(X)\\)\n\\(\\frac{\\alpha}{\\lambda^2}\\)\n\n\nSkewness\n\\(\\frac{2}{\\sqrt{\\alpha}}\\)\n\n\nKurtosis\n\\(3 + \\frac{6}{\\alpha}\\)\n\n\n\n\n\n\n\\(f(x) = \\frac{\\lambda^\\alpha x^{\\alpha-1}}{\\Gamma(\\alpha)} e^{-\\lambda x}\\)"
+  },
+  {
+    "objectID": "part1.html#other-laws",
+    "href": "part1.html#other-laws",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Other laws",
+    "text": "Other laws\n\nUniform\nBeta: for continuous values between 0 and 1\nBinomial/Bernouilli: Positive discrete"
+  },
+  {
+    "objectID": "part1.html#law-of-large-numbers-lln",
+    "href": "part1.html#law-of-large-numbers-lln",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Law of Large Numbers (LLN)",
+    "text": "Law of Large Numbers (LLN)\n\nDefintions As the number of independent trials increases, the sample average converges to the expected value.\nFor any \\(\\epsilon &gt; 0\\)\n\n\\(\\lim_{n \\to \\infty} \\mathbb{P}\\left(|\\bar{X}_n - \\mu| &gt; \\epsilon\\right) = 0\\) as \\(n \\rightarrow \\infty\\),\n\\(\\bar{X}_n\\) is the sample average of n observations."
+  },
+  {
+    "objectID": "part1.html#lln-in-ml",
+    "href": "part1.html#lln-in-ml",
+    "title": "Machine Learning Techniques - 1",
+    "section": "LLN in ML",
+    "text": "LLN in ML\n\nModel Training: Given more training data, the model’s performance on the training data (like the loss) tends to stabilize, providing a more reliable estimate of its generalization to unseen data (if no bias).\nEvaluation Metrics: As we evaluate a model on more samples, metrics like accuracy, F1 score, or Mean Squared Error will converge to a more consistent value, representing the model’s true performance."
+  },
+  {
+    "objectID": "part1.html#central-limit-theorem",
+    "href": "part1.html#central-limit-theorem",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Central limit theorem",
+    "text": "Central limit theorem\nThe distribution of the sum (or average) of a large number of independent, identically distributed random variables approaches a normal (Gaussian) distribution, regardless of the original distribution of the variables.\n\nGiven \\(X_1, X_2, ...\\) independent and identically distributed with mean \\(\\mu\\) and variance \\(\\sigma^2\\)\n\\(\\frac{\\bar{X}_n - \\mu}{\\sigma/\\sqrt{n}} \\xrightarrow{n \\to \\infty} \\mathcal{N}(0,1)\\)"
+  },
+  {
+    "objectID": "part1.html#central-limit-theorem-in-ml",
+    "href": "part1.html#central-limit-theorem-in-ml",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Central limit theorem in ML",
+    "text": "Central limit theorem in ML\n\n\nIn the ML context:\n\nthe sampling distribution tends to be normal\nregardless the true distribution\n\nPrediction errors tend to be normally distributed when:\n\nthe sampling increase, when working in aggregate/batch\nthe model complexity increase (number of parameters)\n\nEnsemble Methods:\n\nAggregation of models\n\nK-fold validation:\n\nSplits of training/validation\nmetrics tend to be normally distributed"
+  },
+  {
+    "objectID": "part1.html#hypothesis-testing",
+    "href": "part1.html#hypothesis-testing",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Hypothesis testing",
+    "text": "Hypothesis testing\n\nSystematic method used in statistics\nEvaluate two competing statements\nWhich is more consistent with the observed data ?\nOften based on assumptions on underlying distributions/dependencies ?"
+  },
+  {
+    "objectID": "part1.html#hypothesis-testing-null-hypothesis",
+    "href": "part1.html#hypothesis-testing-null-hypothesis",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Hypothesis testing: Null hypothesis",
+    "text": "Hypothesis testing: Null hypothesis\n\nThe null hypothesis (\\(H_0\\)) is a statement about a population\nAbout one or several parameters (e.g. \\(\\mu\\))\nTypically, \\(H_0\\) represents\n\nthe status quo (\\(\\mu = 0\\))\na situation of no effect or no difference (\\(\\mu_1 = \\mu_2\\))"
+  },
+  {
+    "objectID": "part1.html#hypothesis-testing-power-errors",
+    "href": "part1.html#hypothesis-testing-power-errors",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Hypothesis testing: Power/ errors",
+    "text": "Hypothesis testing: Power/ errors\n\nTwo types of errors in hypothesis testing (Neyman and Pearson (1933)):\n\nType I error (False positive):\n\nRejecting \\(H_0\\) when it is actually true.\nDenoted by \\(\\alpha\\) (alpha)\naka significance level.\n\nType II error (False negative):\n\nNot rejecting \\(H_0\\) when it is false.\ndenoted by \\(\\beta\\) (beta)\npower of a test is \\(\\pi = 1-\\beta\\)\nThe power is the probability of correctly rejecting a false \\(H_0\\)."
+  },
+  {
+    "objectID": "part1.html#hypothesis-testing-test-statictic",
+    "href": "part1.html#hypothesis-testing-test-statictic",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Hypothesis testing: Test statictic",
+    "text": "Hypothesis testing: Test statictic\n\nA test statistic is a\n\nStandardized value calculated from sample data\nThe realization of a random variable with a known distribution\n\n\n\nWhen testing for \\(H_0: \\mu_X = \\mu_0\\) \\(t = \\frac{\\bar{\\mu_X} - 0}{\\bar{\\sigma_X}\\sqrt{n}}\\) with:\n\n\n\\(\\bar{\\mu_X}\\): sample mean\n\\(\\bar{\\sigma_X}\\): sample standard deviation\n\\(n\\): sample size\n\n\nIn case where \\(X \\sim \\mathcal{N}(0,1)\\), then \\(X \\sim \\mathcal{S}(\\nu)\\) (W. S. Gosset) (1908))\n\\(\\nu\\) is the degrees of freedom (\\(n-1\\)) \\(\\to\\) shape of the student-distribution."
+  },
+  {
+    "objectID": "part1.html#hypothesis-testingp-value",
+    "href": "part1.html#hypothesis-testingp-value",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Hypothesis testing:P-Value",
+    "text": "Hypothesis testing:P-Value\n\nThe p-value measures the evidence against a null hypothesis.\nMathematically:\n\n\\(P(T \\geq t \\,|\\, H_0 \\, \\text{is true})\\) for right-tailed tests\n\\(P(T \\leq t \\,|\\, H_0 \\, \\text{is true})\\) for left-tailed tests\n\nIt is the probability of observing a test statistic:\n\nas extreme, or more extreme, than from the sample\nassuming that the null hypothesis is true.\nif low, then data are inconsistent with \\(H_0\\).\n\nGeneral guideline:\n\nIf \\(p-value \\leq \\alpha\\), then reject \\(H_0\\), else do not reject."
+  },
+  {
+    "objectID": "part1.html#fixed-effects",
+    "href": "part1.html#fixed-effects",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Fixed effects",
+    "text": "Fixed effects\nParameter(s) in a model that do not vary across sampling.\nExample: Linear regression with fixed effects\n\\[\n\\left\\{\n  \\begin{array}{ll}\n    y_{i} = \\alpha + \\beta x_{i} + \\epsilon_{i} \\\\\n    \\epsilon_{i} \\sim \\mathcal{N}(0,1)\n    \\end{array}\n\\right.\n\\] Where \\(\\alpha\\) and \\(\\beta\\) are fixed effects.\nAll the sampling variation is absobed in the error.\n\\(\\rightarrow\\) Mostly used in ML"
+  },
+  {
+    "objectID": "part1.html#random-effect",
+    "href": "part1.html#random-effect",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Random effect",
+    "text": "Random effect\n\nParameters are random variables\nExample: Linear regression with random effects:\n\\[\n\\left\\{\n  \\begin{array}{ll}\n    y_{it} = \\alpha_i + \\beta_i x_{it} + \\epsilon_{it} \\\\\n    \\alpha_i \\sim \\mathcal{N}(\\mu_\\alpha, \\tau^2_\\alpha) \\\\\n    \\beta_i \\sim \\mathcal{N}(\\mu_\\beta, \\tau^2_\\beta) \\\\\n    \\epsilon_{it} \\sim \\mathcal{N}(0, \\sigma^2)\n    \\end{array}\n\\right.\n\\]\n\n\\(t \\to\\) sampling/observation\n\\(i \\to\\) group (e.g. gender if y is size)"
+  },
+  {
+    "objectID": "part1.html#mixed-effects",
+    "href": "part1.html#mixed-effects",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Mixed Effects",
+    "text": "Mixed Effects\n\nGeneralization\nParameters can be either\n\nFixed (fixed effect)\nRandom variable (randome effect)"
+  },
+  {
+    "objectID": "part1.html#multilevelhierarchical-models",
+    "href": "part1.html#multilevelhierarchical-models",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Multilevel/Hierarchical models",
+    "text": "Multilevel/Hierarchical models\n\nA type of mixed-effects model where data is nested within multiple levels of groups.\n\\[\n\\left\\{\n  \\begin{array}{ll}\n    y_{ijkt} =  \\alpha_i + \\beta_j x_j + \\gamma_k z_k + \\epsilon_{ijkt} \\\\\n    \\alpha_i \\sim \\mathcal{N}(\\mu_{\\alpha}, \\sigma) \\\\\n    \\beta_j \\sim \\mathcal{N}(\\mu_{\\beta}, \\sigma) \\\\\n    \\gamma_k \\sim \\mathcal{N}(\\mu_{\\gamma}, \\sigma) \\\\\n    \\epsilon_{ijkt} \\sim \\mathcal{N}(0, 1)\n    \\end{array}\n\\right.\n\\]\n\n\\(i \\to\\) student-level / no features\n\\(j \\to\\) classroom-level / \\(x_j\\) feature like class size\n\\(k \\to\\) school-level / \\(z_k\\) feature like school budget\n\\(t \\to\\) sampling/obsevation (multiple tests)"
+  },
+  {
+    "objectID": "part1.html#nested-models",
+    "href": "part1.html#nested-models",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Nested models",
+    "text": "Nested models\n\nA specificity from another model\nExample: no school effect: \\(\\gamma_k = 0\\)\nImportant for hypothesis testing with a test elaborated to compare nested models (seen after)"
+  },
+  {
+    "objectID": "part1.html#likelihood-definition-for-a-model",
+    "href": "part1.html#likelihood-definition-for-a-model",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Likelihood definition for a model",
+    "text": "Likelihood definition for a model\n\nThe likelihood is a probability defined for a model \\[\n\\mathbb{P}_\\mathcal{M}( y | \\theta)\n\\]\nwith:\n\n\\(\\mathcal{M}\\) the model\n\\(\\theta\\) the parameters\n\\(y\\) the observations / measurements / sampling\n\n\n\nThe probability of the parameters given the observation and a model\nHow well the model explains the observed data ?\n\n\nThe likelihood is a function of the parameters \\(\\mathcal{L}_{\\mathcal{M}}(\\theta) = \\mathcal{L}(\\theta)\\)"
+  },
+  {
+    "objectID": "part1.html#maximum-likelihood-estimation-mle",
+    "href": "part1.html#maximum-likelihood-estimation-mle",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Maximum Likelihood Estimation (MLE)",
+    "text": "Maximum Likelihood Estimation (MLE)\n\n\nMLE aims to find the parameters \\(\\theta\\) that maximizes the likelihood function \\(\\mathcal{L}(\\theta)\\).\n\n\\[\\hat{\\theta}_{MLE} = \\arg \\max_{\\theta} \\mathcal{L}(\\theta)\\]\n\n\\(\\hat{\\theta}_{MLE}\\) is the maximum likehood estimates\ninferred from likelihood maximization"
+  },
+  {
+    "objectID": "part1.html#mle-and-fixed-effects-normal",
+    "href": "part1.html#mle-and-fixed-effects-normal",
+    "title": "Machine Learning Techniques - 1",
+    "section": "MLE and fixed effects, normal",
+    "text": "MLE and fixed effects, normal\n\nFixed effect model and normally distributed error\n\\[\n\\left\\{\n  \\begin{array}{ll}\n    y_{i} = f_{\\theta}(xi) + \\epsilon_{i} \\\\\n    \\epsilon_{i} \\sim \\mathcal{N}(0,\\sigma)\n    \\end{array}\n\\right.\n\\]\nFrom the normal density function: \\(\\mathbb{P}(\\epsilon_i | \\theta) = \\frac{1}{\\sqrt{2\\pi\\sigma^2}} \\exp \\left( -\\frac{(\\epsilon_i)^2}{2\\sigma^2} \\right)\\)\nor \\(\\epsilon_i = y_i - \\hat{y_i}\\)\nThen : \\(\\mathcal{L}(\\theta) = \\prod_{i=1}^{n} \\mathbb{P}(\\epsilon_i | \\theta)\\)"
+  },
+  {
+    "objectID": "part1.html#from-likelihood-to-loss-least-square",
+    "href": "part1.html#from-likelihood-to-loss-least-square",
+    "title": "Machine Learning Techniques - 1",
+    "section": "From Likelihood to loss: Least Square",
+    "text": "From Likelihood to loss: Least Square\n\\[\nlog(\\mathcal{L}(\\theta)) = - \\frac{n}{2} log(2 \\pi \\sigma) -  \\frac{1}{2 \\sigma^2} \\sum_i{(y_i - \\hat{y_i})^2}\n\\]\n\\[\nlog(\\mathcal{L}(\\theta)) \\propto  - \\sum_i{(y_i - \\hat{y_i})^2}\n\\]\n\\[\n\\arg \\max_{\\theta} \\mathcal{L}(\\theta) = \\arg \\min_{\\theta} \\sum_i{(y_i - \\hat{y_i})^2}\n\\]\n\\(\\to\\) Least squared is equivalent to MLE in such problem"
+  },
+  {
+    "objectID": "part1.html#information-criteria-for-model-selection",
+    "href": "part1.html#information-criteria-for-model-selection",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Information Criteria for model selection",
+    "text": "Information Criteria for model selection\nUsed to balance fit and complexity. Two common criteria:\n\nAIC: \\(-2\\log(\\mathcal{L}) + 2k\\)\nBIC: \\(-2\\log(\\mathcal{L}) + k\\log(n)\\)\n\nWhere \\(L\\) is likelihood, \\(k\\) is number of parameters, and \\(n\\) is sample size."
+  },
+  {
+    "objectID": "part1.html#likelihood-ratio-test-for-nested-model",
+    "href": "part1.html#likelihood-ratio-test-for-nested-model",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Likelihood ratio test for nested model",
+    "text": "Likelihood ratio test for nested model\nGiven:\n\n\\(\\mathcal{L}_1\\): likelihood under the full (or complex) model.\n\\(\\mathcal{L}_0\\): likelihood under the restricted (or simpler) model.\nTest statistic: \\(D = -2(\\log(\\mathcal{L}_0) - \\log(\\mathcal{L}_1))\\)\nWilks’ Theorem \\(D \\xrightarrow{n \\to \\infty} \\chi^2\\)"
+  },
+  {
+    "objectID": "part1.html#general-linear-regression-glr",
+    "href": "part1.html#general-linear-regression-glr",
+    "title": "Machine Learning Techniques - 1",
+    "section": "General linear regression (GLR)",
+    "text": "General linear regression (GLR)\n\nA general linear problem can be defined as: \\[Y = XB + U\\]\nWhere:\n\n\\(Y\\) is an \\(n \\times m\\) matrix of \\(n\\) observations of \\(m\\) variables.\n\\(X\\) is an \\(n \\times p\\) matrix of \\(n\\) observations of \\(p\\) features.\n\\(B\\) is an \\(p \\times m\\) matrix of fixed-effect parameters for each pair variable-feature.\n\\(U\\) is an \\(n \\times m\\) matrix for errors."
+  },
+  {
+    "objectID": "part1.html#glr-minimize-the-ssr",
+    "href": "part1.html#glr-minimize-the-ssr",
+    "title": "Machine Learning Techniques - 1",
+    "section": "GLR: Minimize the SSR",
+    "text": "GLR: Minimize the SSR\n\n\\(SSR(B) = (Y - XB)^T (Y - XB)\\)\n\\(SSR(B) = Y^T Y − Y^T X B − B^T X^T Y + B^T X^T X B\\)\n\\(\\Delta SSR(B) = 0 - X^TY - X^TY + 2 X^T X B\\)\n\\(\\Delta SSR(B) = - 2X^TY + 2 X^T X B\\)\n\nTo find the optimum of \\(SSR(B)\\), we try to resolve \\(\\Delta SSR(B) = 0\\), ie the equation:\n\\[X^TY =  X^T X B\\]"
+  },
+  {
+    "objectID": "part1.html#glr-analytical-resolution",
+    "href": "part1.html#glr-analytical-resolution",
+    "title": "Machine Learning Techniques - 1",
+    "section": "GLR: Analytical resolution",
+    "text": "GLR: Analytical resolution\nIf \\(X^T X\\) is invertible, then\n\\[\\hat{B} = (X^T X)^{-1} X^TY\\]\nFor \\(X\\) to be invertible, it needs to be a full rank matrix:\n\nNo feature (column in \\(X\\)) can be expressed as a linear combination of other features\n\\(n \\geq p\\)\nNon-zero variance for a feature"
+  },
+  {
+    "objectID": "part1.html#grid-search-optimization",
+    "href": "part1.html#grid-search-optimization",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Grid search optimization",
+    "text": "Grid search optimization\n\nSystematic search through a pre-defined space for parameters.\nEvaluates each combination to find the best.\nExample for minimization\n\nInitialize: parameter space Θ, best_score = ∞\nfor each parameter combination θ in Θ do\n    Compute score S using θ\n    if S &lt; best_score then\n        best_score = S\n        best_parameters = θ\n    end if\nend for\nReturn best_parameters"
+  },
+  {
+    "objectID": "part1.html#newton-optimization",
+    "href": "part1.html#newton-optimization",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Newton Optimization",
+    "text": "Newton Optimization\nIterative method using gradient and Hessian to find parameter values that maximize or minimize the objective.\nInitialize: parameter vector θ, tolerance ε, max_iterations M\nfor i = 1 to M do\n    Compute the gradient ∇f(θ) and the Hessian H(θ)\n    Update θ: θ = θ - H(θ)^-1 ∇f(θ)\n    if ||∇f(θ)|| &lt; ε then\n        break\n    end if\nend for\nReturn θ"
+  },
+  {
+    "objectID": "part1.html#simplex-optimization",
+    "href": "part1.html#simplex-optimization",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Simplex Optimization",
+    "text": "Simplex Optimization\nNelder-Mead method; moves a simplex in the parameter space toward optimal values.\nInitialize: simplex vertices θ_1, θ_2, ..., θ_n+1\nwhile termination criteria not met do\n    Order the vertices by objective function value\n    Compute centroid of all but worst vertex\n    Reflect worst vertex over centroid\n    if reflection improved then\n        Try expansion\n    else\n        Try contraction or reduction\n    end if\nend while\nReturn best vertex"
+  },
+  {
+    "objectID": "part1.html#gradient-descent-optimization",
+    "href": "part1.html#gradient-descent-optimization",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Gradient descent Optimization",
+    "text": "Gradient descent Optimization\nIterative method adjusting parameters in the direction of steepest decrease of the objective function.\nInitialize: parameter vector θ, learning rate α, tolerance ε, max_iterations M\nfor i = 1 to M do\n    Compute the gradient ∇f(θ)\n    Update θ: θ = θ - α ∇f(θ)\n    if ||∇f(θ)|| &lt; ε then\n        break\n    end if\nend for\nReturn θ"
+  },
+  {
+    "objectID": "part1.html#bfgs-optimization",
+    "href": "part1.html#bfgs-optimization",
+    "title": "Machine Learning Techniques - 1",
+    "section": "BFGS Optimization",
+    "text": "BFGS Optimization\nQuasi-Newton method; approximates the inverse Hessian to update parameters.\nInitialize: parameter vector θ, inverse Hessian approximation B, tolerance ε, max_iterations M\nfor i = 1 to M do\n    Compute the gradient ∇f(θ)\n    Compute the search direction p = -B ∇f(θ)\n    Perform line search to find step size α\n    Update θ: θ = θ + αp\n    Update B using the BFGS update formula\n    if ||∇f(θ)|| &lt; ε then\n        break\n    end if\nend for\nReturn θ"
+  },
+  {
+    "objectID": "part1.html#jacobianhessian-in-optimization",
+    "href": "part1.html#jacobianhessian-in-optimization",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Jacobian/Hessian in Optimization",
+    "text": "Jacobian/Hessian in Optimization\n\nFor some objective function, it might be complex to get the analytical functino for the the gradient or the hessian.\nGradiant/Hessian can be point-approximated by numerical methods.\nSome optimization methods don’t require computation of the full Jacobian or Hessian, reducing computational demand."
+  },
+  {
+    "objectID": "part1.html#boundaries",
+    "href": "part1.html#boundaries",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Boundaries",
+    "text": "Boundaries\nIn optimization, constraints can be set to ensure parameter values to remain within desired bounds."
+  },
+  {
+    "objectID": "part1.html#stochastic-gradient-descent",
+    "href": "part1.html#stochastic-gradient-descent",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Stochastic Gradient Descent",
+    "text": "Stochastic Gradient Descent\nSGD; updates parameters using a randomly chosen subset of the data. Suitable for large datasets.\nInitialize: parameter vector θ, learning rate α, tolerance ε, max_iterations M, batch_size b\nfor i = 1 to M do\n    Randomly select a mini-batch of size b from the data\n    Compute the gradient ∇f(θ) using the mini-batch\n    Update θ: θ = θ - α ∇f(θ)\n    if average change in θ over recent iterations &lt; ε then\n        break\n    end if\nend for\nReturn θ"
+  },
+  {
+    "objectID": "part1.html#the-bayesian-framework",
+    "href": "part1.html#the-bayesian-framework",
+    "title": "Machine Learning Techniques - 1",
+    "section": "The Bayesian framework",
+    "text": "The Bayesian framework\n\n\nPosterior probability: \\(\\mathbb{P}(\\theta | y)\\)\nPrior: \\(\\mathbb{P}(\\theta)\\)\nLikelihood: \\(\\mathcal{L}(\\theta) = \\mathbb{P}( y | \\theta)\\)\n\n\\[ \\mathbb{P}(\\theta | y) = \\mathcal{L}(\\theta) \\mathbb{P}(\\theta)\\]\n\nExpectation in either likelihood (frequentism) or posterior (Bayesian)\nMaximum Posterior optimization is equivalent to MLE with uniform priors."
+  },
+  {
+    "objectID": "part1.html#x-data-or-features",
+    "href": "part1.html#x-data-or-features",
+    "title": "Machine Learning Techniques - 1",
+    "section": "X, Data or Features",
+    "text": "X, Data or Features"
+  },
+  {
+    "objectID": "part1.html#y-targets-predicted-values-or-transformed-values",
+    "href": "part1.html#y-targets-predicted-values-or-transformed-values",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Y, Targets, Predicted Values or Transformed Values",
+    "text": "Y, Targets, Predicted Values or Transformed Values"
+  },
+  {
+    "objectID": "part1.html#mf-model-and-hyperparameters",
+    "href": "part1.html#mf-model-and-hyperparameters",
+    "title": "Machine Learning Techniques - 1",
+    "section": "M/F, Model and Hyperparameters",
+    "text": "M/F, Model and Hyperparameters"
+  },
+  {
+    "objectID": "part1.html#predict-transform-fit-and-infer",
+    "href": "part1.html#predict-transform-fit-and-infer",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Predict, Transform, Fit and Infer",
+    "text": "Predict, Transform, Fit and Infer"
+  },
+  {
+    "objectID": "part1.html#conclusion",
+    "href": "part1.html#conclusion",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nProbability theory is essential\nStatistical models at the core of ML\nLikelihood function and maximization\nFrom likelihood to Least Square\nSolving through optimization"
+  },
+  {
+    "objectID": "part1.html#references",
+    "href": "part1.html#references",
+    "title": "Machine Learning Techniques - 1",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\nNeyman, J., and E. S. Pearson. 1933. “On the Problem of the Most Efficient Tests of Statistical Hypotheses.” Philosophical Transactions of the Royal Society of London. Series A 231: 289–337.\n\n\nW. S. Gosset), Student (pseudonym for. 1908. “The Probable Error of a Mean.” Biometrika 6 (1): 1–25."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Machine Learning Techniques",
+    "section": "",
+    "text": "Introduction to Artificial Intelligence and Machine Learning\nMathematical foundations to Modelling and ML"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "part0.html#table-of-contents",
+    "href": "part0.html#table-of-contents",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Table of Contents",
+    "text": "Table of Contents"
+  },
+  {
+    "objectID": "part0.html#can-machine-think",
+    "href": "part0.html#can-machine-think",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Can Machine Think ?",
+    "text": "Can Machine Think ?\nTuring (1950)\n\nDefining a machine\nUnderstanding “thinking”"
+  },
+  {
+    "objectID": "part0.html#the-imitation-game",
+    "href": "part0.html#the-imitation-game",
+    "title": "Machine Learning Techniques - 0",
+    "section": "The Imitation Game",
+    "text": "The Imitation Game\n\n\n\nContext:\n\n A  →  Man \n B  →  Woman \n C  →  Interrogator \n\nRules:\n\nGenders of  A  and  B  are hidden to  C \n C  interrogates them\nResponses are typewritten\n\n\nObjectives:\n\nFor  C :\n\nDetermine the Gender of  A  and  B \n\nFor  A : Deceive  C \nFor  B : Assist  C"
+  },
+  {
+    "objectID": "part0.html#what-if-a-is-a-machine",
+    "href": "part0.html#what-if-a-is-a-machine",
+    "title": "Machine Learning Techniques - 0",
+    "section": "What if A is a machine ?",
+    "text": "What if A is a machine ?\nWould C be as often wrong ?"
+  },
+  {
+    "objectID": "part0.html#a-modern-experiment-the-imitation-game-revisited",
+    "href": "part0.html#a-modern-experiment-the-imitation-game-revisited",
+    "title": "Machine Learning Techniques - 0",
+    "section": "A Modern Experiment: The Imitation Game Revisited",
+    "text": "A Modern Experiment: The Imitation Game Revisited\nHuman or Not? A Gamified Approach to the Turing Test Jannai et al. (2023)\nOnline 2-player game:\n\nOne player asks questions and must guess “Human” or “Bot”\nThe other player responds and might be substituted by a bot\nBots are advanced LLM models (e.g., GPT-3)"
+  },
+  {
+    "objectID": "part0.html#turing-test-current-outcomes",
+    "href": "part0.html#turing-test-current-outcomes",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Turing test: Current outcomes",
+    "text": "Turing test: Current outcomes\n\n73% Chance to recognize a real person\n\n\n60% chance to recognize a bot\n\nIneffective strategies:\n\nChecking grammar, spelling, recent events\n\nEffective strategies:\n\nRecognizing known issues and biases\nIdentifying hallucinations"
+  },
+  {
+    "objectID": "part0.html#beyond-the-turing-test",
+    "href": "part0.html#beyond-the-turing-test",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Beyond The Turing test",
+    "text": "Beyond The Turing test"
+  },
+  {
+    "objectID": "part0.html#pionneered-definitions-of-ai",
+    "href": "part0.html#pionneered-definitions-of-ai",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Pionneered Definitions of AI",
+    "text": "Pionneered Definitions of AI\n McCarthy et al. (1955) \n\n\n\n“Artificial Intelligence is the science and engineering of making intelligent machines, especially intelligent computer programs.”\n\nFrom John McCarty (2007). Stanford University.\n\n\nArtificial Intelligence is “the science of making machines do things that would require intelligence if done by men.”\n\nfrom Marvin Minsky (1968). MIT Press."
+  },
+  {
+    "objectID": "part0.html#alternative-definitions",
+    "href": "part0.html#alternative-definitions",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Alternative definitions",
+    "text": "Alternative definitions\n\n\nHuman-oriented\n\n\n“We call programs intelligent if they exhibit behaviors that would be regarded intelligent if they were exhibited by human beings.” - Herbert Simon\n“AI is the attempt to make computers do what people think computers cannot do.” – Douglas Baker\n“AI is the study of how to make computers do things at which, at the moment, people are better.” – Elaine Rich and Kevin Knight\n\n\nMathematics-oriented\n\n\n“AI is the study of techniques for solving exponentially hard problems in polynomial time by exploiting knowledge about the problem domain.” – Elaine Rich\n“There is no intelligence in AI. It’s just pure mathematical optimization.” – Julia Luc\n\n\nIntelligence-oriented\n\n\n“Physicists ask what kind of place this universe is and seek to characterize its behavior systematically. Biologists ask what it means for a physical system to be living. We in AI wonder what kind of information-processing system can ask such questions.” – Avron Barr and Edward Feigenbaum"
+  },
+  {
+    "objectID": "part0.html#levels-of-ai",
+    "href": "part0.html#levels-of-ai",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Levels of AI",
+    "text": "Levels of AI\n\nNarrow AI: Specialized in one task. Translation\nBroad AI: Multimodel/Multitask. ChatBot\nGeneral AI (AGI): Can perform any intellectual task that a human can.\nSuperintelligent AI: Surpasses human abilities. It’s speculative and doesn’t exist yet."
+  },
+  {
+    "objectID": "part0.html#theories-of-intelligence",
+    "href": "part0.html#theories-of-intelligence",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Theories of intelligence",
+    "text": "Theories of intelligence\n\nTwo factor Theory (Spearmann)\nMultiple Intelligence (Gardner)\nEmotional Intelligence (Goleman)\nFluid vs. Crystallized Intelligence (Cattell)"
+  },
+  {
+    "objectID": "part0.html#what-makes-human-intelligence-unique",
+    "href": "part0.html#what-makes-human-intelligence-unique",
+    "title": "Machine Learning Techniques - 0",
+    "section": "What Makes Human Intelligence Unique ?",
+    "text": "What Makes Human Intelligence Unique ?\n\n\nInstinct: Innate behaviour Respiration\nMemory: The capacity to recall knowledge and events.\nLearn: The capability to acquire knowledge and skills.\nLogic and Reason: Ability to applies rules of logic to reach conclusions.\nEmotional Intelligence: Recognizing and understanding emotions in oneself and others.\nAbstraction/Concepts: Conceptualizing ideas and making connections between unrelated domains.\nCreativity: Generating novel ideas and solutions.\nAn so on …\n\n\n→ Human intelligence is multifaceted."
+  },
+  {
+    "objectID": "part0.html#machine-intelligence",
+    "href": "part0.html#machine-intelligence",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Machine Intelligence",
+    "text": "Machine Intelligence\n\nOperates based on algorithms and data.\nDoesn’t “understand” or “feel” in the way humans do.\nCan process information faster and more accurately than humans."
+  },
+  {
+    "objectID": "part0.html#measuring-human-intelligence",
+    "href": "part0.html#measuring-human-intelligence",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Measuring human intelligence",
+    "text": "Measuring human intelligence\n\nIQ Tests\nComplex and contraversary\nEducational exams\nno single definitive method"
+  },
+  {
+    "objectID": "part0.html#measuring-narrow-ia-intelligence",
+    "href": "part0.html#measuring-narrow-ia-intelligence",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Measuring Narrow IA intelligence",
+    "text": "Measuring Narrow IA intelligence\n\nPrecision / Specificity for classification\nRegression coeficient for regression\nWill be extensively discussed later."
+  },
+  {
+    "objectID": "part0.html#measuring-artificial-general-intelligence",
+    "href": "part0.html#measuring-artificial-general-intelligence",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Measuring Artificial General intelligence",
+    "text": "Measuring Artificial General intelligence\n\n\nGeneral Tests:\n\nAI2 Reasoning Challenge\nHellaSwag\nMMLU\nTruthfulQA\n\nField-specific Exams:\n\nUniversity exams (e.g., Bar exam, Math exams)\nMath challenges\n\n\n→ AGI measurement is closer to human intelligence assessment."
+  },
+  {
+    "objectID": "part0.html#definition",
+    "href": "part0.html#definition",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Definition",
+    "text": "Definition\nMachine Learning is a subset of AI where machines can learn from data."
+  },
+  {
+    "objectID": "part0.html#what-is-a-machine",
+    "href": "part0.html#what-is-a-machine",
+    "title": "Machine Learning Techniques - 0",
+    "section": "What is a machine",
+    "text": "What is a machine\n\nLogical model\nMathematical model\nTheory-driven\nData-driven"
+  },
+  {
+    "objectID": "part0.html#machine-learning-vs-human-learning",
+    "href": "part0.html#machine-learning-vs-human-learning",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Machine learning vs Human learning",
+    "text": "Machine learning vs Human learning\n\nMachine learn through optimization.\n\nNumerical optimizations with objective function\nReinforcement learning\nGenetic algorithms\n\n\nOptimization can be see widely such as PCA is a optimization to maximize variance."
+  },
+  {
+    "objectID": "part0.html#major-dates-and-periods",
+    "href": "part0.html#major-dates-and-periods",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Major Dates and Periods",
+    "text": "Major Dates and Periods\n\n1950: Turing’s “Computing Machinery and Intelligence”\n1956: Dartmouth Workshop - Birth of AI\n1980s: Rise of Expert Systems\n1990s: Machine Learning Gains Popularity\n2010s: Deep Learning Era Begins\n2020s: Emergence of Large Language Models"
+  },
+  {
+    "objectID": "part0.html#conclusion",
+    "href": "part0.html#conclusion",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nArtificial intelligence is a wide concept with multiple definitions\n\nhuman-oriented\nmathematic-oriented\nintelligence-centered\n\nIntelligence is a a wide notion when applied to human.\nMachine intelligence"
+  },
+  {
+    "objectID": "part0.html#objectives",
+    "href": "part0.html#objectives",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Objectives",
+    "text": "Objectives\n\nDefinition of Machine Learning\nMathematics and Statistics\nImplement and train models\nKnowledge and best practices\n\nFeature engineering\nModel engineering"
+  },
+  {
+    "objectID": "part0.html#planning",
+    "href": "part0.html#planning",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Planning",
+    "text": "Planning\n\n\n\n\n\n25/10 PM\n\n\nPart 0 Introduction : – 1h30\nPart 1 Reminders and Foundations – 1h30\n\nTheory of probability – 30min\nStatistical modelling – 15min\nModel inference – 45min\nImportant definitions – 30min\n\nTP 0 – 1h\n\nFitting probability law\nModel selection / Fixed effect (type of errors)\n\n\n\n26/10 AM\n\n\nTP 1 – 2h\n\nData transformation / PCA\nProof: Cross-entropy from likelihood\n\nPart 2 Base of Machine Learning 1/2 – 2h\n\nA: Typology and nommenclatures – 1h\nB: Evaluation metrics – 1h\n\n\n\n\n\n\n08/11 PM\n\n\nTP 1 – 1h30\n\nLinear regression with few data\nLinear (logistic) regression with multiple features\nBias-Variance decomposition of Loss\n\nPart 2 Base of Machine Learning 1/2 – 30min\n\nC: Bottlenecks and Issues – 30min\n\nPart 3 Advanced Machine Learning –2h\n\nA: Feature engineering – 1h\nB: Model engineering 1/2 – 1h\n\n\n\n09/11 AM\n\n\nPart 3 Advanced Machine Learning –2h\n\nB: Model engineering 2/2 – 1h30\n\nTP 3 – 2h30"
+  },
+  {
+    "objectID": "part0.html#references",
+    "href": "part0.html#references",
+    "title": "Machine Learning Techniques - 0",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\nJannai, Daniel, Amos Meron, Barak Lenz, Yoav Levine, and Yoav Shoham. 2023. “Human or Not? A Gamified Approach to the Turing Test.” https://arxiv.org/abs/2305.20010.\n\n\nMcCarthy, J., M. Minsky, N. Rochester, and C. E. Shannon. 1955. “A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence.” https://raysolomonoff.com/dartmouth/boxa/dart564props.pdf.\n\n\nTuring, A. M. 1950. “I.—COMPUTING MACHINERY AND INTELLIGENCE.” Mind LIX (236): 433–60. https://doi.org/10.1093/mind/LIX.236.433."
+  }
+]
