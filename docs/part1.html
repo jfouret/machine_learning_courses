@@ -523,7 +523,7 @@ P(A|B) = \frac{P(B|A)P(A)}{P(B)}
 <li><p><span class="math inline">\(\gamma_1 = 0\)</span>, <span class="math inline">\(\gamma_2 = 1\)</span></p></li>
 <li><p><strong>Skewness</strong> the 3rd standardized moment:</p>
 <ul>
-<li>Skewness is a measure of <strong>assymetry</strong> around the function mean or location.</li>
+<li>Skewness is a measure of <strong>assymmetry</strong> around the function mean or location.</li>
 </ul></li>
 <li><p><strong>Kurtosis</strong> the 3rd standardized moment:</p>
 <ul>
@@ -589,7 +589,7 @@ P(A|B) = \frac{P(B|A)P(A)}{P(B)}
 <li>2 parameters
 <ul>
 <li><span class="math inline">\(\alpha &gt; 0\)</span> – <em>shape</em></li>
-<li><span class="math inline">\(\sigma &gt; 0\)</span> – <em>rate</em></li>
+<li><span class="math inline">\(\lambda &gt; 0\)</span> – <em>rate</em></li>
 </ul></li>
 </ul>
 <table>
@@ -630,13 +630,13 @@ P(A|B) = \frac{P(B|A)P(A)}{P(B)}
 <ul>
 <li><strong>Uniform</strong></li>
 <li><strong>Beta</strong>: for continuous values between 0 and 1</li>
-<li><strong>Binomial/Bernouilli</strong>: Positive discrete</li>
+<li><strong>Binomial/Bernoulli</strong>: Positive discrete</li>
 </ul>
 </section>
 <section id="law-of-large-numbers-lln" class="slide level2 center">
 <h2>Law of Large Numbers (LLN)</h2>
 <ul>
-<li><p><strong>Defintions</strong> As the number of independent trials increases, the sample average converges to the expected value.</p></li>
+<li><p><strong>Defintion</strong> As the number of independent trials increases, the sample average converges to the expected value.</p></li>
 <li><p>For any <span class="math inline">\(\epsilon &gt; 0\)</span></p>
 <ul>
 <li><span class="math inline">\(\lim_{n \to \infty} \mathbb{P}\left(|\bar{X}_n - \mu| &gt; \epsilon\right) = 0\)</span> as <span class="math inline">\(n \rightarrow \infty\)</span>,</li>
@@ -666,12 +666,12 @@ P(A|B) = \frac{P(B|A)P(A)}{P(B)}
 <li>In the ML context:
 <ul>
 <li>the <strong>sampling distribution</strong> tends to be normal</li>
-<li>regardless the true distribution</li>
+<li>regardless of the true distribution</li>
 </ul></li>
 <li>Prediction errors <strong>tend</strong> to be normally distributed when:
 <ul>
-<li>the sampling increase, when working in aggregate/batch</li>
-<li>the model complexity increase (number of parameters)</li>
+<li>The sampling increases, when working in aggregate/batch</li>
+<li>The model complexity increases (number of parameters)</li>
 </ul></li>
 <li><strong>Ensemble Methods</strong>:
 <ul>
@@ -727,8 +727,8 @@ P(A|B) = \frac{P(B|A)P(A)}{P(B)}
 </ul>
 </div>
 </section>
-<section id="hypothesis-testing-test-statictic" class="slide level2 center">
-<h2>Hypothesis testing: Test statictic</h2>
+<section id="hypothesis-testing-test-statistic" class="slide level2 center">
+<h2>Hypothesis testing: Test statistic</h2>
 <div style="font-size: 80%;">
 <p>A <strong>test statistic</strong> is a</p>
 <ul>
@@ -745,7 +745,7 @@ When testing for <span style="border: 1px solid red;"><span class="math inline">
 <li><span class="math inline">\(n\)</span>: sample size</li>
 </ul>
 </div>
-<p>In case where <span class="math inline">\(X \sim \mathcal{N}(0,1)\)</span>, then <span class="math inline">\(X \sim \mathcal{S}(\nu)\)</span> (<span class="citation" data-cites="student1908">W. S. Gosset) (<a href="#/references" role="doc-biblioref" onclick="">1908</a>)</span>)</p>
+<p>In case where <span class="math inline">\(X \sim \mathcal{N}(0,1)\)</span>, then <span class="math inline">\(X \sim \mathcal{Student}(\nu)\)</span> (<span class="citation" data-cites="student1908">W. S. Gosset) (<a href="#/references" role="doc-biblioref" onclick="">1908</a>)</span>)</p>
 <p><span class="math inline">\(\nu\)</span> is the degrees of freedom (<span class="math inline">\(n-1\)</span>) <span class="math inline">\(\to\)</span> shape of the student-distribution.</p>
 </div>
 </section>
@@ -818,7 +818,7 @@ When testing for <span style="border: 1px solid red;"><span class="math inline">
 <li>Parameters can be either
 <ul>
 <li>Fixed (fixed effect)</li>
-<li>Random variable (randome effect)</li>
+<li>Random variable (random effect)</li>
 </ul></li>
 </ul>
 </section>
@@ -841,14 +841,14 @@ When testing for <span style="border: 1px solid red;"><span class="math inline">
 <li><span class="math inline">\(i \to\)</span> student-level / no features</li>
 <li><span class="math inline">\(j \to\)</span> classroom-level / <span class="math inline">\(x_j\)</span> feature like class size</li>
 <li><span class="math inline">\(k \to\)</span> school-level / <span class="math inline">\(z_k\)</span> feature like school budget</li>
-<li><span class="math inline">\(t \to\)</span> sampling/obsevation (multiple tests)</li>
+<li><span class="math inline">\(t \to\)</span> sampling/observation (multiple tests)</li>
 </ul>
 </div>
 </section>
 <section id="nested-models" class="slide level2 center">
 <h2>Nested models</h2>
 <ul>
-<li>A specificity from another model</li>
+<li>A specific case from another model</li>
 <li>Example: no school effect: <span class="math inline">\(\gamma_k = 0\)</span></li>
 <li>Important for hypothesis testing with a test elaborated to compare nested models (seen after)</li>
 </ul>
@@ -873,7 +873,7 @@ When testing for <span style="border: 1px solid red;"><span class="math inline">
 <div class="box">
 <ul>
 <li>The probability of the parameters given the observation and a model</li>
-<li>How well the model explains the observed data ?</li>
+<li>How well does the model explain the observed data ?</li>
 </ul>
 </div>
 <p>The likelihood is a function of the parameters <span class="math inline">\(\mathcal{L}_{\mathcal{M}}(\theta) = \mathcal{L}(\theta)\)</span></p>
@@ -883,11 +883,11 @@ When testing for <span style="border: 1px solid red;"><span class="math inline">
 <h2>Maximum Likelihood Estimation (MLE)</h2>
 <div style="font-size: 80%;">
 <ul>
-<li>MLE aims to find the parameters <span class="math inline">\(\theta\)</span> that maximizes the likelihood function <span class="math inline">\(\mathcal{L}(\theta)\)</span>.</li>
+<li>MLE aims to find the parameter(s) <span class="math inline">\(\theta\)</span> that maximize the likelihood function <span class="math inline">\(\mathcal{L}(\theta)\)</span>.</li>
 </ul>
 <p><span class="math display">\[\hat{\theta}_{MLE} = \arg \max_{\theta} \mathcal{L}(\theta)\]</span></p>
 <ul>
-<li><span class="math inline">\(\hat{\theta}_{MLE}\)</span> is the <em>maximum likehood estimates</em></li>
+<li><span class="math inline">\(\hat{\theta}_{MLE}\)</span> is the <em>maximum likehood estimate(s)</em></li>
 <li>inferred from likelihood maximization</li>
 </ul>
 </div>
@@ -954,15 +954,15 @@ log(\mathcal{L}(\theta)) \propto  - \sum_i{(y_i - \hat{y_i})^2}
 </ul>
 </div>
 </section>
-<section id="glr-minimize-the-ssr" class="slide level2 center">
-<h2>GLR: Minimize the SSR</h2>
+<section id="glr-minimizing-the-ssr" class="slide level2 center">
+<h2>GLR: Minimizing the SSR</h2>
 <ul>
 <li><span class="math inline">\(SSR(B) = (Y - XB)^T (Y - XB)\)</span></li>
 <li><span class="math inline">\(SSR(B) = Y^T Y − Y^T X B − B^T X^T Y + B^T X^T X B\)</span></li>
 <li><span class="math inline">\(\Delta SSR(B) = 0 - X^TY - X^TY + 2 X^T X B\)</span></li>
 <li><span class="math inline">\(\Delta SSR(B) = - 2X^TY + 2 X^T X B\)</span></li>
 </ul>
-<p>To find the optimum of <span class="math inline">\(SSR(B)\)</span>, we try to resolve <span class="math inline">\(\Delta SSR(B) = 0\)</span>, ie the equation:</p>
+<p>To find the optimum of <span class="math inline">\(SSR(B)\)</span>, we try to solve <span class="math inline">\(\Delta SSR(B) = 0\)</span>, ie the equation:</p>
 <p><span class="math display">\[X^TY =  X^T X B\]</span></p>
 </section>
 <section id="glr-analytical-resolution" class="slide level2 center">
@@ -978,104 +978,164 @@ log(\mathcal{L}(\theta)) \propto  - \sum_i{(y_i - \hat{y_i})^2}
 </section>
 <section id="grid-search-optimization" class="slide level2 center">
 <h2>Grid search optimization</h2>
+<div style="font-size: 80%;">
 <ul>
 <li>Systematic search through a pre-defined space for parameters.</li>
 <li>Evaluates each combination to find the best.</li>
 <li>Example for minimization</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource pseudo number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>Initialize: parameter space Θ, best_score = ∞</span>
-<span id="cb1-2"><a href="#cb1-2"></a>for each parameter combination θ in Θ do</span>
-<span id="cb1-3"><a href="#cb1-3"></a>    Compute score S using θ</span>
-<span id="cb1-4"><a href="#cb1-4"></a>    if S &lt; best_score then</span>
-<span id="cb1-5"><a href="#cb1-5"></a>        best_score = S</span>
-<span id="cb1-6"><a href="#cb1-6"></a>        best_parameters = θ</span>
-<span id="cb1-7"><a href="#cb1-7"></a>    end if</span>
-<span id="cb1-8"><a href="#cb1-8"></a>end for</span>
-<span id="cb1-9"><a href="#cb1-9"></a>Return best_parameters</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>function grid_search(x_space, f):</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="co">"""</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co">  x_space: all combination of parameters</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co">  f: target function</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="co">  """</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>  best_score <span class="op">=</span> <span class="bu">float</span>(<span class="st">"inf"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="cf">for</span> x <span class="kw">in</span> x_space:</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    score <span class="op">=</span> f(p)</span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="cf">if</span> score <span class="op">&lt;</span> best_score:</span>
+<span id="cb1-10"><a href="#cb1-10"></a>      best_score <span class="op">=</span> score</span>
+<span id="cb1-11"><a href="#cb1-11"></a>      best_x <span class="op">=</span> x</span>
+<span id="cb1-12"><a href="#cb1-12"></a>  <span class="cf">return</span> best_x </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="newton-optimization" class="slide level2 center">
 <h2>Newton Optimization</h2>
-<p>Iterative method using gradient and Hessian to find parameter values that maximize or minimize the objective.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource pseudo number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a>Initialize: parameter vector θ, tolerance ε, max_iterations M</span>
-<span id="cb2-2"><a href="#cb2-2"></a>for i = 1 to M do</span>
-<span id="cb2-3"><a href="#cb2-3"></a>    Compute the gradient ∇f(θ) and the Hessian H(θ)</span>
-<span id="cb2-4"><a href="#cb2-4"></a>    Update θ: θ = θ - H(θ)^-1 ∇f(θ)</span>
-<span id="cb2-5"><a href="#cb2-5"></a>    if ||∇f(θ)|| &lt; ε then</span>
-<span id="cb2-6"><a href="#cb2-6"></a>        break</span>
-<span id="cb2-7"><a href="#cb2-7"></a>    end if</span>
-<span id="cb2-8"><a href="#cb2-8"></a>end for</span>
-<span id="cb2-9"><a href="#cb2-9"></a>Return θ</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Iterative method using gradient and Hessian</li>
+</ul>
+<div style="font-size: 75%;">
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">from</span> scipy.linalg <span class="im">import</span> inv, det, norm</span>
+<span id="cb2-2"><a href="#cb2-2"></a>function newton_optimization(grad, hess, x0, tol<span class="op">=</span><span class="fl">1e-6</span>, max_it<span class="op">=</span><span class="dv">1000</span>):</span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="co">"""</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="co">  grad: function for computing the gradient vector of shape (n, 1)</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="co">  hess: function for computing the hessian matrix of shape (n, n)</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="co">  x0: initial guess of shape (n, 1)</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="co">  tol: stopping criterion for the difference between consecutive x values</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="co">  max_it: maximum number of iterations allowed</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="co">  """</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a>  x <span class="op">=</span> x0</span>
+<span id="cb2-11"><a href="#cb2-11"></a>  <span class="cf">for</span> it <span class="kw">in</span> <span class="bu">range</span>(max_it):</span>
+<span id="cb2-12"><a href="#cb2-12"></a>    x_grad <span class="op">=</span> grad(x)</span>
+<span id="cb2-13"><a href="#cb2-13"></a>    x_hess <span class="op">=</span> hess(x)</span>
+<span id="cb2-14"><a href="#cb2-14"></a>    <span class="cf">assert</span>(det(x_hess) <span class="op">!=</span> <span class="dv">0</span>)</span>
+<span id="cb2-15"><a href="#cb2-15"></a>    x <span class="op">=</span> x <span class="op">+</span> np.matmul(inv(x_hess), x_grad)</span>
+<span id="cb2-16"><a href="#cb2-16"></a>    <span class="cf">if</span> norm(x_grad) <span class="op">&lt;</span> tol:</span>
+<span id="cb2-17"><a href="#cb2-17"></a>      <span class="cf">return</span> x  <span class="co"># Found the optimum</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a>    x_current <span class="op">=</span> x_next</span>
+<span id="cb2-19"><a href="#cb2-19"></a>  <span class="cf">raise</span> Error(<span class="st">"Maximum iterations reached without convergence!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="simplex-optimization" class="slide level2 center">
-<h2>Simplex Optimization</h2>
-<p>Nelder-Mead method; moves a simplex in the parameter space toward optimal values.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource pseudo number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a>Initialize: simplex vertices θ_1, θ_2, ..., θ_n+1</span>
-<span id="cb3-2"><a href="#cb3-2"></a>while termination criteria not met do</span>
-<span id="cb3-3"><a href="#cb3-3"></a>    Order the vertices by objective function value</span>
-<span id="cb3-4"><a href="#cb3-4"></a>    Compute centroid of all but worst vertex</span>
-<span id="cb3-5"><a href="#cb3-5"></a>    Reflect worst vertex over centroid</span>
-<span id="cb3-6"><a href="#cb3-6"></a>    if reflection improved then</span>
-<span id="cb3-7"><a href="#cb3-7"></a>        Try expansion</span>
-<span id="cb3-8"><a href="#cb3-8"></a>    else</span>
-<span id="cb3-9"><a href="#cb3-9"></a>        Try contraction or reduction</span>
-<span id="cb3-10"><a href="#cb3-10"></a>    end if</span>
-<span id="cb3-11"><a href="#cb3-11"></a>end while</span>
-<span id="cb3-12"><a href="#cb3-12"></a>Return best vertex</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="nelder-mead-optimization" class="slide level2 center">
+<h2>Nelder-Mead Optimization</h2>
+<div style="font-size: 60%;">
+<div class="columns">
+<div class="column" style="width:58%;">
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>function nelder_mead(f, s0, coef, max_it<span class="op">=</span><span class="dv">1000</span>, tol<span class="op">=</span><span class="fl">1e-6</span>):</span>
+<span id="cb3-2"><a href="#cb3-2"></a>  <span class="co">"""</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="co">  f: target function to be minimized</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="co">  s0: list of n+1 initial guesses (vertices of the initial simplex)</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="co">  coef: reflection, contraction, expansion, shrink coefficients</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="co">  max_it: maximum number of iterations allowed</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="co">  tol: stopping criterion for the difference in function values</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="co">  """</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a>  s <span class="op">=</span> s0</span>
+<span id="cb3-10"><a href="#cb3-10"></a>  <span class="cf">for</span> it <span class="kw">in</span> <span class="bu">range</span>(max_it):</span>
+<span id="cb3-11"><a href="#cb3-11"></a>    s.sort(key<span class="op">=</span><span class="kw">lambda</span> v: f(v)) <span class="co"># Sorting from low to high</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a>    centroid <span class="op">=</span> [<span class="bu">sum</span>(v[i] <span class="cf">for</span> v <span class="kw">in</span> s[:<span class="op">-</span><span class="dv">1</span>]) <span class="co"># Without the worst</span></span>
+<span id="cb3-13"><a href="#cb3-13"></a>    refl_v <span class="op">=</span> centroid <span class="op">+</span> coef[<span class="dv">0</span>] <span class="op">*</span> (centroid <span class="op">-</span> s[<span class="op">-</span><span class="dv">1</span>]) <span class="co"># Reflect the worst</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a>    <span class="cf">if</span> f(s[<span class="dv">0</span>]) <span class="op">&lt;=</span> f(refl_v) <span class="op">&lt;</span> f(s[<span class="op">-</span><span class="dv">2</span>]): <span class="co"># if good but not best</span></span>
+<span id="cb3-15"><a href="#cb3-15"></a>      simplex[<span class="op">-</span><span class="dv">1</span>] <span class="op">=</span> refl_v <span class="co"># replace the worst</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a>    <span class="cf">elif</span> f(refl_v) <span class="op">&lt;</span> f(s[<span class="dv">0</span>]): <span class="co"># elif best, try expansion</span></span>
+<span id="cb3-17"><a href="#cb3-17"></a>      expe_v <span class="op">=</span> centroid <span class="op">+</span> coef[<span class="dv">1</span>] <span class="op">*</span> (refl_v <span class="op">-</span> centroid)</span>
+<span id="cb3-18"><a href="#cb3-18"></a>      <span class="cf">if</span> f(expe_v) <span class="op">&lt;</span> f(s[<span class="dv">0</span>]): simplex[<span class="op">-</span><span class="dv">1</span>] <span class="op">=</span> expe_v</span>
+<span id="cb3-19"><a href="#cb3-19"></a>      <span class="cf">else</span>: simplex[<span class="op">-</span><span class="dv">1</span>] <span class="op">=</span> refl_v</span>
+<span id="cb3-20"><a href="#cb3-20"></a>    <span class="cf">else</span>: <span class="co"># contract the worst or shrink all others</span></span>
+<span id="cb3-21"><a href="#cb3-21"></a>      cont_v <span class="op">=</span> centroid <span class="op">+</span> coef[<span class="dv">2</span>] <span class="op">*</span> (s[<span class="op">-</span><span class="dv">1</span>] <span class="op">-</span> centroid)</span>
+<span id="cb3-22"><a href="#cb3-22"></a>      <span class="cf">if</span> f(cont_v) <span class="op">&lt;</span> f(s[<span class="op">-</span><span class="dv">1</span>]): s[<span class="op">-</span><span class="dv">1</span>] <span class="op">=</span> cont_v</span>
+<span id="cb3-23"><a href="#cb3-23"></a>      <span class="cf">else</span>: s <span class="op">=</span> [s[<span class="dv">0</span>] <span class="op">+</span> coef[<span class="dv">3</span>] <span class="op">*</span> (s[i] <span class="op">-</span> s[<span class="dv">0</span>]) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(s))]</span>
+<span id="cb3-24"><a href="#cb3-24"></a>    <span class="cf">if</span> <span class="bu">abs</span>(f(s[<span class="op">-</span><span class="dv">1</span>]) <span class="op">-</span> f(s[<span class="dv">0</span>])) <span class="op">&lt;</span> tol:</span>
+<span id="cb3-25"><a href="#cb3-25"></a>      <span class="cf">return</span> s[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:42%;">
+<p><img src="img/Nelder_Mead.png" alt="" style="border: 2px solid black; display: block; margin: auto;" width="65%" height="auto"></p>
+<p><img src="img/Nelder-Mead_Himmelblau.gif" alt="" style="border: 2px solid black; display: block; margin: auto;" width="65%" height="auto"></p>
+<p>Source: WIKIPEDIA</p>
+</div>
+</div>
+</div>
 </section>
 <section id="gradient-descent-optimization" class="slide level2 center">
 <h2>Gradient descent Optimization</h2>
-<p>Iterative method adjusting parameters in the direction of steepest decrease of the objective function.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource pseudo number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href="#cb4-1"></a>Initialize: parameter vector θ, learning rate α, tolerance ε, max_iterations M</span>
-<span id="cb4-2"><a href="#cb4-2"></a>for i = 1 to M do</span>
-<span id="cb4-3"><a href="#cb4-3"></a>    Compute the gradient ∇f(θ)</span>
-<span id="cb4-4"><a href="#cb4-4"></a>    Update θ: θ = θ - α ∇f(θ)</span>
-<span id="cb4-5"><a href="#cb4-5"></a>    if ||∇f(θ)|| &lt; ε then</span>
-<span id="cb4-6"><a href="#cb4-6"></a>        break</span>
-<span id="cb4-7"><a href="#cb4-7"></a>    end if</span>
-<span id="cb4-8"><a href="#cb4-8"></a>end for</span>
-<span id="cb4-9"><a href="#cb4-9"></a>Return θ</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="bfgs-optimization" class="slide level2 center">
-<h2>BFGS Optimization</h2>
-<p>Quasi-Newton method; approximates the inverse Hessian to update parameters.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource pseudo number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a href="#cb5-1"></a>Initialize: parameter vector θ, inverse Hessian approximation B, tolerance ε, max_iterations M</span>
-<span id="cb5-2"><a href="#cb5-2"></a>for i = 1 to M do</span>
-<span id="cb5-3"><a href="#cb5-3"></a>    Compute the gradient ∇f(θ)</span>
-<span id="cb5-4"><a href="#cb5-4"></a>    Compute the search direction p = -B ∇f(θ)</span>
-<span id="cb5-5"><a href="#cb5-5"></a>    Perform line search to find step size α</span>
-<span id="cb5-6"><a href="#cb5-6"></a>    Update θ: θ = θ + αp</span>
-<span id="cb5-7"><a href="#cb5-7"></a>    Update B using the BFGS update formula</span>
-<span id="cb5-8"><a href="#cb5-8"></a>    if ||∇f(θ)|| &lt; ε then</span>
-<span id="cb5-9"><a href="#cb5-9"></a>        break</span>
-<span id="cb5-10"><a href="#cb5-10"></a>    end if</span>
-<span id="cb5-11"><a href="#cb5-11"></a>end for</span>
-<span id="cb5-12"><a href="#cb5-12"></a>Return θ</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="jacobianhessian-in-optimization" class="slide level2 center">
-<h2>Jacobian/Hessian in Optimization</h2>
 <ul>
-<li><p>For some objective function, it might be complex to get the analytical functino for the the gradient or the hessian.</p></li>
-<li><p>Gradiant/Hessian can be point-approximated by numerical methods.</p></li>
-<li><p>Some optimization methods don’t require computation of the full Jacobian or Hessian, reducing computational demand.</p></li>
+<li>Iterative method using only the first order derivative</li>
+<li>Introduction of a learning rate</li>
 </ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>function gradient_descent(f_gradient, x0, lr, max_it<span class="op">=</span><span class="dv">1000</span>, tol<span class="op">=</span><span class="fl">1e-6</span>):</span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="co">"""</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="co">  grad: function for computing the gradient vector of shape (n, 1)</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co">  x0: initial guess of shape (n, 1)</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="co">  lr: learning rate (step size)</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="co">  max_it: maximum number of iterations allowed</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="co">  tol: stopping criterion for the difference between consecutive x values</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="co">  """</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a>  x <span class="op">=</span> x0</span>
+<span id="cb4-10"><a href="#cb4-10"></a>  <span class="cf">for</span> it <span class="kw">in</span> <span class="bu">range</span>(max_it):</span>
+<span id="cb4-11"><a href="#cb4-11"></a>    x_grad <span class="op">=</span> grad(x)</span>
+<span id="cb4-12"><a href="#cb4-12"></a>    newton_step <span class="op">=</span> lr <span class="op">*</span> grad(x)</span>
+<span id="cb4-13"><a href="#cb4-13"></a>    x <span class="op">=</span> x <span class="op">-</span> newton_step</span>
+<span id="cb4-14"><a href="#cb4-14"></a>    <span class="cf">if</span> norm(newton_step) <span class="op">&lt;</span> tolerance: <span class="co"># OR ABSOLUTE MAXIMUM</span></span>
+<span id="cb4-15"><a href="#cb4-15"></a>      <span class="cf">return</span> x  <span class="co"># Found the minimum</span></span>
+<span id="cb4-16"><a href="#cb4-16"></a>  <span class="cf">raise</span> Error(<span class="st">"Maximum iterations reached without convergence!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="boundaries" class="slide level2 center">
-<h2>Boundaries</h2>
-<p>In optimization, constraints can be set to ensure parameter values to remain within desired bounds.</p>
+<section id="other-optimization-algorithms" class="slide level2 center">
+<h2>Other Optimization Algorithms</h2>
+<div style="font-size: 60%;">
+<ul>
+<li>Hierarchical Grid-search
+<ul>
+<li>Lowering the resolution iteratively on the best found intervals.</li>
+</ul></li>
+<li>Random search
+<ul>
+<li>For high dimension space.</li>
+<li>Sampling the search space.</li>
+</ul></li>
+<li>BFGS
+<ul>
+<li>Use inverse hessian approximation.</li>
+<li>Update the approximation at each step.</li>
+<li>Compatible with boundaries: BFGS-B.</li>
+</ul></li>
+<li>Stochastic Gradient Descent
+<ul>
+<li>GD on a sampling of the observations.</li>
+<li>Suitable for large datasets.</li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="stochastic-gradient-descent" class="slide level2 center">
-<h2>Stochastic Gradient Descent</h2>
-<p>SGD; updates parameters using a randomly chosen subset of the data. Suitable for large datasets.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource pseudo number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a href="#cb6-1"></a>Initialize: parameter vector θ, learning rate α, tolerance ε, max_iterations M, batch_size b</span>
-<span id="cb6-2"><a href="#cb6-2"></a>for i = 1 to M do</span>
-<span id="cb6-3"><a href="#cb6-3"></a>    Randomly select a mini-batch of size b from the data</span>
-<span id="cb6-4"><a href="#cb6-4"></a>    Compute the gradient ∇f(θ) using the mini-batch</span>
-<span id="cb6-5"><a href="#cb6-5"></a>    Update θ: θ = θ - α ∇f(θ)</span>
-<span id="cb6-6"><a href="#cb6-6"></a>    if average change in θ over recent iterations &lt; ε then</span>
-<span id="cb6-7"><a href="#cb6-7"></a>        break</span>
-<span id="cb6-8"><a href="#cb6-8"></a>    end if</span>
-<span id="cb6-9"><a href="#cb6-9"></a>end for</span>
-<span id="cb6-10"><a href="#cb6-10"></a>Return θ</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="key-points-in-optimization" class="slide level2 center">
+<h2>Key points in Optimization</h2>
+<div style="font-size: 75%;">
+<ul>
+<li>Gradient and Hessian
+<ul>
+<li>Known ? Approximated ?</li>
+<li>Computational costs</li>
+</ul></li>
+<li>Hyperparameters
+<ul>
+<li>Initial Guess</li>
+<li>Learning rate</li>
+<li>Iterations / Tolerance</li>
+<li>…</li>
+</ul></li>
+<li>Randomness ?
+<ul>
+<li>Repeat with several initial guesses</li>
+<li>Randomness in algorithm ?</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="the-bayesian-framework" class="slide level2 center">
 <h2>The Bayesian framework</h2>
@@ -1087,7 +1147,7 @@ log(\mathcal{L}(\theta)) \propto  - \sum_i{(y_i - \hat{y_i})^2}
 </ul>
 <p><span class="math display">\[ \mathbb{P}(\theta | y) = \mathcal{L}(\theta) \mathbb{P}(\theta)\]</span></p>
 <ul>
-<li>Expectation in either likelihood (frequentism) or posterior (Bayesian)</li>
+<li>Expectation in either likelihood (Frequentism) or posterior (Bayesian)</li>
 <li>Maximum Posterior optimization is equivalent to MLE with uniform priors.</li>
 </ul>
 </div>
@@ -1099,15 +1159,88 @@ log(\mathcal{L}(\theta)) \propto  - \sum_i{(y_i - \hat{y_i})^2}
 </section>
 <section id="x-data-or-features" class="slide level2 center">
 <h2>X, Data or Features</h2>
+<div class="columns">
+<div class="column">
+<div style="font-size: 80%;">
+<ul>
+<li><p><strong>Features</strong>: Variables that are collected for each “observation”. Nature of those variables can be diverse (E.g. measure, design).</p></li>
+<li><p><strong>X</strong>: Often refers to the matrix of feature with lines as observations and columns as features.</p></li>
+<li><p><strong>Data</strong>: Data can refers to X or to a larger entity with the target value (variable to predict)</p></li>
+</ul>
+</div>
+</div><div class="column">
+<p><img src="img/data_x.svg" alt="" style="border: 2px solid black; display: block; margin: auto;" width="80%" height="auto"></p>
+</div>
+</div>
 </section>
 <section id="y-targets-predicted-values-or-transformed-values" class="slide level2 center">
 <h2>Y, Targets, Predicted Values or Transformed Values</h2>
+<div class="columns">
+<div class="column">
+<div style="font-size: 60%;">
+<ul>
+<li><p><strong>Y</strong> typically represents the variable or the output in statistical modeling and machine learning.</p></li>
+<li><p><strong>Targets</strong>: The actual values of Y in the dataset. These are what the model aims to predict or reproduce.</p></li>
+<li><p><strong>Predicted Values</strong> (<span class="math inline">\(\hat{Y}\)</span>): The values of Y as estimated or predicted by the model based on the features, X.</p></li>
+<li><p><strong>Transformed Values</strong>: The values of Y as estimated or predicted by the model based on the features, X when there is no meaning for prediction as there are no target value (unsupervised)</p></li>
+</ul>
+</div>
+</div><div class="column">
+<p><img src="img/data_x_y.svg" alt="" style="border: 2px solid black; display: block; margin: auto;" width="80%" height="auto"></p>
+</div>
+</div>
 </section>
-<section id="mf-model-and-hyperparameters" class="slide level2 center">
-<h2>M/F, Model and Hyperparameters</h2>
+<section id="mf-model-parameters-and-hyperparameters" class="slide level2 center">
+<h2>M/F, Model, Parameters and Hyperparameters</h2>
+<div class="columns">
+<div class="column">
+<div style="font-size: 60%;">
+<ul>
+<li><p><strong>M</strong> or <strong>F</strong> stands for the model or function that is being trained or used for predictions/transformations.</p></li>
+<li><p><strong>Model</strong>: Represents the specific algorithm or method being used to learn from data and make predictions. Examples include linear regression, decision tree, neural network, etc.</p></li>
+<li><p><strong>Parameters</strong>: Part of the model which is being trained from the data through optimization to maximize the objective function.</p></li>
+<li><p><strong>Hyperparameters</strong>: Part of the model that are not learned from the data but are set before training.</p></li>
+</ul>
+</div>
+</div><div class="column">
+<p><img src="img/model_params.png" alt="" style="border: 2px solid black; display: block; margin: auto;" width="60%" height="auto"></p>
+</div>
+</div>
 </section>
 <section id="predict-transform-fit-and-infer" class="slide level2 center">
 <h2>Predict, Transform, Fit and Infer</h2>
+<div style="font-size: 80%;">
+<p><strong>Predict</strong>: The process of using a model to estimate or forecast the output (Y) given data (X). Purpose of training a model is to improve the prediction.</p>
+<p><strong>Transform</strong>: The process of using a model to transfort given data (X) into transformed data (Y) when there is not explicit target for example in the case of dimensionality reduction.</p>
+<p><strong>Fit</strong>: The process of training a model on a given dataset.</p>
+<p><strong>Infer</strong>:</p>
+<ul>
+<li>(common) Prediction based on new, unseen data.</li>
+<li>(less common) The optimization of parameters given a model and a training dataset.</li>
+</ul>
+</div>
+</section>
+<section id="beyond-likelihood-based-reasoning" class="slide level2 center">
+<h2>Beyond Likelihood-based reasoning</h2>
+<div style="font-size: 80%;">
+<ul>
+<li><strong>Supervised learning</strong>
+<ul>
+<li>Easily associated with <strong>likelihood-based</strong> reasoning due to the error term</li>
+<li>Also many methos not based on likelihood reasoning: Support Vector Machine and Hinge Loss</li>
+</ul></li>
+<li><strong>Unsupervised learning</strong>
+<ul>
+<li>Principal Component Analysis: Maximizing Variance</li>
+<li>Gaussian Mixture Model: Likelihood-based</li>
+</ul></li>
+<li><strong>Reinforcement learning</strong>
+<ul>
+<li>Reward is maximized.</li>
+<li>Mostly not based on likelihood-based reasoning.</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="conclusion" class="slide level2 center">
 <h2>Conclusion</h2>

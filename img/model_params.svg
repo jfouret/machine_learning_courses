@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="108.19709mm"
+   height="153.60562mm"
+   viewBox="10 0 120.21898 170.67292"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="model_params.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="false"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="cm"
+     inkscape:lockguides="false"
+     showgrid="true"
+     showguides="true"
+     inkscape:zoom="1.1875571"
+     inkscape:cx="30.314332"
+     inkscape:cy="299.35403"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="825"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <rect
+       x="599.50824"
+       y="270.20938"
+       width="23.619715"
+       height="29.756975"
+       id="rect6" />
+    <color-profile
+       name="sRGB-IEC61966-2.1"
+       xlink:href="../../../../../../WINDOWS/system32/spool/drivers/color/sRGB%20Color%20Space%20Profile.icm"
+       id="color-profile1" />
+    <marker
+       style="overflow:visible"
+       id="ArrowWideRounded"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide, rounded arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:round"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path2" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-10.414671,-36.196899)">
+    <g
+       id="g16"
+       transform="matrix(0.92793015,0,0,1,-7.912513,-11.573087)">
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;line-height:1.95;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';baseline-shift:baseline;stroke-width:0.756813"
+         x="37.036671"
+         y="96.45575"
+         id="text5-5"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre';baseline-shift:baseline;stroke-width:0.756813"
+           x="37.036671"
+           y="96.45575"
+           id="tspan10">Y  =  <tspan
+   style="fill:#ff0000"
+   id="tspan5">M</tspan><tspan
+   style="font-size:65%;baseline-shift:sub;fill:#808000"
+   id="tspan9">θ</tspan>(X) ➜ <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Lucida Calligraphy';-inkscape-font-specification:'Lucida Calligraphy'"
+   id="tspan19">L</tspan>(θ)   </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;line-height:1.95;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';baseline-shift:baseline;stroke-width:0.756813"
+         x="104.17061"
+         y="96.894653"
+         id="text5-5-01"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre';baseline-shift:baseline;stroke-width:0.756813"
+           x="104.17061"
+           y="96.894653"
+           id="tspan10-4" /></text>
+    </g>
+    <g
+       id="g17"
+       transform="translate(-10.161547,21.103704)">
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;line-height:1.95;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';baseline-shift:baseline;stroke-width:0.756813"
+         x="36.625988"
+         y="180.35484"
+         id="text5-5-0"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre';baseline-shift:baseline;stroke-width:0.756813"
+           x="36.625988"
+           y="180.35484"
+           id="tspan10-7">Y  =  <tspan
+   style="fill:#ff0000"
+   id="tspan4">M</tspan><tspan
+   style="font-size:65%;baseline-shift:sub;fill:#808000"
+   id="tspan9-0">θ</tspan>(X) </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;line-height:1.95;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';baseline-shift:baseline;stroke-width:0.756813"
+         x="35.221989"
+         y="174.99065"
+         id="text5-5-5-4-9"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre';baseline-shift:baseline;stroke-width:0.756813"
+           x="35.221989"
+           y="174.99065"
+           id="tspan10-5-9-2">^ </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:7.50868px;line-height:1.95;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';baseline-shift:baseline;stroke-width:0.473556"
+         x="87.24485"
+         y="167.45241"
+         id="text5-5-5-4-9-6"
+         transform="scale(0.92942124,1.0759384)"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre';baseline-shift:baseline;stroke-width:0.473556"
+           x="87.24485"
+           y="167.45241"
+           id="tspan10-5-9-2-6"><tspan
+   style="fill:#808000"
+   id="tspan6">^</tspan> </tspan></text>
+    </g>
+    <rect
+       style="fill:none;fill-opacity:0.25;stroke:none;stroke-width:1.18702;stroke-dasharray:none;stroke-opacity:1"
+       id="rect9"
+       width="120.21898"
+       height="170.6729"
+       x="20.414671"
+       y="36.196899" />
+    <g
+       id="g15"
+       transform="translate(144.15983,-17.514322)">
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;line-height:1.95;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';baseline-shift:baseline;stroke-width:0.756813"
+         x="-118.33057"
+         y="140.72977"
+         id="text5-5-5-3"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre';baseline-shift:baseline;stroke-width:0.756813"
+           x="-118.33057"
+           y="140.72977"
+           id="tspan10-5-8">argmax<tspan
+   style="font-size:65%;baseline-shift:sub;fill:#808000"
+   id="tspan11-9">θ</tspan> <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Lucida Calligraphy';-inkscape-font-specification:'Lucida Calligraphy'"
+   id="tspan13-0">L</tspan>(<tspan
+   style="fill:#808000"
+   id="tspan8">θ</tspan>) </tspan></text>
+      <g
+         id="g3"
+         transform="translate(-113.48405,35.103926)"
+         style="fill:#808000">
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;line-height:1.95;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';baseline-shift:baseline;fill:#808000;stroke-width:0.756813"
+           x="66.924904"
+           y="152.01694"
+           id="text5-5-5"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre';baseline-shift:baseline;fill:#808000;stroke-width:0.756813"
+             x="66.924904"
+             y="152.01694"
+             id="tspan10-5">θ </tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;line-height:1.95;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';baseline-shift:baseline;fill:#808000;stroke-width:0.756813"
+           x="66.062469"
+           y="148.01416"
+           id="text5-5-5-4"
+           inkscape:transform-center-x="-0.70018125"
+           inkscape:transform-center-y="3.6759516"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre';baseline-shift:baseline;fill:#808000;stroke-width:0.756813"
+             x="66.062469"
+             y="148.01416"
+             id="tspan10-5-9">^ </tspan></text>
+      </g>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:2.11462;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWideRounded)"
+         d="m -96.240474,145.81419 42.410765,35.19799"
+         id="path13" />
+      <g
+         id="g18">
+        <g
+           id="g19">
+          <text
+             xml:space="preserve"
+             style="font-weight:bold;font-size:8.7393px;line-height:1.95;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';baseline-shift:baseline;stroke-width:0.551168"
+             x="-108.33135"
+             y="168.11609"
+             id="text5-5-57"
+             transform="scale(1.0062195,0.99381895)"><tspan
+               sodipodi:role="line"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;baseline-shift:baseline;fill:#ff0000;stroke-width:0.551168"
+               x="-108.33135"
+               y="168.11609"
+               id="tspan16">Solver</tspan></text>
+        </g>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.29398148,0,0,0.29398148,20.443382,36.225613)"
+       id="text6"
+       style="font-weight:bold;font-size:16px;line-height:1.95;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';white-space:pre;shape-inside:url(#rect6);display:inline" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:6.8028px;line-height:1.95;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';stroke-width:0.425174"
+       x="25.720192"
+       y="55.451202"
+       id="text13"><tspan
+         sodipodi:role="line"
+         id="tspan13"
+         style="fill:#808000;stroke-width:0.425174"
+         x="25.720192"
+         y="55.451202">PARAMETERS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:6.79232px;line-height:1.95;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';stroke-width:0.42452"
+       x="25.721146"
+       y="47.329803"
+       id="text14"><tspan
+         sodipodi:role="line"
+         id="tspan14"
+         style="fill:#ff0000;stroke-width:0.42452"
+         x="25.721146"
+         y="47.329803">HYPERPARAMETERS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:6.18901px;line-height:1.95;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';stroke-width:0.386813"
+       x="26.171532"
+       y="66.874916"
+       id="text15"><tspan
+         sodipodi:role="line"
+         id="tspan15"
+         style="font-style:italic;fill:#808080;stroke-width:0.386813"
+         x="26.171532"
+         y="66.874916">Modelling</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:6.18901px;line-height:1.95;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';stroke-width:0.386813"
+       x="25.824944"
+       y="105.95534"
+       id="text15-3"><tspan
+         sodipodi:role="line"
+         id="tspan15-9"
+         style="font-style:italic;fill:#808080;stroke-width:0.386813"
+         x="25.824944"
+         y="105.95534">Training</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:6.18901px;line-height:1.95;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';stroke-width:0.386813"
+       x="26.171532"
+       y="182.16199"
+       id="text15-3-6"><tspan
+         sodipodi:role="line"
+         id="tspan15-9-2"
+         style="font-style:italic;fill:#808080;stroke-width:0.386813"
+         x="26.171532"
+         y="182.16199">Predicting</tspan></text>
+  </g>
+</svg>

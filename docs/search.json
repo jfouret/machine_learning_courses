@@ -60,7 +60,7 @@
     "href": "part1.html#standardized-moments",
     "title": "Machine Learning Techniques - 1",
     "section": "Standardized moments",
-    "text": "Standardized moments\n\n\n\nThe nth standardized moment \\(\\gamma_k = \\frac{\\mu_k}{(\\sigma)^k}\\)\n\\(\\gamma_1 = 0\\), \\(\\gamma_2 = 1\\)\nSkewness the 3rd standardized moment:\n\nSkewness is a measure of assymetry around the function mean or location.\n\nKurtosis the 3rd standardized moment:\n\n(from Greek: κυρτός, kyrtos or kurtos, meaning “curved, arching”)\nKurtosis is a measure of tailedness"
+    "text": "Standardized moments\n\n\n\nThe nth standardized moment \\(\\gamma_k = \\frac{\\mu_k}{(\\sigma)^k}\\)\n\\(\\gamma_1 = 0\\), \\(\\gamma_2 = 1\\)\nSkewness the 3rd standardized moment:\n\nSkewness is a measure of assymmetry around the function mean or location.\n\nKurtosis the 3rd standardized moment:\n\n(from Greek: κυρτός, kyrtos or kurtos, meaning “curved, arching”)\nKurtosis is a measure of tailedness"
   },
   {
     "objectID": "part1.html#continuous-law-normal",
@@ -74,21 +74,21 @@
     "href": "part1.html#continuous-law-gamma",
     "title": "Machine Learning Techniques - 1",
     "section": "Continuous Law : Gamma",
-    "text": "Continuous Law : Gamma\n\n\n\n\nGamma distribution (Real Positive)\n2 parameters\n\n\\(\\alpha &gt; 0\\) – shape\n\\(\\sigma &gt; 0\\) – rate\n\n\n\n\n\nMoment\nValue\n\n\n\n\n\\(E(X)\\)\n\\(\\frac{\\alpha}{\\lambda}\\)\n\n\n\\(\\text{Var}(X)\\)\n\\(\\frac{\\alpha}{\\lambda^2}\\)\n\n\nSkewness\n\\(\\frac{2}{\\sqrt{\\alpha}}\\)\n\n\nKurtosis\n\\(3 + \\frac{6}{\\alpha}\\)\n\n\n\n\n\n\n\\(f(x) = \\frac{\\lambda^\\alpha x^{\\alpha-1}}{\\Gamma(\\alpha)} e^{-\\lambda x}\\)"
+    "text": "Continuous Law : Gamma\n\n\n\n\nGamma distribution (Real Positive)\n2 parameters\n\n\\(\\alpha &gt; 0\\) – shape\n\\(\\lambda &gt; 0\\) – rate\n\n\n\n\n\nMoment\nValue\n\n\n\n\n\\(E(X)\\)\n\\(\\frac{\\alpha}{\\lambda}\\)\n\n\n\\(\\text{Var}(X)\\)\n\\(\\frac{\\alpha}{\\lambda^2}\\)\n\n\nSkewness\n\\(\\frac{2}{\\sqrt{\\alpha}}\\)\n\n\nKurtosis\n\\(3 + \\frac{6}{\\alpha}\\)\n\n\n\n\n\n\n\\(f(x) = \\frac{\\lambda^\\alpha x^{\\alpha-1}}{\\Gamma(\\alpha)} e^{-\\lambda x}\\)"
   },
   {
     "objectID": "part1.html#other-laws",
     "href": "part1.html#other-laws",
     "title": "Machine Learning Techniques - 1",
     "section": "Other laws",
-    "text": "Other laws\n\nUniform\nBeta: for continuous values between 0 and 1\nBinomial/Bernouilli: Positive discrete"
+    "text": "Other laws\n\nUniform\nBeta: for continuous values between 0 and 1\nBinomial/Bernoulli: Positive discrete"
   },
   {
     "objectID": "part1.html#law-of-large-numbers-lln",
     "href": "part1.html#law-of-large-numbers-lln",
     "title": "Machine Learning Techniques - 1",
     "section": "Law of Large Numbers (LLN)",
-    "text": "Law of Large Numbers (LLN)\n\nDefintions As the number of independent trials increases, the sample average converges to the expected value.\nFor any \\(\\epsilon &gt; 0\\)\n\n\\(\\lim_{n \\to \\infty} \\mathbb{P}\\left(|\\bar{X}_n - \\mu| &gt; \\epsilon\\right) = 0\\) as \\(n \\rightarrow \\infty\\),\n\\(\\bar{X}_n\\) is the sample average of n observations."
+    "text": "Law of Large Numbers (LLN)\n\nDefintion As the number of independent trials increases, the sample average converges to the expected value.\nFor any \\(\\epsilon &gt; 0\\)\n\n\\(\\lim_{n \\to \\infty} \\mathbb{P}\\left(|\\bar{X}_n - \\mu| &gt; \\epsilon\\right) = 0\\) as \\(n \\rightarrow \\infty\\),\n\\(\\bar{X}_n\\) is the sample average of n observations."
   },
   {
     "objectID": "part1.html#lln-in-ml",
@@ -109,7 +109,7 @@
     "href": "part1.html#central-limit-theorem-in-ml",
     "title": "Machine Learning Techniques - 1",
     "section": "Central limit theorem in ML",
-    "text": "Central limit theorem in ML\n\n\nIn the ML context:\n\nthe sampling distribution tends to be normal\nregardless the true distribution\n\nPrediction errors tend to be normally distributed when:\n\nthe sampling increase, when working in aggregate/batch\nthe model complexity increase (number of parameters)\n\nEnsemble Methods:\n\nAggregation of models\n\nK-fold validation:\n\nSplits of training/validation\nmetrics tend to be normally distributed"
+    "text": "Central limit theorem in ML\n\n\nIn the ML context:\n\nthe sampling distribution tends to be normal\nregardless of the true distribution\n\nPrediction errors tend to be normally distributed when:\n\nThe sampling increases, when working in aggregate/batch\nThe model complexity increases (number of parameters)\n\nEnsemble Methods:\n\nAggregation of models\n\nK-fold validation:\n\nSplits of training/validation\nmetrics tend to be normally distributed"
   },
   {
     "objectID": "part1.html#hypothesis-testing",
@@ -133,11 +133,11 @@
     "text": "Hypothesis testing: Power/ errors\n\nTwo types of errors in hypothesis testing (Neyman and Pearson (1933)):\n\nType I error (False positive):\n\nRejecting \\(H_0\\) when it is actually true.\nDenoted by \\(\\alpha\\) (alpha)\naka significance level.\n\nType II error (False negative):\n\nNot rejecting \\(H_0\\) when it is false.\ndenoted by \\(\\beta\\) (beta)\npower of a test is \\(\\pi = 1-\\beta\\)\nThe power is the probability of correctly rejecting a false \\(H_0\\)."
   },
   {
-    "objectID": "part1.html#hypothesis-testing-test-statictic",
-    "href": "part1.html#hypothesis-testing-test-statictic",
+    "objectID": "part1.html#hypothesis-testing-test-statistic",
+    "href": "part1.html#hypothesis-testing-test-statistic",
     "title": "Machine Learning Techniques - 1",
-    "section": "Hypothesis testing: Test statictic",
-    "text": "Hypothesis testing: Test statictic\n\nA test statistic is a\n\nStandardized value calculated from sample data\nThe realization of a random variable with a known distribution\n\n\n\nWhen testing for \\(H_0: \\mu_X = \\mu_0\\) \\(t = \\frac{\\bar{\\mu_X} - 0}{\\bar{\\sigma_X}\\sqrt{n}}\\) with:\n\n\n\\(\\bar{\\mu_X}\\): sample mean\n\\(\\bar{\\sigma_X}\\): sample standard deviation\n\\(n\\): sample size\n\n\nIn case where \\(X \\sim \\mathcal{N}(0,1)\\), then \\(X \\sim \\mathcal{S}(\\nu)\\) (W. S. Gosset) (1908))\n\\(\\nu\\) is the degrees of freedom (\\(n-1\\)) \\(\\to\\) shape of the student-distribution."
+    "section": "Hypothesis testing: Test statistic",
+    "text": "Hypothesis testing: Test statistic\n\nA test statistic is a\n\nStandardized value calculated from sample data\nThe realization of a random variable with a known distribution\n\n\n\nWhen testing for \\(H_0: \\mu_X = \\mu_0\\) \\(t = \\frac{\\bar{\\mu_X} - 0}{\\bar{\\sigma_X}\\sqrt{n}}\\) with:\n\n\n\\(\\bar{\\mu_X}\\): sample mean\n\\(\\bar{\\sigma_X}\\): sample standard deviation\n\\(n\\): sample size\n\n\nIn case where \\(X \\sim \\mathcal{N}(0,1)\\), then \\(X \\sim \\mathcal{Student}(\\nu)\\) (W. S. Gosset) (1908))\n\\(\\nu\\) is the degrees of freedom (\\(n-1\\)) \\(\\to\\) shape of the student-distribution."
   },
   {
     "objectID": "part1.html#hypothesis-testingp-value",
@@ -165,35 +165,35 @@
     "href": "part1.html#mixed-effects",
     "title": "Machine Learning Techniques - 1",
     "section": "Mixed Effects",
-    "text": "Mixed Effects\n\nGeneralization\nParameters can be either\n\nFixed (fixed effect)\nRandom variable (randome effect)"
+    "text": "Mixed Effects\n\nGeneralization\nParameters can be either\n\nFixed (fixed effect)\nRandom variable (random effect)"
   },
   {
     "objectID": "part1.html#multilevelhierarchical-models",
     "href": "part1.html#multilevelhierarchical-models",
     "title": "Machine Learning Techniques - 1",
     "section": "Multilevel/Hierarchical models",
-    "text": "Multilevel/Hierarchical models\n\nA type of mixed-effects model where data is nested within multiple levels of groups.\n\\[\n\\left\\{\n  \\begin{array}{ll}\n    y_{ijkt} =  \\alpha_i + \\beta_j x_j + \\gamma_k z_k + \\epsilon_{ijkt} \\\\\n    \\alpha_i \\sim \\mathcal{N}(\\mu_{\\alpha}, \\sigma) \\\\\n    \\beta_j \\sim \\mathcal{N}(\\mu_{\\beta}, \\sigma) \\\\\n    \\gamma_k \\sim \\mathcal{N}(\\mu_{\\gamma}, \\sigma) \\\\\n    \\epsilon_{ijkt} \\sim \\mathcal{N}(0, 1)\n    \\end{array}\n\\right.\n\\]\n\n\\(i \\to\\) student-level / no features\n\\(j \\to\\) classroom-level / \\(x_j\\) feature like class size\n\\(k \\to\\) school-level / \\(z_k\\) feature like school budget\n\\(t \\to\\) sampling/obsevation (multiple tests)"
+    "text": "Multilevel/Hierarchical models\n\nA type of mixed-effects model where data is nested within multiple levels of groups.\n\\[\n\\left\\{\n  \\begin{array}{ll}\n    y_{ijkt} =  \\alpha_i + \\beta_j x_j + \\gamma_k z_k + \\epsilon_{ijkt} \\\\\n    \\alpha_i \\sim \\mathcal{N}(\\mu_{\\alpha}, \\sigma) \\\\\n    \\beta_j \\sim \\mathcal{N}(\\mu_{\\beta}, \\sigma) \\\\\n    \\gamma_k \\sim \\mathcal{N}(\\mu_{\\gamma}, \\sigma) \\\\\n    \\epsilon_{ijkt} \\sim \\mathcal{N}(0, 1)\n    \\end{array}\n\\right.\n\\]\n\n\\(i \\to\\) student-level / no features\n\\(j \\to\\) classroom-level / \\(x_j\\) feature like class size\n\\(k \\to\\) school-level / \\(z_k\\) feature like school budget\n\\(t \\to\\) sampling/observation (multiple tests)"
   },
   {
     "objectID": "part1.html#nested-models",
     "href": "part1.html#nested-models",
     "title": "Machine Learning Techniques - 1",
     "section": "Nested models",
-    "text": "Nested models\n\nA specificity from another model\nExample: no school effect: \\(\\gamma_k = 0\\)\nImportant for hypothesis testing with a test elaborated to compare nested models (seen after)"
+    "text": "Nested models\n\nA specific case from another model\nExample: no school effect: \\(\\gamma_k = 0\\)\nImportant for hypothesis testing with a test elaborated to compare nested models (seen after)"
   },
   {
     "objectID": "part1.html#likelihood-definition-for-a-model",
     "href": "part1.html#likelihood-definition-for-a-model",
     "title": "Machine Learning Techniques - 1",
     "section": "Likelihood definition for a model",
-    "text": "Likelihood definition for a model\n\nThe likelihood is a probability defined for a model \\[\n\\mathbb{P}_\\mathcal{M}( y | \\theta)\n\\]\nwith:\n\n\\(\\mathcal{M}\\) the model\n\\(\\theta\\) the parameters\n\\(y\\) the observations / measurements / sampling\n\n\n\nThe probability of the parameters given the observation and a model\nHow well the model explains the observed data ?\n\n\nThe likelihood is a function of the parameters \\(\\mathcal{L}_{\\mathcal{M}}(\\theta) = \\mathcal{L}(\\theta)\\)"
+    "text": "Likelihood definition for a model\n\nThe likelihood is a probability defined for a model \\[\n\\mathbb{P}_\\mathcal{M}( y | \\theta)\n\\]\nwith:\n\n\\(\\mathcal{M}\\) the model\n\\(\\theta\\) the parameters\n\\(y\\) the observations / measurements / sampling\n\n\n\nThe probability of the parameters given the observation and a model\nHow well does the model explain the observed data ?\n\n\nThe likelihood is a function of the parameters \\(\\mathcal{L}_{\\mathcal{M}}(\\theta) = \\mathcal{L}(\\theta)\\)"
   },
   {
     "objectID": "part1.html#maximum-likelihood-estimation-mle",
     "href": "part1.html#maximum-likelihood-estimation-mle",
     "title": "Machine Learning Techniques - 1",
     "section": "Maximum Likelihood Estimation (MLE)",
-    "text": "Maximum Likelihood Estimation (MLE)\n\n\nMLE aims to find the parameters \\(\\theta\\) that maximizes the likelihood function \\(\\mathcal{L}(\\theta)\\).\n\n\\[\\hat{\\theta}_{MLE} = \\arg \\max_{\\theta} \\mathcal{L}(\\theta)\\]\n\n\\(\\hat{\\theta}_{MLE}\\) is the maximum likehood estimates\ninferred from likelihood maximization"
+    "text": "Maximum Likelihood Estimation (MLE)\n\n\nMLE aims to find the parameter(s) \\(\\theta\\) that maximize the likelihood function \\(\\mathcal{L}(\\theta)\\).\n\n\\[\\hat{\\theta}_{MLE} = \\arg \\max_{\\theta} \\mathcal{L}(\\theta)\\]\n\n\\(\\hat{\\theta}_{MLE}\\) is the maximum likehood estimate(s)\ninferred from likelihood maximization"
   },
   {
     "objectID": "part1.html#mle-and-fixed-effects-normal",
@@ -231,11 +231,11 @@
     "text": "General linear regression (GLR)\n\nA general linear problem can be defined as: \\[Y = XB + U\\]\nWhere:\n\n\\(Y\\) is an \\(n \\times m\\) matrix of \\(n\\) observations of \\(m\\) variables.\n\\(X\\) is an \\(n \\times p\\) matrix of \\(n\\) observations of \\(p\\) features.\n\\(B\\) is an \\(p \\times m\\) matrix of fixed-effect parameters for each pair variable-feature.\n\\(U\\) is an \\(n \\times m\\) matrix for errors."
   },
   {
-    "objectID": "part1.html#glr-minimize-the-ssr",
-    "href": "part1.html#glr-minimize-the-ssr",
+    "objectID": "part1.html#glr-minimizing-the-ssr",
+    "href": "part1.html#glr-minimizing-the-ssr",
     "title": "Machine Learning Techniques - 1",
-    "section": "GLR: Minimize the SSR",
-    "text": "GLR: Minimize the SSR\n\n\\(SSR(B) = (Y - XB)^T (Y - XB)\\)\n\\(SSR(B) = Y^T Y − Y^T X B − B^T X^T Y + B^T X^T X B\\)\n\\(\\Delta SSR(B) = 0 - X^TY - X^TY + 2 X^T X B\\)\n\\(\\Delta SSR(B) = - 2X^TY + 2 X^T X B\\)\n\nTo find the optimum of \\(SSR(B)\\), we try to resolve \\(\\Delta SSR(B) = 0\\), ie the equation:\n\\[X^TY =  X^T X B\\]"
+    "section": "GLR: Minimizing the SSR",
+    "text": "GLR: Minimizing the SSR\n\n\\(SSR(B) = (Y - XB)^T (Y - XB)\\)\n\\(SSR(B) = Y^T Y − Y^T X B − B^T X^T Y + B^T X^T X B\\)\n\\(\\Delta SSR(B) = 0 - X^TY - X^TY + 2 X^T X B\\)\n\\(\\Delta SSR(B) = - 2X^TY + 2 X^T X B\\)\n\nTo find the optimum of \\(SSR(B)\\), we try to solve \\(\\Delta SSR(B) = 0\\), ie the equation:\n\\[X^TY =  X^T X B\\]"
   },
   {
     "objectID": "part1.html#glr-analytical-resolution",
@@ -249,91 +249,84 @@
     "href": "part1.html#grid-search-optimization",
     "title": "Machine Learning Techniques - 1",
     "section": "Grid search optimization",
-    "text": "Grid search optimization\n\nSystematic search through a pre-defined space for parameters.\nEvaluates each combination to find the best.\nExample for minimization\n\nInitialize: parameter space Θ, best_score = ∞\nfor each parameter combination θ in Θ do\n    Compute score S using θ\n    if S &lt; best_score then\n        best_score = S\n        best_parameters = θ\n    end if\nend for\nReturn best_parameters"
+    "text": "Grid search optimization\n\n\nSystematic search through a pre-defined space for parameters.\nEvaluates each combination to find the best.\nExample for minimization\n\n\nfunction grid_search(x_space, f):\n  \"\"\"\n  x_space: all combination of parameters\n  f: target function\n  \"\"\"\n  best_score = float(\"inf\")\n  for x in x_space:\n    score = f(p)\n    if score &lt; best_score:\n      best_score = score\n      best_x = x\n  return best_x"
   },
   {
     "objectID": "part1.html#newton-optimization",
     "href": "part1.html#newton-optimization",
     "title": "Machine Learning Techniques - 1",
     "section": "Newton Optimization",
-    "text": "Newton Optimization\nIterative method using gradient and Hessian to find parameter values that maximize or minimize the objective.\nInitialize: parameter vector θ, tolerance ε, max_iterations M\nfor i = 1 to M do\n    Compute the gradient ∇f(θ) and the Hessian H(θ)\n    Update θ: θ = θ - H(θ)^-1 ∇f(θ)\n    if ||∇f(θ)|| &lt; ε then\n        break\n    end if\nend for\nReturn θ"
+    "text": "Newton Optimization\n\nIterative method using gradient and Hessian\n\n\nfrom scipy.linalg import inv, det, norm\nfunction newton_optimization(grad, hess, x0, tol=1e-6, max_it=1000):\n  \"\"\"\n  grad: function for computing the gradient vector of shape (n, 1)\n  hess: function for computing the hessian matrix of shape (n, n)\n  x0: initial guess of shape (n, 1)\n  tol: stopping criterion for the difference between consecutive x values\n  max_it: maximum number of iterations allowed\n  \"\"\"\n  x = x0\n  for it in range(max_it):\n    x_grad = grad(x)\n    x_hess = hess(x)\n    assert(det(x_hess) != 0)\n    x = x + np.matmul(inv(x_hess), x_grad)\n    if norm(x_grad) &lt; tol:\n      return x  # Found the optimum\n    x_current = x_next\n  raise Error(\"Maximum iterations reached without convergence!\")"
   },
   {
-    "objectID": "part1.html#simplex-optimization",
-    "href": "part1.html#simplex-optimization",
+    "objectID": "part1.html#nelder-mead-optimization",
+    "href": "part1.html#nelder-mead-optimization",
     "title": "Machine Learning Techniques - 1",
-    "section": "Simplex Optimization",
-    "text": "Simplex Optimization\nNelder-Mead method; moves a simplex in the parameter space toward optimal values.\nInitialize: simplex vertices θ_1, θ_2, ..., θ_n+1\nwhile termination criteria not met do\n    Order the vertices by objective function value\n    Compute centroid of all but worst vertex\n    Reflect worst vertex over centroid\n    if reflection improved then\n        Try expansion\n    else\n        Try contraction or reduction\n    end if\nend while\nReturn best vertex"
+    "section": "Nelder-Mead Optimization",
+    "text": "Nelder-Mead Optimization\n\n\n\nfunction nelder_mead(f, s0, coef, max_it=1000, tol=1e-6):\n  \"\"\"\n  f: target function to be minimized\n  s0: list of n+1 initial guesses (vertices of the initial simplex)\n  coef: reflection, contraction, expansion, shrink coefficients\n  max_it: maximum number of iterations allowed\n  tol: stopping criterion for the difference in function values\n  \"\"\"\n  s = s0\n  for it in range(max_it):\n    s.sort(key=lambda v: f(v)) # Sorting from low to high\n    centroid = [sum(v[i] for v in s[:-1]) # Without the worst\n    refl_v = centroid + coef[0] * (centroid - s[-1]) # Reflect the worst\n    if f(s[0]) &lt;= f(refl_v) &lt; f(s[-2]): # if good but not best\n      simplex[-1] = refl_v # replace the worst\n    elif f(refl_v) &lt; f(s[0]): # elif best, try expansion\n      expe_v = centroid + coef[1] * (refl_v - centroid)\n      if f(expe_v) &lt; f(s[0]): simplex[-1] = expe_v\n      else: simplex[-1] = refl_v\n    else: # contract the worst or shrink all others\n      cont_v = centroid + coef[2] * (s[-1] - centroid)\n      if f(cont_v) &lt; f(s[-1]): s[-1] = cont_v\n      else: s = [s[0] + coef[3] * (s[i] - s[0]) for i in range(1, len(s))]\n    if abs(f(s[-1]) - f(s[0])) &lt; tol:\n      return s[0]\n\n\n\nSource: WIKIPEDIA"
   },
   {
     "objectID": "part1.html#gradient-descent-optimization",
     "href": "part1.html#gradient-descent-optimization",
     "title": "Machine Learning Techniques - 1",
     "section": "Gradient descent Optimization",
-    "text": "Gradient descent Optimization\nIterative method adjusting parameters in the direction of steepest decrease of the objective function.\nInitialize: parameter vector θ, learning rate α, tolerance ε, max_iterations M\nfor i = 1 to M do\n    Compute the gradient ∇f(θ)\n    Update θ: θ = θ - α ∇f(θ)\n    if ||∇f(θ)|| &lt; ε then\n        break\n    end if\nend for\nReturn θ"
+    "text": "Gradient descent Optimization\n\nIterative method using only the first order derivative\nIntroduction of a learning rate\n\nfunction gradient_descent(f_gradient, x0, lr, max_it=1000, tol=1e-6):\n  \"\"\"\n  grad: function for computing the gradient vector of shape (n, 1)\n  x0: initial guess of shape (n, 1)\n  lr: learning rate (step size)\n  max_it: maximum number of iterations allowed\n  tol: stopping criterion for the difference between consecutive x values\n  \"\"\"\n  x = x0\n  for it in range(max_it):\n    x_grad = grad(x)\n    newton_step = lr * grad(x)\n    x = x - newton_step\n    if norm(newton_step) &lt; tolerance: # OR ABSOLUTE MAXIMUM\n      return x  # Found the minimum\n  raise Error(\"Maximum iterations reached without convergence!\")"
   },
   {
-    "objectID": "part1.html#bfgs-optimization",
-    "href": "part1.html#bfgs-optimization",
+    "objectID": "part1.html#other-optimization-algorithms",
+    "href": "part1.html#other-optimization-algorithms",
     "title": "Machine Learning Techniques - 1",
-    "section": "BFGS Optimization",
-    "text": "BFGS Optimization\nQuasi-Newton method; approximates the inverse Hessian to update parameters.\nInitialize: parameter vector θ, inverse Hessian approximation B, tolerance ε, max_iterations M\nfor i = 1 to M do\n    Compute the gradient ∇f(θ)\n    Compute the search direction p = -B ∇f(θ)\n    Perform line search to find step size α\n    Update θ: θ = θ + αp\n    Update B using the BFGS update formula\n    if ||∇f(θ)|| &lt; ε then\n        break\n    end if\nend for\nReturn θ"
+    "section": "Other Optimization Algorithms",
+    "text": "Other Optimization Algorithms\n\n\nHierarchical Grid-search\n\nLowering the resolution iteratively on the best found intervals.\n\nRandom search\n\nFor high dimension space.\nSampling the search space.\n\nBFGS\n\nUse inverse hessian approximation.\nUpdate the approximation at each step.\nCompatible with boundaries: BFGS-B.\n\nStochastic Gradient Descent\n\nGD on a sampling of the observations.\nSuitable for large datasets."
   },
   {
-    "objectID": "part1.html#jacobianhessian-in-optimization",
-    "href": "part1.html#jacobianhessian-in-optimization",
+    "objectID": "part1.html#key-points-in-optimization",
+    "href": "part1.html#key-points-in-optimization",
     "title": "Machine Learning Techniques - 1",
-    "section": "Jacobian/Hessian in Optimization",
-    "text": "Jacobian/Hessian in Optimization\n\nFor some objective function, it might be complex to get the analytical functino for the the gradient or the hessian.\nGradiant/Hessian can be point-approximated by numerical methods.\nSome optimization methods don’t require computation of the full Jacobian or Hessian, reducing computational demand."
-  },
-  {
-    "objectID": "part1.html#boundaries",
-    "href": "part1.html#boundaries",
-    "title": "Machine Learning Techniques - 1",
-    "section": "Boundaries",
-    "text": "Boundaries\nIn optimization, constraints can be set to ensure parameter values to remain within desired bounds."
-  },
-  {
-    "objectID": "part1.html#stochastic-gradient-descent",
-    "href": "part1.html#stochastic-gradient-descent",
-    "title": "Machine Learning Techniques - 1",
-    "section": "Stochastic Gradient Descent",
-    "text": "Stochastic Gradient Descent\nSGD; updates parameters using a randomly chosen subset of the data. Suitable for large datasets.\nInitialize: parameter vector θ, learning rate α, tolerance ε, max_iterations M, batch_size b\nfor i = 1 to M do\n    Randomly select a mini-batch of size b from the data\n    Compute the gradient ∇f(θ) using the mini-batch\n    Update θ: θ = θ - α ∇f(θ)\n    if average change in θ over recent iterations &lt; ε then\n        break\n    end if\nend for\nReturn θ"
+    "section": "Key points in Optimization",
+    "text": "Key points in Optimization\n\n\nGradient and Hessian\n\nKnown ? Approximated ?\nComputational costs\n\nHyperparameters\n\nInitial Guess\nLearning rate\nIterations / Tolerance\n…\n\nRandomness ?\n\nRepeat with several initial guesses\nRandomness in algorithm ?"
   },
   {
     "objectID": "part1.html#the-bayesian-framework",
     "href": "part1.html#the-bayesian-framework",
     "title": "Machine Learning Techniques - 1",
     "section": "The Bayesian framework",
-    "text": "The Bayesian framework\n\n\nPosterior probability: \\(\\mathbb{P}(\\theta | y)\\)\nPrior: \\(\\mathbb{P}(\\theta)\\)\nLikelihood: \\(\\mathcal{L}(\\theta) = \\mathbb{P}( y | \\theta)\\)\n\n\\[ \\mathbb{P}(\\theta | y) = \\mathcal{L}(\\theta) \\mathbb{P}(\\theta)\\]\n\nExpectation in either likelihood (frequentism) or posterior (Bayesian)\nMaximum Posterior optimization is equivalent to MLE with uniform priors."
+    "text": "The Bayesian framework\n\n\nPosterior probability: \\(\\mathbb{P}(\\theta | y)\\)\nPrior: \\(\\mathbb{P}(\\theta)\\)\nLikelihood: \\(\\mathcal{L}(\\theta) = \\mathbb{P}( y | \\theta)\\)\n\n\\[ \\mathbb{P}(\\theta | y) = \\mathcal{L}(\\theta) \\mathbb{P}(\\theta)\\]\n\nExpectation in either likelihood (Frequentism) or posterior (Bayesian)\nMaximum Posterior optimization is equivalent to MLE with uniform priors."
   },
   {
     "objectID": "part1.html#x-data-or-features",
     "href": "part1.html#x-data-or-features",
     "title": "Machine Learning Techniques - 1",
     "section": "X, Data or Features",
-    "text": "X, Data or Features"
+    "text": "X, Data or Features\n\n\n\n\nFeatures: Variables that are collected for each “observation”. Nature of those variables can be diverse (E.g. measure, design).\nX: Often refers to the matrix of feature with lines as observations and columns as features.\nData: Data can refers to X or to a larger entity with the target value (variable to predict)"
   },
   {
     "objectID": "part1.html#y-targets-predicted-values-or-transformed-values",
     "href": "part1.html#y-targets-predicted-values-or-transformed-values",
     "title": "Machine Learning Techniques - 1",
     "section": "Y, Targets, Predicted Values or Transformed Values",
-    "text": "Y, Targets, Predicted Values or Transformed Values"
+    "text": "Y, Targets, Predicted Values or Transformed Values\n\n\n\n\nY typically represents the variable or the output in statistical modeling and machine learning.\nTargets: The actual values of Y in the dataset. These are what the model aims to predict or reproduce.\nPredicted Values (\\(\\hat{Y}\\)): The values of Y as estimated or predicted by the model based on the features, X.\nTransformed Values: The values of Y as estimated or predicted by the model based on the features, X when there is no meaning for prediction as there are no target value (unsupervised)"
   },
   {
-    "objectID": "part1.html#mf-model-and-hyperparameters",
-    "href": "part1.html#mf-model-and-hyperparameters",
+    "objectID": "part1.html#mf-model-parameters-and-hyperparameters",
+    "href": "part1.html#mf-model-parameters-and-hyperparameters",
     "title": "Machine Learning Techniques - 1",
-    "section": "M/F, Model and Hyperparameters",
-    "text": "M/F, Model and Hyperparameters"
+    "section": "M/F, Model, Parameters and Hyperparameters",
+    "text": "M/F, Model, Parameters and Hyperparameters\n\n\n\n\nM or F stands for the model or function that is being trained or used for predictions/transformations.\nModel: Represents the specific algorithm or method being used to learn from data and make predictions. Examples include linear regression, decision tree, neural network, etc.\nParameters: Part of the model which is being trained from the data through optimization to maximize the objective function.\nHyperparameters: Part of the model that are not learned from the data but are set before training."
   },
   {
     "objectID": "part1.html#predict-transform-fit-and-infer",
     "href": "part1.html#predict-transform-fit-and-infer",
     "title": "Machine Learning Techniques - 1",
     "section": "Predict, Transform, Fit and Infer",
-    "text": "Predict, Transform, Fit and Infer"
+    "text": "Predict, Transform, Fit and Infer\n\nPredict: The process of using a model to estimate or forecast the output (Y) given data (X). Purpose of training a model is to improve the prediction.\nTransform: The process of using a model to transfort given data (X) into transformed data (Y) when there is not explicit target for example in the case of dimensionality reduction.\nFit: The process of training a model on a given dataset.\nInfer:\n\n(common) Prediction based on new, unseen data.\n(less common) The optimization of parameters given a model and a training dataset."
+  },
+  {
+    "objectID": "part1.html#beyond-likelihood-based-reasoning",
+    "href": "part1.html#beyond-likelihood-based-reasoning",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Beyond Likelihood-based reasoning",
+    "text": "Beyond Likelihood-based reasoning\n\n\nSupervised learning\n\nEasily associated with likelihood-based reasoning due to the error term\nAlso many methos not based on likelihood reasoning: Support Vector Machine and Hinge Loss\n\nUnsupervised learning\n\nPrincipal Component Analysis: Maximizing Variance\nGaussian Mixture Model: Likelihood-based\n\nReinforcement learning\n\nReward is maximized.\nMostly not based on likelihood-based reasoning."
   },
   {
     "objectID": "part1.html#conclusion",

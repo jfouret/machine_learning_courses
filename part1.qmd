@@ -107,7 +107,7 @@ $$
 - $\gamma_1 = 0$, $\gamma_2 = 1$
 
 - **Skewness** the 3rd standardized moment:
-  - Skewness is a measure of **assymetry** around the function mean or location.
+  - Skewness is a measure of **assymmetry** around the function mean or location.
 - **Kurtosis** the 3rd standardized moment:
   - *(from Greek: κυρτός, kyrtos or kurtos, meaning "curved, arching")*
   - Kurtosis is a measure of **tailedness**
@@ -146,7 +146,7 @@ $f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$
 - Gamma distribution (Real Positive)
 - 2 parameters
   - $\alpha > 0$ -- *shape*
-  - $\sigma > 0$ -- *rate*
+  - $\lambda > 0$ -- *rate*
 
 |Moment|Value|
 |---|---|
@@ -168,11 +168,11 @@ $f(x) = \frac{\lambda^\alpha x^{\alpha-1}}{\Gamma(\alpha)} e^{-\lambda x}$
 
 - **Uniform**
 - **Beta**: for continuous values between 0 and 1
-- **Binomial/Bernouilli**: Positive discrete
+- **Binomial/Bernoulli**: Positive discrete
 
 ## Law of Large Numbers (LLN)
 
-- **Defintions** 
+- **Defintion** 
   As the number of independent trials increases, the sample average converges to the expected value.
 
 - For any $\epsilon > 0$
@@ -202,11 +202,11 @@ The distribution of the sum (or average) of a large number of independent, ident
 
 - In the ML context:
   - the **sampling distribution** tends to be normal
-  - regardless the true distribution
+  - regardless of the true distribution
 
 - Prediction errors **tend** to be normally distributed when:
-  - the sampling increase, when working in aggregate/batch
-  - the model complexity increase (number of parameters)
+  - The sampling increases, when working in aggregate/batch
+  - The model complexity increases (number of parameters)
 
 - **Ensemble Methods**:
   - Aggregation of models
@@ -250,7 +250,7 @@ Two types of errors in hypothesis testing (@neyman1933):
 
 </div>
 
-## Hypothesis testing: Test statictic 
+## Hypothesis testing: Test statistic 
 <div style="font-size: 80%;">
 A **test statistic** is a 
 
@@ -266,7 +266,7 @@ When testing for
 - $\bar{\sigma_X}$: sample standard deviation
 - $n$: sample size
 </div>
-In case where $X \sim \mathcal{N}(0,1)$, then $X \sim \mathcal{S}(\nu)$ (@student1908)
+In case where $X \sim \mathcal{N}(0,1)$, then $X \sim \mathcal{Student}(\nu)$ (@student1908)
 
 $\nu$ is the degrees of freedom ($n-1$) $\to$ shape of the student-distribution.
 </div>
@@ -345,7 +345,7 @@ $$
 - Generalization
 - Parameters can be either
   - Fixed (fixed effect)
-  - Random variable (randome effect)
+  - Random variable (random effect)
 
 ## Multilevel/Hierarchical models
 
@@ -368,13 +368,13 @@ $$
 - $i \to$ student-level / no features
 - $j \to$ classroom-level / $x_j$ feature like class size
 - $k \to$ school-level / $z_k$ feature like school budget
-- $t \to$ sampling/obsevation (multiple tests)
+- $t \to$ sampling/observation (multiple tests)
 
 </div>
 
 ## Nested models
 
-- A specificity from another model
+- A specific case from another model
 - Example: no school effect: $\gamma_k = 0$
 - Important for hypothesis testing with a test elaborated to compare nested models (seen after)
 
@@ -397,7 +397,7 @@ with:
 
 :::{.box}
 - The probability of the parameters given the observation and a model
-- How well the model explains the observed data ?
+- How well does the model explain the observed data ?
 :::
 
 The likelihood is a function of the parameters $\mathcal{L}_{\mathcal{M}}(\theta) = \mathcal{L}(\theta)$
@@ -408,11 +408,11 @@ The likelihood is a function of the parameters $\mathcal{L}_{\mathcal{M}}(\theta
 
 <div style="font-size: 80%;">
 
-- MLE aims to find the parameters $\theta$ that maximizes the likelihood function $\mathcal{L}(\theta)$.
+- MLE aims to find the parameter(s) $\theta$ that maximize the likelihood function $\mathcal{L}(\theta)$.
 
 $$\hat{\theta}_{MLE} = \arg \max_{\theta} \mathcal{L}(\theta)$$
 
-- $\hat{\theta}_{MLE}$ is the *maximum likehood estimates*
+- $\hat{\theta}_{MLE}$ is the *maximum likehood estimate(s)*
 - inferred from likelihood maximization
 
 </div>
@@ -492,14 +492,14 @@ Where:
 
 </div>
 
-## GLR: Minimize the SSR
+## GLR: Minimizing the SSR
 
 - $SSR(B) = (Y - XB)^T (Y - XB)$
 - $SSR(B) = Y^T Y − Y^T X B − B^T X^T Y + B^T X^T X B$
 - $\Delta SSR(B) = 0 - X^TY - X^TY + 2 X^T X B$
 - $\Delta SSR(B) = - 2X^TY + 2 X^T X B$
 
-To find the optimum of $SSR(B)$, we try to resolve $\Delta SSR(B) = 0$, ie the equation:
+To find the optimum of $SSR(B)$, we try to solve $\Delta SSR(B) = 0$, ie the equation:
 
 $$X^TY =  X^T X B$$
 
@@ -517,121 +517,165 @@ For $X$ to be invertible, it needs to be a full rank matrix:
 
 ## Grid search optimization
 
+<div style="font-size: 80%;">
 - Systematic search through a pre-defined space for parameters.
 - Evaluates each combination to find the best.
 - Example for minimization
+</div>
 
-```pseudo
-Initialize: parameter space Θ, best_score = ∞
-for each parameter combination θ in Θ do
-    Compute score S using θ
-    if S < best_score then
-        best_score = S
-        best_parameters = θ
-    end if
-end for
-Return best_parameters
+```python
+function grid_search(x_space, f):
+  """
+  x_space: all combination of parameters
+  f: target function
+  """
+  best_score = float("inf")
+  for x in x_space:
+    score = f(p)
+    if score < best_score:
+      best_score = score
+      best_x = x
+  return best_x 
 ```
 
 ## Newton Optimization
 
-Iterative method using gradient and Hessian to find parameter values that maximize or minimize the objective.
+- Iterative method using gradient and Hessian
 
-```pseudo
-Initialize: parameter vector θ, tolerance ε, max_iterations M
-for i = 1 to M do
-    Compute the gradient ∇f(θ) and the Hessian H(θ)
-    Update θ: θ = θ - H(θ)^-1 ∇f(θ)
-    if ||∇f(θ)|| < ε then
-        break
-    end if
-end for
-Return θ
+<div style="font-size: 75%;">
+
+```python
+from scipy.linalg import inv, det, norm
+function newton_optimization(grad, hess, x0, tol=1e-6, max_it=1000):
+  """
+  grad: function for computing the gradient vector of shape (n, 1)
+  hess: function for computing the hessian matrix of shape (n, n)
+  x0: initial guess of shape (n, 1)
+  tol: stopping criterion for the difference between consecutive x values
+  max_it: maximum number of iterations allowed
+  """
+  x = x0
+  for it in range(max_it):
+    x_grad = grad(x)
+    x_hess = hess(x)
+    assert(det(x_hess) != 0)
+    x = x + np.matmul(inv(x_hess), x_grad)
+    if norm(x_grad) < tol:
+      return x  # Found the optimum
+    x_current = x_next
+  raise Error("Maximum iterations reached without convergence!")
 ```
+</div>
 
-## Simplex Optimization
+## Nelder-Mead Optimization
+<div style="font-size: 60%;">
 
-Nelder-Mead method; moves a simplex in the parameter space toward optimal values.
+::: columns
+::: {.column width="58%"}
+```python
+function nelder_mead(f, s0, coef, max_it=1000, tol=1e-6):
+  """
+  f: target function to be minimized
+  s0: list of n+1 initial guesses (vertices of the initial simplex)
+  coef: reflection, contraction, expansion, shrink coefficients
+  max_it: maximum number of iterations allowed
+  tol: stopping criterion for the difference in function values
+  """
+  s = s0
+  for it in range(max_it):
+    s.sort(key=lambda v: f(v)) # Sorting from low to high
+    centroid = [sum(v[i] for v in s[:-1]) # Without the worst
+    refl_v = centroid + coef[0] * (centroid - s[-1]) # Reflect the worst
+    if f(s[0]) <= f(refl_v) < f(s[-2]): # if good but not best
+      simplex[-1] = refl_v # replace the worst
+    elif f(refl_v) < f(s[0]): # elif best, try expansion
+      expe_v = centroid + coef[1] * (refl_v - centroid)
+      if f(expe_v) < f(s[0]): simplex[-1] = expe_v
+      else: simplex[-1] = refl_v
+    else: # contract the worst or shrink all others
+      cont_v = centroid + coef[2] * (s[-1] - centroid)
+      if f(cont_v) < f(s[-1]): s[-1] = cont_v
+      else: s = [s[0] + coef[3] * (s[i] - s[0]) for i in range(1, len(s))]
+    if abs(f(s[-1]) - f(s[0])) < tol:
+      return s[0]
 
-```pseudo
-Initialize: simplex vertices θ_1, θ_2, ..., θ_n+1
-while termination criteria not met do
-    Order the vertices by objective function value
-    Compute centroid of all but worst vertex
-    Reflect worst vertex over centroid
-    if reflection improved then
-        Try expansion
-    else
-        Try contraction or reduction
-    end if
-end while
-Return best vertex
 ```
+:::
+::: {.column width="42%"}
+
+<img src="img/Nelder_Mead.png" alt="" style="border: 2px solid black; display: block; margin: auto;" width="65%" height="auto">
+
+<img src="img/Nelder-Mead_Himmelblau.gif" alt="" style="border: 2px solid black; display: block; margin: auto;" width="65%" height="auto">
+
+Source: WIKIPEDIA
+:::
+:::
+
+</div>
 
 ## Gradient descent Optimization
 
-Iterative method adjusting parameters in the direction of steepest decrease of the objective function.
+- Iterative method using only the first order derivative
+- Introduction of a learning rate
 
-```pseudo
-Initialize: parameter vector θ, learning rate α, tolerance ε, max_iterations M
-for i = 1 to M do
-    Compute the gradient ∇f(θ)
-    Update θ: θ = θ - α ∇f(θ)
-    if ||∇f(θ)|| < ε then
-        break
-    end if
-end for
-Return θ
+```python
+function gradient_descent(f_gradient, x0, lr, max_it=1000, tol=1e-6):
+  """
+  grad: function for computing the gradient vector of shape (n, 1)
+  x0: initial guess of shape (n, 1)
+  lr: learning rate (step size)
+  max_it: maximum number of iterations allowed
+  tol: stopping criterion for the difference between consecutive x values
+  """
+  x = x0
+  for it in range(max_it):
+    x_grad = grad(x)
+    newton_step = lr * grad(x)
+    x = x - newton_step
+    if norm(newton_step) < tolerance: # OR ABSOLUTE MAXIMUM
+      return x  # Found the minimum
+  raise Error("Maximum iterations reached without convergence!")
 ```
 
-## BFGS Optimization
+## Other Optimization Algorithms
 
-Quasi-Newton method; approximates the inverse Hessian to update parameters.
+<div style="font-size: 60%;">
 
-```pseudo
-Initialize: parameter vector θ, inverse Hessian approximation B, tolerance ε, max_iterations M
-for i = 1 to M do
-    Compute the gradient ∇f(θ)
-    Compute the search direction p = -B ∇f(θ)
-    Perform line search to find step size α
-    Update θ: θ = θ + αp
-    Update B using the BFGS update formula
-    if ||∇f(θ)|| < ε then
-        break
-    end if
-end for
-Return θ
-```
+- Hierarchical Grid-search
+  - Lowering the resolution iteratively on the best found intervals.
 
-## Jacobian/Hessian in Optimization
+- Random search
+  - For high dimension space.
+  - Sampling the search space.
 
-- For some objective function, it might be complex to get the analytical functino for the the gradient or the hessian.
+- BFGS
+  - Use inverse hessian approximation.
+  - Update the approximation at each step. 
+  - Compatible with boundaries: BFGS-B.
 
-- Gradiant/Hessian can be point-approximated by numerical methods.
+- Stochastic Gradient Descent
+  - GD on a sampling of the observations.
+  - Suitable for large datasets.
+</div>
 
-- Some optimization methods don't require computation of the 
-full Jacobian or Hessian, reducing computational demand.
+## Key points in Optimization
 
-## Boundaries
+<div style="font-size: 75%;">
 
-In optimization, constraints can be set to ensure parameter values to remain within desired bounds.
+- Gradient and Hessian
+  - Known ? Approximated ?
+  - Computational costs
 
-## Stochastic Gradient Descent
+- Hyperparameters
+  - Initial Guess
+  - Learning rate
+  - Iterations / Tolerance
+  - ... 
 
-SGD; updates parameters using a randomly chosen subset of the data. Suitable for large datasets.
-
-```pseudo
-Initialize: parameter vector θ, learning rate α, tolerance ε, max_iterations M, batch_size b
-for i = 1 to M do
-    Randomly select a mini-batch of size b from the data
-    Compute the gradient ∇f(θ) using the mini-batch
-    Update θ: θ = θ - α ∇f(θ)
-    if average change in θ over recent iterations < ε then
-        break
-    end if
-end for
-Return θ
-```
+- Randomness ?
+  - Repeat with several initial guesses
+  - Randomness in algorithm ?
+</div>
 
 ## The Bayesian framework
 
@@ -643,7 +687,7 @@ Return θ
 
 $$ \mathbb{P}(\theta | y) = \mathcal{L}(\theta) \mathbb{P}(\theta)$$
 
-- Expectation in either likelihood (frequentism) or posterior (Bayesian)
+- Expectation in either likelihood (Frequentism) or posterior (Bayesian)
 - Maximum Posterior optimization is equivalent to MLE with uniform priors.
 
 </div>
@@ -652,11 +696,113 @@ $$ \mathbb{P}(\theta | y) = \mathcal{L}(\theta) \mathbb{P}(\theta)$$
 
 ## X, Data or Features
 
+::: columns
+
+::: column
+
+<div style="font-size: 80%;">
+
+- **Features**: Variables that are collected for each "observation". Nature of those variables can be diverse (E.g. measure, design).
+
+- **X**: Often refers to the matrix of feature with lines as observations and columns as features.
+
+- **Data**: Data can refers to X or to a larger entity with the target value (variable to predict)
+
+</div>
+
+:::
+
+::: column
+
+<img src="img/data_x.svg" alt="" style="border: 2px solid black; display: block; margin: auto;" width="80%" height="auto">
+
+:::
+:::
+
 ## Y, Targets, Predicted Values or Transformed Values
 
-## M/F, Model and Hyperparameters
+::: columns
+::: column
+<div style="font-size: 60%;">
+
+- **Y** typically represents the variable or the output in statistical modeling and machine learning.
+
+- **Targets**: The actual values of Y in the dataset. These are what the model aims to predict or reproduce.
+
+- **Predicted Values** ($\hat{Y}$): The values of Y as estimated or predicted by the model based on the features, X.
+
+- **Transformed Values**: The values of Y as estimated or predicted by the model based on the features, X when there is no meaning for prediction as there are no target value (unsupervised)
+
+</div>
+
+:::
+
+::: column
+
+<img src="img/data_x_y.svg" alt="" style="border: 2px solid black; display: block; margin: auto;" width="80%" height="auto">
+
+:::
+:::
+
+## M/F, Model, Parameters and Hyperparameters
+
+::: columns
+::: column
+<div style="font-size: 60%;">
+
+- **M** or **F** stands for the model or function that is being trained or used for predictions/transformations.
+
+- **Model**: Represents the specific algorithm or method being used to learn from data and make predictions. Examples include linear regression, decision tree, neural network, etc.
+
+- **Parameters**: Part of the model which is being trained from the data through optimization to maximize the objective function.
+
+- **Hyperparameters**: Part of the model that are not learned from the data but are set before training.
+
+</div>
+
+:::
+
+::: column
+
+<img src="img/model_params.png" alt="" style="border: 2px solid black; display: block; margin: auto;" width="60%" height="auto">
+
+:::
+:::
 
 ## Predict, Transform, Fit and Infer
+
+<div style="font-size: 80%;">
+
+**Predict**: The process of using a model to estimate or forecast the output (Y) given data (X). Purpose of training a model is to improve the prediction.
+
+**Transform**: The process of using a model to transfort given data (X) into transformed data (Y) when there is not explicit target for example in the case of dimensionality reduction.
+
+**Fit**: The process of training a model on a given dataset.
+
+**Infer**:
+
+- (common) Prediction based on new, unseen data.
+- (less common) The optimization of parameters given a model and a training dataset.
+
+</div>
+
+## Beyond Likelihood-based reasoning
+
+<div style="font-size: 80%;">
+
+- **Supervised learning**
+  - Easily associated with **likelihood-based** reasoning due to the error term
+  - Also many methos not based on likelihood reasoning: Support Vector Machine and Hinge Loss
+
+- **Unsupervised learning**
+  - Principal Component Analysis: Maximizing Variance
+  - Gaussian Mixture Model: Likelihood-based
+
+- **Reinforcement learning**
+  - Reward is maximized.
+  - Mostly not based on likelihood-based reasoning.
+
+</div>
 
 ## Conclusion
 

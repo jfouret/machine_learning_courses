@@ -1,3 +1,6 @@
 /*_files
 /.quarto/
 _extensions
+.RData
+.Rhistory
+/part*.html
