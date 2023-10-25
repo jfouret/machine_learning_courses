@@ -197,12 +197,12 @@ How BMI is used in real life ?
 Sometime features holds too much non-essential information and are better used being reduced and categorized.
 </details>
 
-## 3.2 Interaction Terms
+## 3.2 Interaction Term
 
 Given your observation is there an interaction that might be more of interest ? Considering all interactions at once might add too much complexity to the model.
 
 <details><summary>**Hints**</summary>
-Add the new feature that sould be binary.
+Add the new feature that should be binary.
 </details>
 
 - Encoding the interaction
@@ -217,4 +217,134 @@ Add the new feature that sould be binary.
 
 - **Evaluate the performance**
 
+# 4. Leveraging the statsmodels package
 
+## 4.1 OLS with Formula API
+
+```
+import statsmodels.formula.api as smf
+results1 = smf.ols('charges ~ age + sex + bmi +  children + smoker + region + obesity', data=df2).fit()
+results1.summary()
+```
+## 4.2 Model selection
+
+- add a model with the interaction term `+ obesity:smoker`
+- Compare models with AIC, BIC and LRT test
+    <details><summary>**Hints**</summary>
+    compute the stat: `D = -2 * (results1.llf - results2.llf)`
+
+    compute the difference in complexity: `df = results2.df_model - results1.df_model`
+    
+    compute the p-value as area under the pdf more extreme in comparison the the observed statistic.
+
+    use `scipy.stats.chi2`
+
+    "area under the pdf more extreme in comparison the the observed statistic" ==> 1-cdf
+
+    cdf: cumulative distribution function
+
+    pdf: probability distribution function
+
+    Do not forget that df is the agrument of the chi2 law here.
+    </details>
+
+
+# 5. In-sample and out-sample errors
+
+## 5.1 North vs South
+
+- Split the dataset between south and north based on region.
+- Train a model with south data
+- Compare its performance using sum of squared error and R2 between the 2 datasets.
+- What is the difference ? Comment.
+
+## 5.2 Sample 1 vs Sample 2
+
+- Do the same with 2 sample of the data frame
+
+    <details><summary>**Hints**</summary>
+    use the `sample()` method of the pd dataframe object.
+    </details>
+
+- start with 2 sample of 100
+- try, 20 and 50
+- Each time look at the sum of squared errors and r2
+- Comment.
+
+# 6. Full ML workflow
+
+- Familiarize yourself with the terms
+  - training dataset
+  - validation dataset
+  - test dataset
+  - adversarial test dataset
+
+- Let us make a proper setup:
+
+We expect `df2` to be the dataframe, not encoded with the new feature.
+
+```python
+from sklearn.linear_model import LinearRegression
+from sklearn.feature_selection import SelectKBest, f_regression
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.model_selection import GridSearchCV, train_test_split
+from sklearn.metrics import mean_squared_error
+
+df_adv = pd.get_dummies(df2[df2["region"] == "southeast"].drop(columns="region"), columns=['sex', 'smoker', "obesity"], drop_first=True)
+df_trn = pd.get_dummies(df2[df2["region"] != "southeast"].drop(columns="region"), columns=['sex', 'smoker', "obesity"], drop_first=True)
+
+X_adv = df_adv.drop(columns='charges')
+y_adv = df_adv['charges']
+
+# Splitting the data
+X = df_trn.drop(columns='charges')
+y = df_trn['charges']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+```
+
+Let's define a full ML pipeline
+
+```python
+# Create the preprocessing steps using ColumnTransformer
+preprocessor = ColumnTransformer(
+    transformers=[
+        ('poly', PolynomialFeatures(include_bias=False), X.columns)
+    ])
+
+# Create the pipeline with SequentialFeatureSelector
+pipeline = Pipeline([
+    ('preprocessor', preprocessor),
+    ('feature_selection', SelectKBest(f_regression, k='all')),
+    ('regressor', LinearRegression())
+])
+
+# Grid search including a parameter for number of features to select
+param_grid = [
+    {
+        'regressor': [LinearRegression()],
+        'preprocessor__poly__degree': [], # TO COMPLETE
+        'feature_selection__k': [], # TO COMPLETE
+    },
+    {
+        'regressor': [], # TO COMPLETE find an alternative regressor model on sklearn
+        'preprocessor__poly__degree': [], # TO COMPLETE
+        'feature_selection__k': [5,10,"all"], # TO COMPLETE
+    }
+]
+```
+
+- use `GridSearchCV` to find the best hyper parameters
+    <details><summary>**Hints**</summary>
+    Create the object and use the `fit` method with training dataset.
+    </details>
+
+- Gather the best pipeline with the best parameters
+    <details><summary>**Hints**</summary>
+    best pipeline: `best_estimator_` attribute
+    best parameters: `best_estimator_` attribute
+    </details>
+
+- Refit the best pipeline with the training datasets. And comment why retraining is necessary.
+- Evaluate the prediction on the different datasets, training, Test, adversarial test with the MSE (mean squared error) and the R2 scores.

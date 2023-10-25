@@ -159,9 +159,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#some-feature-engineering" id="toc-some-feature-engineering" class="nav-link" data-scroll-target="#some-feature-engineering">3. Some Feature Engineering</a>
   <ul class="collapse">
   <li><a href="#a-derived-feature" id="toc-a-derived-feature" class="nav-link" data-scroll-target="#a-derived-feature">3.1 A derived feature ?</a></li>
-  <li><a href="#interaction-terms" id="toc-interaction-terms" class="nav-link" data-scroll-target="#interaction-terms">3.2 Interaction Terms</a></li>
+  <li><a href="#interaction-term" id="toc-interaction-term" class="nav-link" data-scroll-target="#interaction-term">3.2 Interaction Term</a></li>
   <li><a href="#retrain-with-the-new-model" id="toc-retrain-with-the-new-model" class="nav-link" data-scroll-target="#retrain-with-the-new-model">3.3 Retrain with the new model</a></li>
   </ul></li>
+  <li><a href="#leveraging-the-statsmodels-package" id="toc-leveraging-the-statsmodels-package" class="nav-link" data-scroll-target="#leveraging-the-statsmodels-package">4. Leveraging the statsmodels package</a>
+  <ul class="collapse">
+  <li><a href="#ols-with-formula-api" id="toc-ols-with-formula-api" class="nav-link" data-scroll-target="#ols-with-formula-api">4.1 OLS with Formula API</a></li>
+  <li><a href="#model-selection" id="toc-model-selection" class="nav-link" data-scroll-target="#model-selection">4.2 Model selection</a></li>
+  </ul></li>
+  <li><a href="#in-sample-and-out-sample-errors" id="toc-in-sample-and-out-sample-errors" class="nav-link" data-scroll-target="#in-sample-and-out-sample-errors">5. In-sample and out-sample errors</a>
+  <ul class="collapse">
+  <li><a href="#north-vs-south" id="toc-north-vs-south" class="nav-link" data-scroll-target="#north-vs-south">5.1 North vs South</a></li>
+  <li><a href="#sample-1-vs-sample-2" id="toc-sample-1-vs-sample-2" class="nav-link" data-scroll-target="#sample-1-vs-sample-2">5.2 Sample 1 vs Sample 2</a></li>
+  </ul></li>
+  <li><a href="#full-ml-workflow" id="toc-full-ml-workflow" class="nav-link" data-scroll-target="#full-ml-workflow">6. Full ML workflow</a></li>
   </ul>
 </nav>
     </div>
@@ -417,14 +428,14 @@ Generate predictions based on the model you trained.</p></li>
 Sometime features holds too much non-essential information and are better used being reduced and categorized.
 </details>
 </section>
-<section id="interaction-terms" class="level2">
-<h2 class="anchored" data-anchor-id="interaction-terms">3.2 Interaction Terms</h2>
+<section id="interaction-term" class="level2">
+<h2 class="anchored" data-anchor-id="interaction-term">3.2 Interaction Term</h2>
 <p>Given your observation is there an interaction that might be more of interest ? Considering all interactions at once might add too much complexity to the model.</p>
 <details>
 <summary>
 <strong>Hints</strong>
 </summary>
-Add the new feature that sould be binary.
+Add the new feature that should be binary.
 </details>
 <ul>
 <li><p>Encoding the interaction</p>
@@ -442,9 +453,143 @@ Add the new feature that sould be binary.
 <li><p><strong>Train the model and make predictions</strong></p></li>
 <li><p><strong>Evaluate the performance</strong></p></li>
 </ul>
-
-
 </section>
+</section>
+<section id="leveraging-the-statsmodels-package" class="level1">
+<h1>4. Leveraging the statsmodels package</h1>
+<section id="ols-with-formula-api" class="level2">
+<h2 class="anchored" data-anchor-id="ols-with-formula-api">4.1 OLS with Formula API</h2>
+<pre><code>import statsmodels.formula.api as smf
+results1 = smf.ols('charges ~ age + sex + bmi +  children + smoker + region + obesity', data=df2).fit()
+results1.summary()</code></pre>
+</section>
+<section id="model-selection" class="level2">
+<h2 class="anchored" data-anchor-id="model-selection">4.2 Model selection</h2>
+<ul>
+<li><p>add a model with the interaction term <code>+ obesity:smoker</code></p></li>
+<li><p>Compare models with AIC, BIC and LRT test</p>
+<details>
+<summary>
+<p><strong>Hints</strong></p>
+</summary>
+<p>compute the stat: <code>D = -2 * (results1.llf - results2.llf)</code></p>
+<p>compute the difference in complexity: <code>df = results2.df_model - results1.df_model</code></p>
+<p>compute the p-value as area under the pdf more extreme in comparison the the observed statistic.</p>
+<p>use <code>scipy.stats.chi2</code></p>
+<p>“area under the pdf more extreme in comparison the the observed statistic” ==&gt; 1-cdf</p>
+<p>cdf: cumulative distribution function</p>
+<p>pdf: probability distribution function</p>
+<p>Do not forget that df is the agrument of the chi2 law here.</p>
+</details></li>
+</ul>
+</section>
+</section>
+<section id="in-sample-and-out-sample-errors" class="level1">
+<h1>5. In-sample and out-sample errors</h1>
+<section id="north-vs-south" class="level2">
+<h2 class="anchored" data-anchor-id="north-vs-south">5.1 North vs South</h2>
+<ul>
+<li>Split the dataset between south and north based on region.</li>
+<li>Train a model with south data</li>
+<li>Compare its performance using sum of squared error and R2 between the 2 datasets.</li>
+<li>What is the difference ? Comment.</li>
+</ul>
+</section>
+<section id="sample-1-vs-sample-2" class="level2">
+<h2 class="anchored" data-anchor-id="sample-1-vs-sample-2">5.2 Sample 1 vs Sample 2</h2>
+<ul>
+<li><p>Do the same with 2 sample of the data frame</p>
+<details>
+<summary>
+<p><strong>Hints</strong></p>
+</summary>
+<p>use the <code>sample()</code> method of the pd dataframe object.</p>
+</details></li>
+<li><p>start with 2 sample of 100</p></li>
+<li><p>try, 20 and 50</p></li>
+<li><p>Each time look at the sum of squared errors and r2</p></li>
+<li><p>Comment.</p></li>
+</ul>
+</section>
+</section>
+<section id="full-ml-workflow" class="level1">
+<h1>6. Full ML workflow</h1>
+<ul>
+<li>Familiarize yourself with the terms
+<ul>
+<li>training dataset</li>
+<li>validation dataset</li>
+<li>test dataset</li>
+<li>adversarial test dataset</li>
+</ul></li>
+<li>Let us make a proper setup:</li>
+</ul>
+<p>We expect <code>df2</code> to be the dataframe, not encoded with the new feature.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.feature_selection <span class="im">import</span> SelectKBest, f_regression</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> PolynomialFeatures</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.compose <span class="im">import</span> ColumnTransformer</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> Pipeline</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> GridSearchCV, train_test_split</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>df_adv <span class="op">=</span> pd.get_dummies(df2[df2[<span class="st">"region"</span>] <span class="op">==</span> <span class="st">"southeast"</span>].drop(columns<span class="op">=</span><span class="st">"region"</span>), columns<span class="op">=</span>[<span class="st">'sex'</span>, <span class="st">'smoker'</span>, <span class="st">"obesity"</span>], drop_first<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>df_trn <span class="op">=</span> pd.get_dummies(df2[df2[<span class="st">"region"</span>] <span class="op">!=</span> <span class="st">"southeast"</span>].drop(columns<span class="op">=</span><span class="st">"region"</span>), columns<span class="op">=</span>[<span class="st">'sex'</span>, <span class="st">'smoker'</span>, <span class="st">"obesity"</span>], drop_first<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>X_adv <span class="op">=</span> df_adv.drop(columns<span class="op">=</span><span class="st">'charges'</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>y_adv <span class="op">=</span> df_adv[<span class="st">'charges'</span>]</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Splitting the data</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> df_trn.drop(columns<span class="op">=</span><span class="st">'charges'</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> df_trn[<span class="st">'charges'</span>]</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.2</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Let’s define a full ML pipeline</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the preprocessing steps using ColumnTransformer</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>preprocessor <span class="op">=</span> ColumnTransformer(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    transformers<span class="op">=</span>[</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        (<span class="st">'poly'</span>, PolynomialFeatures(include_bias<span class="op">=</span><span class="va">False</span>), X.columns)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    ])</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the pipeline with SequentialFeatureSelector</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>pipeline <span class="op">=</span> Pipeline([</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'preprocessor'</span>, preprocessor),</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'feature_selection'</span>, SelectKBest(f_regression, k<span class="op">=</span><span class="st">'all'</span>)),</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'regressor'</span>, LinearRegression())</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Grid search including a parameter for number of features to select</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>param_grid <span class="op">=</span> [</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">'regressor'</span>: [LinearRegression()],</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">'preprocessor__poly__degree'</span>: [], <span class="co"># TO COMPLETE</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>        <span class="st">'feature_selection__k'</span>: [], <span class="co"># TO COMPLETE</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>        <span class="st">'regressor'</span>: [], <span class="co"># TO COMPLETE find an alternative regressor model on sklearn</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>        <span class="st">'preprocessor__poly__degree'</span>: [], <span class="co"># TO COMPLETE</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>        <span class="st">'feature_selection__k'</span>: [<span class="dv">5</span>,<span class="dv">10</span>,<span class="st">"all"</span>], <span class="co"># TO COMPLETE</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>use <code>GridSearchCV</code> to find the best hyper parameters
+<details>
+<summary>
+<strong>Hints</strong>
+</summary>
+Create the object and use the <code>fit</code> method with training dataset.
+</details></li>
+<li>Gather the best pipeline with the best parameters
+<details>
+<summary>
+<strong>Hints</strong>
+</summary>
+best pipeline: <code>best_estimator_</code> attribute best parameters: <code>best_estimator_</code> attribute
+</details></li>
+<li>Refit the best pipeline with the training datasets. And comment why retraining is necessary.</li>
+<li>Evaluate the prediction on the different datasets, training, Test, adversarial test with the MSE (mean squared error) and the R2 scores.</li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->

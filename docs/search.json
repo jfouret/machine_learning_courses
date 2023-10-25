@@ -49,11 +49,11 @@
     "text": "3.1 A derived feature ?\nChallenge yourself: Can you derive any new features that might be relevant for the model given your previous observations ?\n\n\nHints\n\nHow BMI is used in real life ?\nSometime features holds too much non-essential information and are better used being reduced and categorized."
   },
   {
-    "objectID": "practicals_1.html#interaction-terms",
-    "href": "practicals_1.html#interaction-terms",
+    "objectID": "practicals_1.html#interaction-term",
+    "href": "practicals_1.html#interaction-term",
     "title": "Hands-on Machine Learning: Medical Insurance Data",
-    "section": "3.2 Interaction Terms",
-    "text": "3.2 Interaction Terms\nGiven your observation is there an interaction that might be more of interest ? Considering all interactions at once might add too much complexity to the model.\n\n\nHints\n\nAdd the new feature that sould be binary.\n\n\nEncoding the interaction\n\n\nHints\n\nIn linear regression an interaction between \\(x_1\\) and \\(x_2\\) is modelled as follows: \\(y = \\alpha + \\beta_1 x_1 + \\beta_2 x_2 + \\beta_3 x_1 x_2\\), \\(x_1 x_2\\) being the interaction term and \\(\\beta_3\\) the associated parameter."
+    "section": "3.2 Interaction Term",
+    "text": "3.2 Interaction Term\nGiven your observation is there an interaction that might be more of interest ? Considering all interactions at once might add too much complexity to the model.\n\n\nHints\n\nAdd the new feature that should be binary.\n\n\nEncoding the interaction\n\n\nHints\n\nIn linear regression an interaction between \\(x_1\\) and \\(x_2\\) is modelled as follows: \\(y = \\alpha + \\beta_1 x_1 + \\beta_2 x_2 + \\beta_3 x_1 x_2\\), \\(x_1 x_2\\) being the interaction term and \\(\\beta_3\\) the associated parameter."
   },
   {
     "objectID": "practicals_1.html#retrain-with-the-new-model",
@@ -61,6 +61,34 @@
     "title": "Hands-on Machine Learning: Medical Insurance Data",
     "section": "3.3 Retrain with the new model",
     "text": "3.3 Retrain with the new model\n\nTrain the model and make predictions\nEvaluate the performance"
+  },
+  {
+    "objectID": "practicals_1.html#ols-with-formula-api",
+    "href": "practicals_1.html#ols-with-formula-api",
+    "title": "Hands-on Machine Learning: Medical Insurance Data",
+    "section": "4.1 OLS with Formula API",
+    "text": "4.1 OLS with Formula API\nimport statsmodels.formula.api as smf\nresults1 = smf.ols('charges ~ age + sex + bmi +  children + smoker + region + obesity', data=df2).fit()\nresults1.summary()"
+  },
+  {
+    "objectID": "practicals_1.html#model-selection",
+    "href": "practicals_1.html#model-selection",
+    "title": "Hands-on Machine Learning: Medical Insurance Data",
+    "section": "4.2 Model selection",
+    "text": "4.2 Model selection\n\nadd a model with the interaction term + obesity:smoker\nCompare models with AIC, BIC and LRT test\n\n\nHints\n\ncompute the stat: D = -2 * (results1.llf - results2.llf)\ncompute the difference in complexity: df = results2.df_model - results1.df_model\ncompute the p-value as area under the pdf more extreme in comparison the the observed statistic.\nuse scipy.stats.chi2\n“area under the pdf more extreme in comparison the the observed statistic” ==&gt; 1-cdf\ncdf: cumulative distribution function\npdf: probability distribution function\nDo not forget that df is the agrument of the chi2 law here."
+  },
+  {
+    "objectID": "practicals_1.html#north-vs-south",
+    "href": "practicals_1.html#north-vs-south",
+    "title": "Hands-on Machine Learning: Medical Insurance Data",
+    "section": "5.1 North vs South",
+    "text": "5.1 North vs South\n\nSplit the dataset between south and north based on region.\nTrain a model with south data\nCompare its performance using sum of squared error and R2 between the 2 datasets.\nWhat is the difference ? Comment."
+  },
+  {
+    "objectID": "practicals_1.html#sample-1-vs-sample-2",
+    "href": "practicals_1.html#sample-1-vs-sample-2",
+    "title": "Hands-on Machine Learning: Medical Insurance Data",
+    "section": "5.2 Sample 1 vs Sample 2",
+    "text": "5.2 Sample 1 vs Sample 2\n\nDo the same with 2 sample of the data frame\n\n\nHints\n\nuse the sample() method of the pd dataframe object.\n\nstart with 2 sample of 100\ntry, 20 and 50\nEach time look at the sum of squared errors and r2\nComment."
   },
   {
     "objectID": "part0.html#table-of-contents",
