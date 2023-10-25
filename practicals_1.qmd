@@ -1,0 +1,220 @@
+---
+title: "Hands-on Machine Learning: Medical Insurance Data"
+description: "A practical exercise to hone your machine learning skills using real-world data."
+author:
+  - name: Julien Fouret
+    email: julien.fouret@cpe.fr
+output: html_document
+---
+
+# Introduction
+
+This exercise immerses you in a real-world scenario.
+
+- exploring the nuances of the dataset
+- apply machine learning techniques
+- gain a tangible feel for data manipulation and modeling.
+- understand ML pipeline
+
+# 1. Dataset Familiarization
+
+## 1.1 Import and quick exploration
+
+Your first task is to get familiar with the practical steps of data handling.
+
+### Context of the dataset
+
+Insurance companies leverage data to make informed decisions about policy pricing. Predicting future insurance charges for new subscriptions is vital. By understanding features like BMI (Body Mass Index), sex, and age, companies can adjust pricing strategies to stay competitive while managing risks and profitability.
+
+Given our dataset, which likely represents insurance charges over a year, our goal is to predict these charges for potential new subscribers.
+
+### Attributes:
+
+The dataset we'll be working with has been sourced from Kaggle. It provides various attributes of individuals and their corresponding medical insurance charges.
+
+[**Dataset Link**](https://www.kaggle.com/datasets/joebeachcapital/medical-insurance-costs/)
+
+**License**: Open
+
+- `age`: Age of the insured
+- `sex`: Gender of the insured
+- `bmi`: Body Mass Index
+- `children`: Number of children/dependents
+- `smoker`: Smoking status
+- `region`: Residential region
+- `charges`: Medical insurance cost
+
+- (Optionally the datasets is available on e-campus.)
+- **Load the Dataset into a colab session**
+- Import the datasets
+
+    <details><summary>Hints</summary>
+    ```python
+    import pandas as pd
+    data = pd.read_csv('insurance.csv')
+    ```
+    </details>
+
+### Dive into the dataset briefly to recognize its structure:
+
+- **Data Types**
+    <details><summary>Hints</summary>
+    use the `dtypes` attribute
+    </details>
+
+- **Dataset Size**  
+    <details><summary>Hints</summary>
+    use the `shape` attribute
+    </details>
+
+- **Column names**  
+    <details><summary>Hints</summary>
+    use the `columns` attribute
+    </details>
+
+- **Look at the first lines**  
+    <details><summary>Hints</summary>
+    use the `.head()` attribute
+    </details>
+
+- **Summarize the columns**  
+    <details><summary>Hints</summary>
+    use the `describe()` method.
+
+    use the `include` argument with respect to dtypes that are not in the first output
+    </details>
+
+- **Identify** the key features and the target variable:
+
+<details><summary>**Target**</summary>
+`charges`
+</details>
+
+<details><summary>**Discrete features**</summary>
+`age`, `sex`, `children`, `smoker`, `region`
+</details>
+
+<details><summary>**Continuous features**</summary>
+`bmi`
+</details>
+
+- What are the possible values for `children`, `region`, or `smoker` ?
+
+## 2.2 Data Vizualisation
+
+- Use dataviz techniques to explore potential relations between the target and features.
+
+<details><summary>**Hints**</summary>
+use a combination of `panda.melt` and `seaborn.relplot` for dataviz.
+
+keep the target as id in the long format
+
+use `kind="scatter"` in `relplot`
+
+Free the plot scales with `facet_kws = {"sharex": False}`
+
+Other relplot option of interest: `alpha`, `col_wrap`.
+</details>
+
+# 2. Basic Linear Modeling
+
+## 2.1 Data Encoding
+
+The linear model does not accept string as input. That is where encoding helps.
+
+- **Encoding Categorical Variables**
+    <details><summary>**Hints**</summary>
+    use `pd.get_dummies`
+
+    decide whether to set `drop_first` `True` or `False`
+    </details>
+
+- **Feature-Target Split**
+    Set up your `X` and `Y`.  
+    <details><summary>**Hints**</summary>
+    Look at `drop` method for dataframes.
+
+    Panda DataFrame or Numpy Array is usually fine.
+    </details>
+
+## 2.2 Model Training
+
+Apply your knowledge of linear models to train on the dataset:
+
+1. **Train the Model**  
+    Use linear algebra techniques or ML libraries as you see fit.
+
+    <details><summary>**Hints**</summary>
+    Use linear algebra: `@` for matrix multiplication and `scipy.linalg.inv` to invert a matrix.
+
+
+    Alternatively setup a score function that take a vector of parameters as argument and use `scipy.optimize.minimize`
+    </details>
+
+2. **Predictions**  
+    Generate predictions based on the model you trained.
+
+## 2.3 Diagnostics
+
+Quickly gauge the performance of your model:
+
+- **Inspect Residuals**
+    A histogram can provide insights.
+
+    <details><summary>**Hints**</summary>
+    Use `seaborn.histplot`
+    </details>
+
+- **Evaluation the regression using the R2 score**
+
+    <details><summary>**Hints**</summary>
+    Use `sklear.metrics.r2_score`
+    </details>
+
+- **Plot predicted values vs targets**
+
+    <details><summary>**Hints**</summary>
+    Use `seaborn.regplot` or `seaborn.scatterplot`
+    </details>
+
+- **Use Dataviz to plot residuals vs features**
+
+    <details><summary>**Hints**</summary>
+    Use `seaborn.relplot` after `pd.melt`
+
+    The `hue` argument might be good.
+    </details>
+
+# 3. Some Feature Engineering
+
+## 3.1 A derived feature ?
+
+Challenge yourself: Can you derive any new features that might be relevant for the model given your previous observations ?
+
+<details><summary>**Hints**</summary>
+How BMI is used in real life ?
+
+Sometime features holds too much non-essential information and are better used being reduced and categorized.
+</details>
+
+## 3.2 Interaction Terms
+
+Given your observation is there an interaction that might be more of interest ? Considering all interactions at once might add too much complexity to the model.
+
+<details><summary>**Hints**</summary>
+Add the new feature that sould be binary.
+</details>
+
+- Encoding the interaction
+
+    <details><summary>**Hints**</summary>
+    In linear regression an interaction between $x_1$ and $x_2$ is modelled as follows: $y = \alpha + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_1 x_2$, $x_1 x_2$ being the interaction term and $\beta_3$ the associated parameter.
+    </details>
+
+## 3.3 Retrain with the new model
+
+- **Train the model and make predictions**
+
+- **Evaluate the performance**
+
+
