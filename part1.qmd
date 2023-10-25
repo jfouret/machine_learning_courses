@@ -2,6 +2,7 @@
 title: "Machine Learning Techniques - 1"
 subtitle: "Mathematical foundations to Modelling and ML"
 bibliography: biblio.bib
+csl: nature.csl
 format:
   revealjs:
     title-slide-attributes:
@@ -107,7 +108,7 @@ $$
 - $\gamma_1 = 0$, $\gamma_2 = 1$
 
 - **Skewness** the 3rd standardized moment:
-  - Skewness is a measure of **assymmetry** around the function mean or location.
+  - Skewness is a measure of **asymmetry** around the function mean or location.
 - **Kurtosis** the 3rd standardized moment:
   - *(from Greek: κυρτός, kyrtos or kurtos, meaning "curved, arching")*
   - Kurtosis is a measure of **tailedness**
@@ -172,7 +173,7 @@ $f(x) = \frac{\lambda^\alpha x^{\alpha-1}}{\Gamma(\alpha)} e^{-\lambda x}$
 
 ## Law of Large Numbers (LLN)
 
-- **Defintion** 
+- **Definition** 
   As the number of independent trials increases, the sample average converges to the expected value.
 
 - For any $\epsilon > 0$
@@ -567,7 +568,7 @@ function newton_optimization(grad, hess, x0, tol=1e-6, max_it=1000):
 ```
 </div>
 
-## Nelder-Mead Optimization
+## Nelder-Mead Optimization @Nelder1965ASM
 <div style="font-size: 60%;">
 
 ::: columns
@@ -613,7 +614,7 @@ Source: WIKIPEDIA
 
 </div>
 
-## Gradient descent Optimization
+## Gradient Descent Optimization @Rosenbrock1960AnAM
 
 - Iterative method using only the first order derivative
 - Introduction of a learning rate
@@ -648,12 +649,12 @@ function gradient_descent(f_gradient, x0, lr, max_it=1000, tol=1e-6):
   - For high dimension space.
   - Sampling the search space.
 
-- BFGS
+- BFGS @Broyden1967QuasiNewtonMA
   - Use inverse hessian approximation.
   - Update the approximation at each step. 
   - Compatible with boundaries: BFGS-B.
 
-- Stochastic Gradient Descent
+- Stochastic Gradient Descent @Kiefer1952StochasticEO
   - GD on a sampling of the observations.
   - Suitable for large datasets.
 </div>
@@ -691,6 +692,22 @@ $$ \mathbb{P}(\theta | y) = \mathcal{L}(\theta) \mathbb{P}(\theta)$$
 - Maximum Posterior optimization is equivalent to MLE with uniform priors.
 
 </div>
+
+## Recommendation to go further @McElreath2020
+
+::: columns
+
+::: column
+
+<img src="img/statistical_rethinking.jpg" alt="" style="border: 2px solid black; display: block; margin: auto;" width="80%" height="auto">
+
+:::
+::: column
+
+Playlist on [youtube](https://www.youtube.com/playlist?list=PLDcUM9US4XdPz-KxHM4XHt7uUVGWWVSus)
+
+:::
+:::
 
 # D. Important Definitions {data-stack-name="Definitions"}
 
@@ -754,9 +771,9 @@ $$ \mathbb{P}(\theta | y) = \mathcal{L}(\theta) \mathbb{P}(\theta)$$
 
 - **Model**: Represents the specific algorithm or method being used to learn from data and make predictions. Examples include linear regression, decision tree, neural network, etc.
 
-- **Parameters**: Part of the model which is being trained from the data through optimization to maximize the objective function.
+- **Parameters**: Part of the model that is being trained from the data through optimization to maximize the objective function.
 
-- **Hyperparameters**: Part of the model that are not learned from the data but are set before training.
+- **Hyperparameters**: Part of the model that is set before the optimization of parameters. Nevertheless, hyperparameters can be learned thanks to nested optimizations using validation techniques.
 
 </div>
 
@@ -775,7 +792,7 @@ $$ \mathbb{P}(\theta | y) = \mathcal{L}(\theta) \mathbb{P}(\theta)$$
 
 **Predict**: The process of using a model to estimate or forecast the output (Y) given data (X). Purpose of training a model is to improve the prediction.
 
-**Transform**: The process of using a model to transfort given data (X) into transformed data (Y) when there is not explicit target for example in the case of dimensionality reduction.
+**Transform**: The process of using a model to transform given data (X) into transformed data (Y) when there is not an explicit target for example in the case of dimensionality reduction.
 
 **Fit**: The process of training a model on a given dataset.
 
@@ -815,5 +832,14 @@ $$ \mathbb{P}(\theta | y) = \mathcal{L}(\theta) \mathbb{P}(\theta)$$
 - From likelihood to Least Square
 
 - Solving through optimization
+
+## Acknowledgement
+
+*For fruitful discussions and corrections.*
+
+- Felix Geoffroy
+- Thomas Chaverondier
+- Grégory Morel
+- John Samuel
 
 ## References

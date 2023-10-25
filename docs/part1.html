@@ -523,7 +523,7 @@ P(A|B) = \frac{P(B|A)P(A)}{P(B)}
 <li><p><span class="math inline">\(\gamma_1 = 0\)</span>, <span class="math inline">\(\gamma_2 = 1\)</span></p></li>
 <li><p><strong>Skewness</strong> the 3rd standardized moment:</p>
 <ul>
-<li>Skewness is a measure of <strong>assymmetry</strong> around the function mean or location.</li>
+<li>Skewness is a measure of <strong>asymmetry</strong> around the function mean or location.</li>
 </ul></li>
 <li><p><strong>Kurtosis</strong> the 3rd standardized moment:</p>
 <ul>
@@ -636,7 +636,7 @@ P(A|B) = \frac{P(B|A)P(A)}{P(B)}
 <section id="law-of-large-numbers-lln" class="slide level2 center">
 <h2>Law of Large Numbers (LLN)</h2>
 <ul>
-<li><p><strong>Defintion</strong> As the number of independent trials increases, the sample average converges to the expected value.</p></li>
+<li><p><strong>Definition</strong> As the number of independent trials increases, the sample average converges to the expected value.</p></li>
 <li><p>For any <span class="math inline">\(\epsilon &gt; 0\)</span></p>
 <ul>
 <li><span class="math inline">\(\lim_{n \to \infty} \mathbb{P}\left(|\bar{X}_n - \mu| &gt; \epsilon\right) = 0\)</span> as <span class="math inline">\(n \rightarrow \infty\)</span>,</li>
@@ -709,7 +709,7 @@ P(A|B) = \frac{P(B|A)P(A)}{P(B)}
 <section id="hypothesis-testing-power-errors" class="slide level2 center">
 <h2>Hypothesis testing: Power/ errors</h2>
 <div style="font-size: 80%;">
-<p>Two types of errors in hypothesis testing (<span class="citation" data-cites="neyman1933">Neyman and Pearson (<a href="#/references" role="doc-biblioref" onclick="">1933</a>)</span>):</p>
+<p>Two types of errors in hypothesis testing (<span class="citation" data-cites="neyman1933"><sup><a href="#/references" role="doc-biblioref" onclick="">1</a></sup></span>):</p>
 <ul>
 <li><strong>Type I error (False positive)</strong>:
 <ul>
@@ -745,7 +745,7 @@ When testing for <span style="border: 1px solid red;"><span class="math inline">
 <li><span class="math inline">\(n\)</span>: sample size</li>
 </ul>
 </div>
-<p>In case where <span class="math inline">\(X \sim \mathcal{N}(0,1)\)</span>, then <span class="math inline">\(X \sim \mathcal{Student}(\nu)\)</span> (<span class="citation" data-cites="student1908">W. S. Gosset) (<a href="#/references" role="doc-biblioref" onclick="">1908</a>)</span>)</p>
+<p>In case where <span class="math inline">\(X \sim \mathcal{N}(0,1)\)</span>, then <span class="math inline">\(X \sim \mathcal{Student}(\nu)\)</span> (<span class="citation" data-cites="student1908"><sup><a href="#/references" role="doc-biblioref" onclick="">2</a></sup></span>)</p>
 <p><span class="math inline">\(\nu\)</span> is the degrees of freedom (<span class="math inline">\(n-1\)</span>) <span class="math inline">\(\to\)</span> shape of the student-distribution.</p>
 </div>
 </section>
@@ -1025,8 +1025,8 @@ log(\mathcal{L}(\theta)) \propto  - \sum_i{(y_i - \hat{y_i})^2}
 <span id="cb2-19"><a href="#cb2-19"></a>  <span class="cf">raise</span> Error(<span class="st">"Maximum iterations reached without convergence!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="nelder-mead-optimization" class="slide level2 center">
-<h2>Nelder-Mead Optimization</h2>
+<section id="nelder-mead-optimization-nelder1965asm" class="slide level2 center">
+<h2>Nelder-Mead Optimization<span class="citation" data-cites="Nelder1965ASM"><sup><a href="#/references" role="doc-biblioref" onclick="">3</a></sup></span></h2>
 <div style="font-size: 60%;">
 <div class="columns">
 <div class="column" style="width:58%;">
@@ -1063,8 +1063,8 @@ log(\mathcal{L}(\theta)) \propto  - \sum_i{(y_i - \hat{y_i})^2}
 </div>
 </div>
 </section>
-<section id="gradient-descent-optimization" class="slide level2 center">
-<h2>Gradient descent Optimization</h2>
+<section id="gradient-descent-optimization-rosenbrock1960anam" class="slide level2 center">
+<h2>Gradient Descent Optimization<span class="citation" data-cites="Rosenbrock1960AnAM"><sup><a href="#/references" role="doc-biblioref" onclick="">4</a></sup></span></h2>
 <ul>
 <li>Iterative method using only the first order derivative</li>
 <li>Introduction of a learning rate</li>
@@ -1099,13 +1099,13 @@ log(\mathcal{L}(\theta)) \propto  - \sum_i{(y_i - \hat{y_i})^2}
 <li>For high dimension space.</li>
 <li>Sampling the search space.</li>
 </ul></li>
-<li>BFGS
+<li>BFGS<span class="citation" data-cites="Broyden1967QuasiNewtonMA"><sup><a href="#/references" role="doc-biblioref" onclick="">5</a></sup></span>
 <ul>
 <li>Use inverse hessian approximation.</li>
 <li>Update the approximation at each step.</li>
 <li>Compatible with boundaries: BFGS-B.</li>
 </ul></li>
-<li>Stochastic Gradient Descent
+<li>Stochastic Gradient Descent<span class="citation" data-cites="Kiefer1952StochasticEO"><sup><a href="#/references" role="doc-biblioref" onclick="">6</a></sup></span>
 <ul>
 <li>GD on a sampling of the observations.</li>
 <li>Suitable for large datasets.</li>
@@ -1150,6 +1150,16 @@ log(\mathcal{L}(\theta)) \propto  - \sum_i{(y_i - \hat{y_i})^2}
 <li>Expectation in either likelihood (Frequentism) or posterior (Bayesian)</li>
 <li>Maximum Posterior optimization is equivalent to MLE with uniform priors.</li>
 </ul>
+</div>
+</section>
+<section id="recommendation-to-go-further-mcelreath2020" class="slide level2 center">
+<h2>Recommendation to go further<span class="citation" data-cites="McElreath2020"><sup><a href="#/references" role="doc-biblioref" onclick="">7</a></sup></span></h2>
+<div class="columns">
+<div class="column">
+<p><img src="img/statistical_rethinking.jpg" alt="" style="border: 2px solid black; display: block; margin: auto;" width="80%" height="auto"></p>
+</div><div class="column">
+<p>Playlist on <a href="https://www.youtube.com/playlist?list=PLDcUM9US4XdPz-KxHM4XHt7uUVGWWVSus">youtube</a></p>
+</div>
 </div>
 </section></section>
 <section>
@@ -1198,8 +1208,8 @@ log(\mathcal{L}(\theta)) \propto  - \sum_i{(y_i - \hat{y_i})^2}
 <ul>
 <li><p><strong>M</strong> or <strong>F</strong> stands for the model or function that is being trained or used for predictions/transformations.</p></li>
 <li><p><strong>Model</strong>: Represents the specific algorithm or method being used to learn from data and make predictions. Examples include linear regression, decision tree, neural network, etc.</p></li>
-<li><p><strong>Parameters</strong>: Part of the model which is being trained from the data through optimization to maximize the objective function.</p></li>
-<li><p><strong>Hyperparameters</strong>: Part of the model that are not learned from the data but are set before training.</p></li>
+<li><p><strong>Parameters</strong>: Part of the model that is being trained from the data through optimization to maximize the objective function.</p></li>
+<li><p><strong>Hyperparameters</strong>: Part of the model that is set before the optimization of parameters. Nevertheless, hyperparameters can be learned thanks to nested optimizations using validation techniques.</p></li>
 </ul>
 </div>
 </div><div class="column">
@@ -1211,7 +1221,7 @@ log(\mathcal{L}(\theta)) \propto  - \sum_i{(y_i - \hat{y_i})^2}
 <h2>Predict, Transform, Fit and Infer</h2>
 <div style="font-size: 80%;">
 <p><strong>Predict</strong>: The process of using a model to estimate or forecast the output (Y) given data (X). Purpose of training a model is to improve the prediction.</p>
-<p><strong>Transform</strong>: The process of using a model to transfort given data (X) into transformed data (Y) when there is not explicit target for example in the case of dimensionality reduction.</p>
+<p><strong>Transform</strong>: The process of using a model to transform given data (X) into transformed data (Y) when there is not an explicit target for example in the case of dimensionality reduction.</p>
 <p><strong>Fit</strong>: The process of training a model on a given dataset.</p>
 <p><strong>Infer</strong>:</p>
 <ul>
@@ -1252,18 +1262,43 @@ log(\mathcal{L}(\theta)) \propto  - \sum_i{(y_i - \hat{y_i})^2}
 <li><p>Solving through optimization</p></li>
 </ul>
 </section>
+<section id="acknowledgement" class="slide level2 center">
+<h2>Acknowledgement</h2>
+<p><em>For fruitful discussions and corrections.</em></p>
+<ul>
+<li>Felix Geoffroy</li>
+<li>Thomas Chaverondier</li>
+<li>Grégory Morel</li>
+<li>John Samuel</li>
+</ul>
+</section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 
 <div class="footer footer-default">
 
 </div>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body" data-line-spacing="2" role="list">
 <div id="ref-neyman1933" class="csl-entry" role="listitem">
-Neyman, J., and E. S. Pearson. 1933. <span>“On the Problem of the Most Efficient Tests of Statistical Hypotheses.”</span> <em>Philosophical Transactions of the Royal Society of London. Series A</em> 231: 289–337.
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Neyman, J. &amp; Pearson, E. S. <a href="https://api.semanticscholar.org/CorpusID:85550403">On the problem of the most efficient tests of statistical hypotheses</a>. <em>Philosophical Transactions of the Royal Society A</em> <strong>231</strong>, 289–337 (1933).</div>
 </div>
 <div id="ref-student1908" class="csl-entry" role="listitem">
-W. S. Gosset), Student (pseudonym for. 1908. <span>“The Probable Error of a Mean.”</span> <em>Biometrika</em> 6 (1): 1–25.
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Student. <a href="https://api.semanticscholar.org/CorpusID:263778821">THE PROBABLE ERROR OF a MEAN</a>. <em>Biometrika</em> <strong>6</strong>, 1–25 (1908).</div>
+</div>
+<div id="ref-Nelder1965ASM" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Nelder, J. A. &amp; Mead, R. <a href="https://api.semanticscholar.org/CorpusID:2208295">A simplex method for function minimization</a>. <em>Comput. J.</em> <strong>7</strong>, 308–313 (1965).</div>
+</div>
+<div id="ref-Rosenbrock1960AnAM" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Rosenbrock, H. <a href="https://api.semanticscholar.org/CorpusID:62755334">An automatic method for finding the greatest or least value of a function</a>. <em>Comput. J.</em> <strong>3</strong>, 175–184 (1960).</div>
+</div>
+<div id="ref-Broyden1967QuasiNewtonMA" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Broyden, C. G. <a href="https://api.semanticscholar.org/CorpusID:10793035">Quasi-newton methods and their application to function minimisation</a>. <em>Mathematics of Computation</em> <strong>21</strong>, 368–381 (1967).</div>
+</div>
+<div id="ref-Kiefer1952StochasticEO" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Kiefer, J. &amp; Wolfowitz, J. <a href="https://api.semanticscholar.org/CorpusID:122078986">Stochastic estimation of the maximum of a regression function</a>. <em>Annals of Mathematical Statistics</em> <strong>23</strong>, 462–466 (1952).</div>
+</div>
+<div id="ref-McElreath2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">McElreath, R. <em><a href="https://xcelab.net/rm/statistical-rethinking/">Statistical rethinking, a bayesian course with example in r and STAN</a></em>. (CRC Press, 2020).</div>
 </div>
 </div>
 </section></section>

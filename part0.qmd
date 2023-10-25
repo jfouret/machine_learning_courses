@@ -2,6 +2,10 @@
 title: "Machine Learning Techniques - 0"
 subtitle: "Introduction to Artificial Intelligence and Machine Learning"
 bibliography: biblio.bib
+csl: nature.csl
+author:
+  - name: Julien Fouret
+    email: julien.fouret@cpe.fr
 format:
   revealjs:
     title-slide-attributes:
@@ -27,9 +31,7 @@ revealjs-plugins:
 
 # What is Artificial Intelligence ? {data-stack-name="What is AI ?"}
 
-## Can Machines Think ?
-
-@Turing1950
+## Can Machines Think ? @Turing1950
 
 - Defining a machine
 - Understanding "thinking"
@@ -79,7 +81,7 @@ Would C be **as often** wrong ?
 
 ## A Modern Experiment: The Imitation Game Revisited
 
-*Human or Not? A Gamified Approach to the Turing Test* @jannai2023
+**Human or Not? A Gamified Approach to the Turing Test** @jannai2023
 
 **Online 2-player game:**
 
@@ -124,9 +126,7 @@ Would C be **as often** wrong ?
 :::
 
 
-## Pionneered Definitions of AI
-
-<span style="font-size: 75%;"> @dartmouth1955 </span>
+## Pionneered Definitions of AI @dartmouth1955
 
 <img src="img/dartmouth_title.PNG" alt="" style="border: 2px solid black; display: block; margin: auto;">
 
@@ -240,10 +240,10 @@ from Marvin Minsky (1968). MIT Press.
 
 <div style="font-size: 75%;">
 - **General Tests**:
-  - AI2 Reasoning Challenge
-  - HellaSwag
-  - MMLU
-  - TruthfulQA
+  - AI2 Reasoning Challenge @Clark2018ThinkYH
+  - HellaSwag @zellers2019hellaswag
+  - MMLU @hendrycks2021measuring
+  - TruthfulQA @lin2022truthfulqa
 - **Field-specific Exams**:
   - University exams (e.g., Bar exam, Math exams)
   - Math challenges
@@ -312,24 +312,25 @@ The term optimization is used loosely, i.e. PCA is an optimization to maximize v
 
 <p class="separator"><span>25/10 PM</span></p>
 
-- <span class="text-box">Part 0</span> Introduction : -- *1h30*
-- <span class="text-box">Part 1</span> Reminders and Foundations -- *1h30*
-  - Theory of probability -- *30min*
-  - Statistical modelling -- *15min*
+- <span class="text-box">Part 0</span> **Introduction to Artificial Intelligence and Machine Learning** : -- *1h30*
+- <span class="text-box">Part 1</span> **Mathematical foundations to Modelling and ML** -- *2h30*
+  - Theory of probability -- *45min*
+  - Statistical modelling -- *30min*
   - Model inference -- *45min*
   - Important definitions -- *30min*
-- <span class="text-box">TP 0</span> -- *1h*
-  - Fitting probability law
-  - Model selection / Fixed effect (type of errors)
 
 <p class="separator"><span>26/10 AM</span></p>
 
-- <span class="text-box">TP 1</span> -- *2h*
-  - Data transformation / PCA
-  - Proof: Cross-entropy from likelihood
-- <span class="text-box">Part 2</span>  Base of Machine Learning 1/2 -- *2h*
-  - A: Typology and nomenclatures -- *1h*
-  - B: Evaluation metrics -- *1h*
+- <span class="text-box">TP 1</span> **Predict medical insurance costs** -- *4h*
+  - Import dataset -- *30 min*
+  - Simple Linear Model -- *30 min*
+  - New feature and interactions -- *20 min*
+  - statmodels package -- *20 min*
+  - In-sample and Out-sample errors -- *30 min*
+  - Scikit-learn pipeline -- *1h*
+  - Anomaly detection -- *30 min*
+  - Conclusion/Discussion -- *20 min*
+
 :::
 :::
 
@@ -337,26 +338,31 @@ The term optimization is used loosely, i.e. PCA is an optimization to maximize v
 ::: {.box}
 <p class="separator"><span>08/11 PM</span></p>
 
-- <span class="text-box">TP 1</span> -- *1h30*
-  - Linear regression with few data 
-  - Linear (logistic) regression with multiple features
-  - Bias-Variance decomposition of Loss
-- <span class="text-box">Part 2</span> Base of Machine Learning 1/2 -- *30min*
+- <span class="text-box">Part 2</span>  Base of Machine Learning 1/2 -- *2h*
+  - A: Typology and nomenclatures -- *30min*
+  - B: Evaluation metrics -- *1h*
   - C: Bottlenecks and Issues -- *30min*
 - <span class="text-box">Part 3</span>  Advanced Machine Learning --*2h*
   - A: Feature engineering -- *1h*
-  - B: Model engineering 1/2 -- *1h*
+  - B: Model engineering 1 -- *1h*
 
 <p class="separator"><span>09/11 AM</span></p>
-- <span class="text-box">Part 3</span>  Advanced Machine Learning --*2h*
-  - B: Model engineering 2/2 -- *1h30*
-- <span class="text-box">TP 3</span> -- *2h30*
+- <span class="text-box">TP 3</span> -- *4h*
 
 :::
 :::
 
 :::
 </div>
+
+## Acknowledgement
+
+*For fruitful discussions and corrections.*
+
+- Felix Geoffroy
+- Thomas Chaverondier
+- Grégory Morel
+- John Samuel
 
 ## References
 

@@ -60,7 +60,7 @@
     "href": "part1.html#standardized-moments",
     "title": "Machine Learning Techniques - 1",
     "section": "Standardized moments",
-    "text": "Standardized moments\n\n\n\nThe nth standardized moment \\(\\gamma_k = \\frac{\\mu_k}{(\\sigma)^k}\\)\n\\(\\gamma_1 = 0\\), \\(\\gamma_2 = 1\\)\nSkewness the 3rd standardized moment:\n\nSkewness is a measure of assymmetry around the function mean or location.\n\nKurtosis the 3rd standardized moment:\n\n(from Greek: κυρτός, kyrtos or kurtos, meaning “curved, arching”)\nKurtosis is a measure of tailedness"
+    "text": "Standardized moments\n\n\n\nThe nth standardized moment \\(\\gamma_k = \\frac{\\mu_k}{(\\sigma)^k}\\)\n\\(\\gamma_1 = 0\\), \\(\\gamma_2 = 1\\)\nSkewness the 3rd standardized moment:\n\nSkewness is a measure of asymmetry around the function mean or location.\n\nKurtosis the 3rd standardized moment:\n\n(from Greek: κυρτός, kyrtos or kurtos, meaning “curved, arching”)\nKurtosis is a measure of tailedness"
   },
   {
     "objectID": "part1.html#continuous-law-normal",
@@ -88,7 +88,7 @@
     "href": "part1.html#law-of-large-numbers-lln",
     "title": "Machine Learning Techniques - 1",
     "section": "Law of Large Numbers (LLN)",
-    "text": "Law of Large Numbers (LLN)\n\nDefintion As the number of independent trials increases, the sample average converges to the expected value.\nFor any \\(\\epsilon &gt; 0\\)\n\n\\(\\lim_{n \\to \\infty} \\mathbb{P}\\left(|\\bar{X}_n - \\mu| &gt; \\epsilon\\right) = 0\\) as \\(n \\rightarrow \\infty\\),\n\\(\\bar{X}_n\\) is the sample average of n observations."
+    "text": "Law of Large Numbers (LLN)\n\nDefinition As the number of independent trials increases, the sample average converges to the expected value.\nFor any \\(\\epsilon &gt; 0\\)\n\n\\(\\lim_{n \\to \\infty} \\mathbb{P}\\left(|\\bar{X}_n - \\mu| &gt; \\epsilon\\right) = 0\\) as \\(n \\rightarrow \\infty\\),\n\\(\\bar{X}_n\\) is the sample average of n observations."
   },
   {
     "objectID": "part1.html#lln-in-ml",
@@ -130,14 +130,14 @@
     "href": "part1.html#hypothesis-testing-power-errors",
     "title": "Machine Learning Techniques - 1",
     "section": "Hypothesis testing: Power/ errors",
-    "text": "Hypothesis testing: Power/ errors\n\nTwo types of errors in hypothesis testing (Neyman and Pearson (1933)):\n\nType I error (False positive):\n\nRejecting \\(H_0\\) when it is actually true.\nDenoted by \\(\\alpha\\) (alpha)\naka significance level.\n\nType II error (False negative):\n\nNot rejecting \\(H_0\\) when it is false.\ndenoted by \\(\\beta\\) (beta)\npower of a test is \\(\\pi = 1-\\beta\\)\nThe power is the probability of correctly rejecting a false \\(H_0\\)."
+    "text": "Hypothesis testing: Power/ errors\n\nTwo types of errors in hypothesis testing (1):\n\nType I error (False positive):\n\nRejecting \\(H_0\\) when it is actually true.\nDenoted by \\(\\alpha\\) (alpha)\naka significance level.\n\nType II error (False negative):\n\nNot rejecting \\(H_0\\) when it is false.\ndenoted by \\(\\beta\\) (beta)\npower of a test is \\(\\pi = 1-\\beta\\)\nThe power is the probability of correctly rejecting a false \\(H_0\\)."
   },
   {
     "objectID": "part1.html#hypothesis-testing-test-statistic",
     "href": "part1.html#hypothesis-testing-test-statistic",
     "title": "Machine Learning Techniques - 1",
     "section": "Hypothesis testing: Test statistic",
-    "text": "Hypothesis testing: Test statistic\n\nA test statistic is a\n\nStandardized value calculated from sample data\nThe realization of a random variable with a known distribution\n\n\n\nWhen testing for \\(H_0: \\mu_X = \\mu_0\\) \\(t = \\frac{\\bar{\\mu_X} - 0}{\\bar{\\sigma_X}\\sqrt{n}}\\) with:\n\n\n\\(\\bar{\\mu_X}\\): sample mean\n\\(\\bar{\\sigma_X}\\): sample standard deviation\n\\(n\\): sample size\n\n\nIn case where \\(X \\sim \\mathcal{N}(0,1)\\), then \\(X \\sim \\mathcal{Student}(\\nu)\\) (W. S. Gosset) (1908))\n\\(\\nu\\) is the degrees of freedom (\\(n-1\\)) \\(\\to\\) shape of the student-distribution."
+    "text": "Hypothesis testing: Test statistic\n\nA test statistic is a\n\nStandardized value calculated from sample data\nThe realization of a random variable with a known distribution\n\n\n\nWhen testing for \\(H_0: \\mu_X = \\mu_0\\) \\(t = \\frac{\\bar{\\mu_X} - 0}{\\bar{\\sigma_X}\\sqrt{n}}\\) with:\n\n\n\\(\\bar{\\mu_X}\\): sample mean\n\\(\\bar{\\sigma_X}\\): sample standard deviation\n\\(n\\): sample size\n\n\nIn case where \\(X \\sim \\mathcal{N}(0,1)\\), then \\(X \\sim \\mathcal{Student}(\\nu)\\) (2)\n\\(\\nu\\) is the degrees of freedom (\\(n-1\\)) \\(\\to\\) shape of the student-distribution."
   },
   {
     "objectID": "part1.html#hypothesis-testingp-value",
@@ -259,25 +259,25 @@
     "text": "Newton Optimization\n\nIterative method using gradient and Hessian\n\n\nfrom scipy.linalg import inv, det, norm\nfunction newton_optimization(grad, hess, x0, tol=1e-6, max_it=1000):\n  \"\"\"\n  grad: function for computing the gradient vector of shape (n, 1)\n  hess: function for computing the hessian matrix of shape (n, n)\n  x0: initial guess of shape (n, 1)\n  tol: stopping criterion for the difference between consecutive x values\n  max_it: maximum number of iterations allowed\n  \"\"\"\n  x = x0\n  for it in range(max_it):\n    x_grad = grad(x)\n    x_hess = hess(x)\n    assert(det(x_hess) != 0)\n    x = x + np.matmul(inv(x_hess), x_grad)\n    if norm(x_grad) &lt; tol:\n      return x  # Found the optimum\n    x_current = x_next\n  raise Error(\"Maximum iterations reached without convergence!\")"
   },
   {
-    "objectID": "part1.html#nelder-mead-optimization",
-    "href": "part1.html#nelder-mead-optimization",
+    "objectID": "part1.html#nelder-mead-optimization-nelder1965asm",
+    "href": "part1.html#nelder-mead-optimization-nelder1965asm",
     "title": "Machine Learning Techniques - 1",
-    "section": "Nelder-Mead Optimization",
-    "text": "Nelder-Mead Optimization\n\n\n\nfunction nelder_mead(f, s0, coef, max_it=1000, tol=1e-6):\n  \"\"\"\n  f: target function to be minimized\n  s0: list of n+1 initial guesses (vertices of the initial simplex)\n  coef: reflection, contraction, expansion, shrink coefficients\n  max_it: maximum number of iterations allowed\n  tol: stopping criterion for the difference in function values\n  \"\"\"\n  s = s0\n  for it in range(max_it):\n    s.sort(key=lambda v: f(v)) # Sorting from low to high\n    centroid = [sum(v[i] for v in s[:-1]) # Without the worst\n    refl_v = centroid + coef[0] * (centroid - s[-1]) # Reflect the worst\n    if f(s[0]) &lt;= f(refl_v) &lt; f(s[-2]): # if good but not best\n      simplex[-1] = refl_v # replace the worst\n    elif f(refl_v) &lt; f(s[0]): # elif best, try expansion\n      expe_v = centroid + coef[1] * (refl_v - centroid)\n      if f(expe_v) &lt; f(s[0]): simplex[-1] = expe_v\n      else: simplex[-1] = refl_v\n    else: # contract the worst or shrink all others\n      cont_v = centroid + coef[2] * (s[-1] - centroid)\n      if f(cont_v) &lt; f(s[-1]): s[-1] = cont_v\n      else: s = [s[0] + coef[3] * (s[i] - s[0]) for i in range(1, len(s))]\n    if abs(f(s[-1]) - f(s[0])) &lt; tol:\n      return s[0]\n\n\n\nSource: WIKIPEDIA"
+    "section": "Nelder-Mead Optimization3",
+    "text": "Nelder-Mead Optimization3\n\n\n\nfunction nelder_mead(f, s0, coef, max_it=1000, tol=1e-6):\n  \"\"\"\n  f: target function to be minimized\n  s0: list of n+1 initial guesses (vertices of the initial simplex)\n  coef: reflection, contraction, expansion, shrink coefficients\n  max_it: maximum number of iterations allowed\n  tol: stopping criterion for the difference in function values\n  \"\"\"\n  s = s0\n  for it in range(max_it):\n    s.sort(key=lambda v: f(v)) # Sorting from low to high\n    centroid = [sum(v[i] for v in s[:-1]) # Without the worst\n    refl_v = centroid + coef[0] * (centroid - s[-1]) # Reflect the worst\n    if f(s[0]) &lt;= f(refl_v) &lt; f(s[-2]): # if good but not best\n      simplex[-1] = refl_v # replace the worst\n    elif f(refl_v) &lt; f(s[0]): # elif best, try expansion\n      expe_v = centroid + coef[1] * (refl_v - centroid)\n      if f(expe_v) &lt; f(s[0]): simplex[-1] = expe_v\n      else: simplex[-1] = refl_v\n    else: # contract the worst or shrink all others\n      cont_v = centroid + coef[2] * (s[-1] - centroid)\n      if f(cont_v) &lt; f(s[-1]): s[-1] = cont_v\n      else: s = [s[0] + coef[3] * (s[i] - s[0]) for i in range(1, len(s))]\n    if abs(f(s[-1]) - f(s[0])) &lt; tol:\n      return s[0]\n\n\n\nSource: WIKIPEDIA"
   },
   {
-    "objectID": "part1.html#gradient-descent-optimization",
-    "href": "part1.html#gradient-descent-optimization",
+    "objectID": "part1.html#gradient-descent-optimization-rosenbrock1960anam",
+    "href": "part1.html#gradient-descent-optimization-rosenbrock1960anam",
     "title": "Machine Learning Techniques - 1",
-    "section": "Gradient descent Optimization",
-    "text": "Gradient descent Optimization\n\nIterative method using only the first order derivative\nIntroduction of a learning rate\n\nfunction gradient_descent(f_gradient, x0, lr, max_it=1000, tol=1e-6):\n  \"\"\"\n  grad: function for computing the gradient vector of shape (n, 1)\n  x0: initial guess of shape (n, 1)\n  lr: learning rate (step size)\n  max_it: maximum number of iterations allowed\n  tol: stopping criterion for the difference between consecutive x values\n  \"\"\"\n  x = x0\n  for it in range(max_it):\n    x_grad = grad(x)\n    newton_step = lr * grad(x)\n    x = x - newton_step\n    if norm(newton_step) &lt; tolerance: # OR ABSOLUTE MAXIMUM\n      return x  # Found the minimum\n  raise Error(\"Maximum iterations reached without convergence!\")"
+    "section": "Gradient Descent Optimization4",
+    "text": "Gradient Descent Optimization4\n\nIterative method using only the first order derivative\nIntroduction of a learning rate\n\nfunction gradient_descent(f_gradient, x0, lr, max_it=1000, tol=1e-6):\n  \"\"\"\n  grad: function for computing the gradient vector of shape (n, 1)\n  x0: initial guess of shape (n, 1)\n  lr: learning rate (step size)\n  max_it: maximum number of iterations allowed\n  tol: stopping criterion for the difference between consecutive x values\n  \"\"\"\n  x = x0\n  for it in range(max_it):\n    x_grad = grad(x)\n    newton_step = lr * grad(x)\n    x = x - newton_step\n    if norm(newton_step) &lt; tolerance: # OR ABSOLUTE MAXIMUM\n      return x  # Found the minimum\n  raise Error(\"Maximum iterations reached without convergence!\")"
   },
   {
     "objectID": "part1.html#other-optimization-algorithms",
     "href": "part1.html#other-optimization-algorithms",
     "title": "Machine Learning Techniques - 1",
     "section": "Other Optimization Algorithms",
-    "text": "Other Optimization Algorithms\n\n\nHierarchical Grid-search\n\nLowering the resolution iteratively on the best found intervals.\n\nRandom search\n\nFor high dimension space.\nSampling the search space.\n\nBFGS\n\nUse inverse hessian approximation.\nUpdate the approximation at each step.\nCompatible with boundaries: BFGS-B.\n\nStochastic Gradient Descent\n\nGD on a sampling of the observations.\nSuitable for large datasets."
+    "text": "Other Optimization Algorithms\n\n\nHierarchical Grid-search\n\nLowering the resolution iteratively on the best found intervals.\n\nRandom search\n\nFor high dimension space.\nSampling the search space.\n\nBFGS5\n\nUse inverse hessian approximation.\nUpdate the approximation at each step.\nCompatible with boundaries: BFGS-B.\n\nStochastic Gradient Descent6\n\nGD on a sampling of the observations.\nSuitable for large datasets."
   },
   {
     "objectID": "part1.html#key-points-in-optimization",
@@ -292,6 +292,13 @@
     "title": "Machine Learning Techniques - 1",
     "section": "The Bayesian framework",
     "text": "The Bayesian framework\n\n\nPosterior probability: \\(\\mathbb{P}(\\theta | y)\\)\nPrior: \\(\\mathbb{P}(\\theta)\\)\nLikelihood: \\(\\mathcal{L}(\\theta) = \\mathbb{P}( y | \\theta)\\)\n\n\\[ \\mathbb{P}(\\theta | y) = \\mathcal{L}(\\theta) \\mathbb{P}(\\theta)\\]\n\nExpectation in either likelihood (Frequentism) or posterior (Bayesian)\nMaximum Posterior optimization is equivalent to MLE with uniform priors."
+  },
+  {
+    "objectID": "part1.html#recommendation-to-go-further-mcelreath2020",
+    "href": "part1.html#recommendation-to-go-further-mcelreath2020",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Recommendation to go further7",
+    "text": "Recommendation to go further7\n\n\n\n\nPlaylist on youtube"
   },
   {
     "objectID": "part1.html#x-data-or-features",
@@ -312,14 +319,14 @@
     "href": "part1.html#mf-model-parameters-and-hyperparameters",
     "title": "Machine Learning Techniques - 1",
     "section": "M/F, Model, Parameters and Hyperparameters",
-    "text": "M/F, Model, Parameters and Hyperparameters\n\n\n\n\nM or F stands for the model or function that is being trained or used for predictions/transformations.\nModel: Represents the specific algorithm or method being used to learn from data and make predictions. Examples include linear regression, decision tree, neural network, etc.\nParameters: Part of the model which is being trained from the data through optimization to maximize the objective function.\nHyperparameters: Part of the model that are not learned from the data but are set before training."
+    "text": "M/F, Model, Parameters and Hyperparameters\n\n\n\n\nM or F stands for the model or function that is being trained or used for predictions/transformations.\nModel: Represents the specific algorithm or method being used to learn from data and make predictions. Examples include linear regression, decision tree, neural network, etc.\nParameters: Part of the model that is being trained from the data through optimization to maximize the objective function.\nHyperparameters: Part of the model that is set before the optimization of parameters. Nevertheless, hyperparameters can be learned thanks to nested optimizations using validation techniques."
   },
   {
     "objectID": "part1.html#predict-transform-fit-and-infer",
     "href": "part1.html#predict-transform-fit-and-infer",
     "title": "Machine Learning Techniques - 1",
     "section": "Predict, Transform, Fit and Infer",
-    "text": "Predict, Transform, Fit and Infer\n\nPredict: The process of using a model to estimate or forecast the output (Y) given data (X). Purpose of training a model is to improve the prediction.\nTransform: The process of using a model to transfort given data (X) into transformed data (Y) when there is not explicit target for example in the case of dimensionality reduction.\nFit: The process of training a model on a given dataset.\nInfer:\n\n(common) Prediction based on new, unseen data.\n(less common) The optimization of parameters given a model and a training dataset."
+    "text": "Predict, Transform, Fit and Infer\n\nPredict: The process of using a model to estimate or forecast the output (Y) given data (X). Purpose of training a model is to improve the prediction.\nTransform: The process of using a model to transform given data (X) into transformed data (Y) when there is not an explicit target for example in the case of dimensionality reduction.\nFit: The process of training a model on a given dataset.\nInfer:\n\n(common) Prediction based on new, unseen data.\n(less common) The optimization of parameters given a model and a training dataset."
   },
   {
     "objectID": "part1.html#beyond-likelihood-based-reasoning",
@@ -336,11 +343,18 @@
     "text": "Conclusion\n\nProbability theory is essential\nStatistical models at the core of ML\nLikelihood function and maximization\nFrom likelihood to Least Square\nSolving through optimization"
   },
   {
+    "objectID": "part1.html#acknowledgement",
+    "href": "part1.html#acknowledgement",
+    "title": "Machine Learning Techniques - 1",
+    "section": "Acknowledgement",
+    "text": "Acknowledgement\nFor fruitful discussions and corrections.\n\nFelix Geoffroy\nThomas Chaverondier\nGrégory Morel\nJohn Samuel"
+  },
+  {
     "objectID": "part1.html#references",
     "href": "part1.html#references",
     "title": "Machine Learning Techniques - 1",
     "section": "References",
-    "text": "References\n\n\n\n\n\n\nNeyman, J., and E. S. Pearson. 1933. “On the Problem of the Most Efficient Tests of Statistical Hypotheses.” Philosophical Transactions of the Royal Society of London. Series A 231: 289–337.\n\n\nW. S. Gosset), Student (pseudonym for. 1908. “The Probable Error of a Mean.” Biometrika 6 (1): 1–25."
+    "text": "References\n\n\n\n\n\n\n1. Neyman, J. & Pearson, E. S. On the problem of the most efficient tests of statistical hypotheses. Philosophical Transactions of the Royal Society A 231, 289–337 (1933).\n\n\n2. Student. THE PROBABLE ERROR OF a MEAN. Biometrika 6, 1–25 (1908).\n\n\n3. Nelder, J. A. & Mead, R. A simplex method for function minimization. Comput. J. 7, 308–313 (1965).\n\n\n4. Rosenbrock, H. An automatic method for finding the greatest or least value of a function. Comput. J. 3, 175–184 (1960).\n\n\n5. Broyden, C. G. Quasi-newton methods and their application to function minimisation. Mathematics of Computation 21, 368–381 (1967).\n\n\n6. Kiefer, J. & Wolfowitz, J. Stochastic estimation of the maximum of a regression function. Annals of Mathematical Statistics 23, 462–466 (1952).\n\n\n7. McElreath, R. Statistical rethinking, a bayesian course with example in r and STAN. (CRC Press, 2020)."
   },
   {
     "objectID": "index.html",
@@ -364,11 +378,11 @@
     "text": "Table of Contents"
   },
   {
-    "objectID": "part0.html#can-machines-think",
-    "href": "part0.html#can-machines-think",
+    "objectID": "part0.html#can-machines-think-turing1950",
+    "href": "part0.html#can-machines-think-turing1950",
     "title": "Machine Learning Techniques - 0",
-    "section": "Can Machines Think ?",
-    "text": "Can Machines Think ?\nTuring (1950)\n\nDefining a machine\nUnderstanding “thinking”"
+    "section": "Can Machines Think ?1",
+    "text": "Can Machines Think ?1\n\nDefining a machine\nUnderstanding “thinking”"
   },
   {
     "objectID": "part0.html#the-imitation-game",
@@ -389,7 +403,7 @@
     "href": "part0.html#a-modern-experiment-the-imitation-game-revisited",
     "title": "Machine Learning Techniques - 0",
     "section": "A Modern Experiment: The Imitation Game Revisited",
-    "text": "A Modern Experiment: The Imitation Game Revisited\nHuman or Not? A Gamified Approach to the Turing Test Jannai et al. (2023)\nOnline 2-player game:\n\nOne player asks questions and must guess “Human” or “Bot”\nThe other player responds and might be substituted by a bot\nBots are advanced LLM models (e.g., GPT-3)"
+    "text": "A Modern Experiment: The Imitation Game Revisited\nHuman or Not? A Gamified Approach to the Turing Test2\nOnline 2-player game:\n\nOne player asks questions and must guess “Human” or “Bot”\nThe other player responds and might be substituted by a bot\nBots are advanced LLM models (e.g., GPT-3)"
   },
   {
     "objectID": "part0.html#turing-test-current-outcomes",
@@ -406,11 +420,11 @@
     "text": "Beyond The Turing test"
   },
   {
-    "objectID": "part0.html#pionneered-definitions-of-ai",
-    "href": "part0.html#pionneered-definitions-of-ai",
+    "objectID": "part0.html#pionneered-definitions-of-ai-dartmouth1955",
+    "href": "part0.html#pionneered-definitions-of-ai-dartmouth1955",
     "title": "Machine Learning Techniques - 0",
-    "section": "Pionneered Definitions of AI",
-    "text": "Pionneered Definitions of AI\n McCarthy et al. (1955) \n\n\n\n“Artificial Intelligence is the science and engineering of making intelligent machines, especially intelligent computer programs.”\n\nFrom John McCarty (2007). Stanford University.\n\n\nArtificial Intelligence is “the science of making machines do things that would require intelligence if done by men.”\n\nfrom Marvin Minsky (1968). MIT Press."
+    "section": "Pionneered Definitions of AI3",
+    "text": "Pionneered Definitions of AI3\n\n\n\n“Artificial Intelligence is the science and engineering of making intelligent machines, especially intelligent computer programs.”\n\nFrom John McCarty (2007). Stanford University.\n\n\nArtificial Intelligence is “the science of making machines do things that would require intelligence if done by men.”\n\nfrom Marvin Minsky (1968). MIT Press."
   },
   {
     "objectID": "part0.html#alternative-definitions",
@@ -466,7 +480,7 @@
     "href": "part0.html#measuring-artificial-general-intelligence",
     "title": "Machine Learning Techniques - 0",
     "section": "Measuring Artificial General intelligence",
-    "text": "Measuring Artificial General intelligence\n\n\nGeneral Tests:\n\nAI2 Reasoning Challenge\nHellaSwag\nMMLU\nTruthfulQA\n\nField-specific Exams:\n\nUniversity exams (e.g., Bar exam, Math exams)\nMath challenges\n\n\n→ AGI measurement is closer to human intelligence assessment."
+    "text": "Measuring Artificial General intelligence\n\n\nGeneral Tests:\n\nAI2 Reasoning Challenge4\nHellaSwag5\nMMLU6\nTruthfulQA7\n\nField-specific Exams:\n\nUniversity exams (e.g., Bar exam, Math exams)\nMath challenges\n\n\n→ AGI measurement is closer to human intelligence assessment."
   },
   {
     "objectID": "part0.html#definition",
@@ -515,13 +529,20 @@
     "href": "part0.html#planning",
     "title": "Machine Learning Techniques - 0",
     "section": "Planning",
-    "text": "Planning\n\n\n\n\n\n25/10 PM\n\n\nPart 0 Introduction : – 1h30\nPart 1 Reminders and Foundations – 1h30\n\nTheory of probability – 30min\nStatistical modelling – 15min\nModel inference – 45min\nImportant definitions – 30min\n\nTP 0 – 1h\n\nFitting probability law\nModel selection / Fixed effect (type of errors)\n\n\n\n26/10 AM\n\n\nTP 1 – 2h\n\nData transformation / PCA\nProof: Cross-entropy from likelihood\n\nPart 2 Base of Machine Learning 1/2 – 2h\n\nA: Typology and nomenclatures – 1h\nB: Evaluation metrics – 1h\n\n\n\n\n\n\n08/11 PM\n\n\nTP 1 – 1h30\n\nLinear regression with few data\nLinear (logistic) regression with multiple features\nBias-Variance decomposition of Loss\n\nPart 2 Base of Machine Learning 1/2 – 30min\n\nC: Bottlenecks and Issues – 30min\n\nPart 3 Advanced Machine Learning –2h\n\nA: Feature engineering – 1h\nB: Model engineering 1/2 – 1h\n\n\n\n09/11 AM\n\n\nPart 3 Advanced Machine Learning –2h\n\nB: Model engineering 2/2 – 1h30\n\nTP 3 – 2h30"
+    "text": "Planning\n\n\n\n\n\n25/10 PM\n\n\nPart 0 Introduction to Artificial Intelligence and Machine Learning : – 1h30\nPart 1 Mathematical foundations to Modelling and ML – 2h30\n\nTheory of probability – 45min\nStatistical modelling – 30min\nModel inference – 45min\nImportant definitions – 30min\n\n\n\n26/10 AM\n\n\nTP 1 Predict medical insurance costs – 4h\n\nImport dataset – 30 min\nSimple Linear Model – 30 min\nNew feature and interactions – 20 min\nstatmodels package – 20 min\nIn-sample and Out-sample errors – 30 min\nScikit-learn pipeline – 1h\nAnomaly detection – 30 min\nConclusion/Discussion – 20 min\n\n\n\n\n\n\n08/11 PM\n\n\nPart 2 Base of Machine Learning 1/2 – 2h\n\nA: Typology and nomenclatures – 30min\nB: Evaluation metrics – 1h\nC: Bottlenecks and Issues – 30min\n\nPart 3 Advanced Machine Learning –2h\n\nA: Feature engineering – 1h\nB: Model engineering 1 – 1h\n\n\n\n09/11 AM\n\n\nTP 3 – 4h"
+  },
+  {
+    "objectID": "part0.html#acknowledgement",
+    "href": "part0.html#acknowledgement",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Acknowledgement",
+    "text": "Acknowledgement\nFor fruitful discussions and corrections.\n\nFelix Geoffroy\nThomas Chaverondier\nGrégory Morel\nJohn Samuel"
   },
   {
     "objectID": "part0.html#references",
     "href": "part0.html#references",
     "title": "Machine Learning Techniques - 0",
     "section": "References",
-    "text": "References\n\n\n\n\n\n\nJannai, Daniel, Amos Meron, Barak Lenz, Yoav Levine, and Yoav Shoham. 2023. “Human or Not? A Gamified Approach to the Turing Test.” https://arxiv.org/abs/2305.20010.\n\n\nMcCarthy, J., M. Minsky, N. Rochester, and C. E. Shannon. 1955. “A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence.” https://raysolomonoff.com/dartmouth/boxa/dart564props.pdf.\n\n\nTuring, A. M. 1950. “I.—COMPUTING MACHINERY AND INTELLIGENCE.” Mind LIX (236): 433–60. https://doi.org/10.1093/mind/LIX.236.433."
+    "text": "References\n\n\n\n\n\n\n1. Turing, A. M. I.—COMPUTING MACHINERY AND INTELLIGENCE. Mind LIX, 433–460 (1950).\n\n\n2. Jannai, D., Meron, A., Lenz, B., Levine, Y. & Shoham, Y. Human or not? A gamified approach to the turing test. ArXiv vol. abs/2305.20010 (2023).\n\n\n3. McCarthy, J., Minsky, M., Rochester, N. & Shannon, C. E. A proposal for the dartmouth summer research project on artificial intelligence. (1955).\n\n\n4. Clark, P. et al. Think you have solved question answering? Try ARC, the AI2 reasoning challenge. ArXiv abs/1803.05457, (2018).\n\n\n5. Zellers, R., Holtzman, A., Bisk, Y., Farhadi, A. & Choi, Y. HellaSwag: Can a machine really finish your sentence? (2019).\n\n\n6. Hendrycks, D. et al. Measuring massive multitask language understanding. ArXiv vol. abs/2009.03300 (2020).\n\n\n7. Lin, S. C., Hilton, J. & Evans, O. TruthfulQA: Measuring how models mimic human falsehoods. (2021)."
   }
 ]

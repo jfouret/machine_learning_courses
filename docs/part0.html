@@ -10,6 +10,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
+  <meta name="author" content="Julien Fouret">
   <title>ML Techniques - Machine Learning Techniques - 0</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -349,6 +350,14 @@
   <p class="subtitle">Introduction to Artificial Intelligence and Machine Learning</p>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Julien Fouret 
+</div>
+<div class="quarto-title-author-email">
+<a href="mailto:julien.fouret@cpe.fr">julien.fouret@cpe.fr</a>
+</div>
+</div>
 </div>
 
 </section>
@@ -362,9 +371,8 @@
 <h1>What is Artificial Intelligence ?</h1>
 
 </section>
-<section id="can-machines-think" class="slide level2 center">
-<h2>Can Machines Think ?</h2>
-<p><span class="citation" data-cites="Turing1950">Turing (<a href="#/references" role="doc-biblioref" onclick="">1950</a>)</span></p>
+<section id="can-machines-think-turing1950" class="slide level2 center">
+<h2>Can Machines Think ?<span class="citation" data-cites="Turing1950"><sup><a href="#/references" role="doc-biblioref" onclick="">1</a></sup></span></h2>
 <ul>
 <li>Defining a machine</li>
 <li>Understanding “thinking”</li>
@@ -407,7 +415,7 @@
 </section>
 <section id="a-modern-experiment-the-imitation-game-revisited" class="slide level2 center">
 <h2>A Modern Experiment: The Imitation Game Revisited</h2>
-<p><em>Human or Not? A Gamified Approach to the Turing Test</em> <span class="citation" data-cites="jannai2023">Jannai et al. (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></p>
+<p><strong>Human or Not? A Gamified Approach to the Turing Test</strong><span class="citation" data-cites="jannai2023"><sup><a href="#/references" role="doc-biblioref" onclick="">2</a></sup></span></p>
 <p><strong>Online 2-player game:</strong></p>
 <ul>
 <li>One player asks questions and must guess <strong>“Human”</strong> or <strong>“Bot”</strong></li>
@@ -446,9 +454,8 @@
 </div>
 </div>
 </section>
-<section id="pionneered-definitions-of-ai" class="slide level2 center">
-<h2>Pionneered Definitions of AI</h2>
-<p><span style="font-size: 75%;"> <span class="citation" data-cites="dartmouth1955">McCarthy et al. (<a href="#/references" role="doc-biblioref" onclick="">1955</a>)</span> </span></p>
+<section id="pionneered-definitions-of-ai-dartmouth1955" class="slide level2 center">
+<h2>Pionneered Definitions of AI<span class="citation" data-cites="dartmouth1955"><sup><a href="#/references" role="doc-biblioref" onclick="">3</a></sup></span></h2>
 <p><img src="img/dartmouth_title.PNG" alt="" style="border: 2px solid black; display: block; margin: auto;"></p>
 <p><img src="img/dartmouth_def.PNG" alt="" style="border: 2px solid black; display: block; margin: auto;"></p>
 <div style="font-size: 70%;">
@@ -560,10 +567,10 @@
 <ul>
 <li><strong>General Tests</strong>:
 <ul>
-<li>AI2 Reasoning Challenge</li>
-<li>HellaSwag</li>
-<li>MMLU</li>
-<li>TruthfulQA</li>
+<li>AI2 Reasoning Challenge<span class="citation" data-cites="Clark2018ThinkYH"><sup><a href="#/references" role="doc-biblioref" onclick="">4</a></sup></span></li>
+<li>HellaSwag<span class="citation" data-cites="zellers2019hellaswag"><sup><a href="#/references" role="doc-biblioref" onclick="">5</a></sup></span></li>
+<li>MMLU<span class="citation" data-cites="hendrycks2021measuring"><sup><a href="#/references" role="doc-biblioref" onclick="">6</a></sup></span></li>
+<li>TruthfulQA<span class="citation" data-cites="lin2022truthfulqa"><sup><a href="#/references" role="doc-biblioref" onclick="">7</a></sup></span></li>
 </ul></li>
 <li><strong>Field-specific Exams</strong>:
 <ul>
@@ -651,33 +658,29 @@
 <span>25/10 PM</span>
 </p>
 <ul>
-<li><span class="text-box">Part 0</span> Introduction : – <em>1h30</em></li>
-<li><span class="text-box">Part 1</span> Reminders and Foundations – <em>1h30</em>
+<li><span class="text-box">Part 0</span> <strong>Introduction to Artificial Intelligence and Machine Learning</strong> : – <em>1h30</em></li>
+<li><span class="text-box">Part 1</span> <strong>Mathematical foundations to Modelling and ML</strong> – <em>2h30</em>
 <ul>
-<li>Theory of probability – <em>30min</em></li>
-<li>Statistical modelling – <em>15min</em></li>
+<li>Theory of probability – <em>45min</em></li>
+<li>Statistical modelling – <em>30min</em></li>
 <li>Model inference – <em>45min</em></li>
 <li>Important definitions – <em>30min</em></li>
-</ul></li>
-<li><span class="text-box">TP 0</span> – <em>1h</em>
-<ul>
-<li>Fitting probability law</li>
-<li>Model selection / Fixed effect (type of errors)</li>
 </ul></li>
 </ul>
 <p class="separator">
 <span>26/10 AM</span>
 </p>
 <ul>
-<li><span class="text-box">TP 1</span> – <em>2h</em>
+<li><span class="text-box">TP 1</span> <strong>Predict medical insurance costs</strong> – <em>4h</em>
 <ul>
-<li>Data transformation / PCA</li>
-<li>Proof: Cross-entropy from likelihood</li>
-</ul></li>
-<li><span class="text-box">Part 2</span> Base of Machine Learning 1/2 – <em>2h</em>
-<ul>
-<li>A: Typology and nomenclatures – <em>1h</em></li>
-<li>B: Evaluation metrics – <em>1h</em></li>
+<li>Import dataset – <em>30 min</em></li>
+<li>Simple Linear Model – <em>30 min</em></li>
+<li>New feature and interactions – <em>20 min</em></li>
+<li>statmodels package – <em>20 min</em></li>
+<li>In-sample and Out-sample errors – <em>30 min</em></li>
+<li>Scikit-learn pipeline – <em>1h</em></li>
+<li>Anomaly detection – <em>30 min</em></li>
+<li>Conclusion/Discussion – <em>20 min</em></li>
 </ul></li>
 </ul>
 </div>
@@ -687,36 +690,38 @@
 <span>08/11 PM</span>
 </p>
 <ul>
-<li><span class="text-box">TP 1</span> – <em>1h30</em>
+<li><span class="text-box">Part 2</span> Base of Machine Learning 1/2 – <em>2h</em>
 <ul>
-<li>Linear regression with few data</li>
-<li>Linear (logistic) regression with multiple features</li>
-<li>Bias-Variance decomposition of Loss</li>
-</ul></li>
-<li><span class="text-box">Part 2</span> Base of Machine Learning 1/2 – <em>30min</em>
-<ul>
+<li>A: Typology and nomenclatures – <em>30min</em></li>
+<li>B: Evaluation metrics – <em>1h</em></li>
 <li>C: Bottlenecks and Issues – <em>30min</em></li>
 </ul></li>
 <li><span class="text-box">Part 3</span> Advanced Machine Learning –<em>2h</em>
 <ul>
 <li>A: Feature engineering – <em>1h</em></li>
-<li>B: Model engineering 1/2 – <em>1h</em></li>
+<li>B: Model engineering 1 – <em>1h</em></li>
 </ul></li>
 </ul>
 <p class="separator">
 <span>09/11 AM</span>
 </p>
 <ul>
-<li><span class="text-box">Part 3</span> Advanced Machine Learning –<em>2h</em>
-<ul>
-<li>B: Model engineering 2/2 – <em>1h30</em></li>
-</ul></li>
-<li><span class="text-box">TP 3</span> – <em>2h30</em></li>
+<li><span class="text-box">TP 3</span> – <em>4h</em></li>
 </ul>
 </div>
 </div>
 </div>
 </div>
+</section>
+<section id="acknowledgement" class="slide level2 center">
+<h2>Acknowledgement</h2>
+<p><em>For fruitful discussions and corrections.</em></p>
+<ul>
+<li>Felix Geoffroy</li>
+<li>Thomas Chaverondier</li>
+<li>Grégory Morel</li>
+<li>John Samuel</li>
+</ul>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
@@ -724,15 +729,27 @@
 <div class="footer footer-default">
 
 </div>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body" data-line-spacing="2" role="list">
+<div id="ref-Turing1950" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Turing, A. M. <a href="https://doi.org/10.1093/mind/LIX.236.433"><span>I.—COMPUTING MACHINERY AND INTELLIGENCE</span></a>. <em>Mind</em> <strong>LIX</strong>, 433–460 (1950).</div>
+</div>
 <div id="ref-jannai2023" class="csl-entry" role="listitem">
-Jannai, Daniel, Amos Meron, Barak Lenz, Yoav Levine, and Yoav Shoham. 2023. <span>“Human or Not? A Gamified Approach to the Turing Test.”</span> <a href="https://arxiv.org/abs/2305.20010">https://arxiv.org/abs/2305.20010</a>.
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Jannai, D., Meron, A., Lenz, B., Levine, Y. &amp; Shoham, Y. <a href="https://api.semanticscholar.org/CorpusID:258987666">Human or not? A gamified approach to the turing test</a>. <em>ArXiv</em> vol. abs/2305.20010 (2023).</div>
 </div>
 <div id="ref-dartmouth1955" class="csl-entry" role="listitem">
-McCarthy, J., M. Minsky, N. Rochester, and C. E. Shannon. 1955. <span>“A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence.”</span> <a href="https://raysolomonoff.com/dartmouth/boxa/dart564props.pdf">https://raysolomonoff.com/dartmouth/boxa/dart564props.pdf</a>.
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">McCarthy, J., Minsky, M., Rochester, N. &amp; Shannon, C. E. <a href="https://raysolomonoff.com/dartmouth/boxa/dart564props.pdf">A proposal for the dartmouth summer research project on artificial intelligence</a>. (1955).</div>
 </div>
-<div id="ref-Turing1950" class="csl-entry" role="listitem">
-Turing, A. M. 1950. <span>“<span>I.—COMPUTING MACHINERY AND INTELLIGENCE</span>.”</span> <em>Mind</em> LIX (236): 433–60. <a href="https://doi.org/10.1093/mind/LIX.236.433">https://doi.org/10.1093/mind/LIX.236.433</a>.
+<div id="ref-Clark2018ThinkYH" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Clark, P. <em>et al.</em> <a href="https://api.semanticscholar.org/CorpusID:3922816">Think you have solved question answering? Try ARC, the AI2 reasoning challenge</a>. <em>ArXiv</em> <strong>abs/1803.05457</strong>, (2018).</div>
+</div>
+<div id="ref-zellers2019hellaswag" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Zellers, R., Holtzman, A., Bisk, Y., Farhadi, A. &amp; Choi, Y. <a href="https://api.semanticscholar.org/CorpusID:159041722">HellaSwag: Can a machine really finish your sentence?</a> (2019).</div>
+</div>
+<div id="ref-hendrycks2021measuring" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Hendrycks, D. <em>et al.</em> <a href="https://api.semanticscholar.org/CorpusID:221516475">Measuring massive multitask language understanding</a>. <em>ArXiv</em> vol. abs/2009.03300 (2020).</div>
+</div>
+<div id="ref-lin2022truthfulqa" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Lin, S. C., Hilton, J. &amp; Evans, O. <a href="https://api.semanticscholar.org/CorpusID:237532606">TruthfulQA: Measuring how models mimic human falsehoods</a>. (2021).</div>
 </div>
 </div>
 </section></section>
