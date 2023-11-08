@@ -4,4 +4,5 @@ title: "Machine Learning Techniques"
 
 - [Introduction to Artificial Intelligence and Machine Learning](part0.html)
 - [Mathematical foundations to Modelling and ML](part1.html)
+- [ML techniques and Good Practices](part2.html)
 - [Practical session 1](practicals_1.html)

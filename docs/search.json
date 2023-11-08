@@ -91,195 +91,6 @@
     "text": "5.2 Sample 1 vs Sample 2\n\nDo the same with 2 sample of the data frame\n\n\nHints\n\nuse the sample() method of the pd dataframe object.\n\nstart with 2 sample of 100\ntry, 20 and 50\nEach time look at the sum of squared errors and r2\nComment."
   },
   {
-    "objectID": "part0.html#table-of-contents",
-    "href": "part0.html#table-of-contents",
-    "title": "Machine Learning Techniques - 0",
-    "section": "Table of Contents",
-    "text": "Table of Contents"
-  },
-  {
-    "objectID": "part0.html#can-machines-think-turing1950",
-    "href": "part0.html#can-machines-think-turing1950",
-    "title": "Machine Learning Techniques - 0",
-    "section": "Can Machines Think ?1",
-    "text": "Can Machines Think ?1\n\nDefining a machine\nUnderstanding “thinking”"
-  },
-  {
-    "objectID": "part0.html#the-imitation-game",
-    "href": "part0.html#the-imitation-game",
-    "title": "Machine Learning Techniques - 0",
-    "section": "The Imitation Game",
-    "text": "The Imitation Game\n\n\n\nContext:\n\n A  →  Man \n B  →  Woman \n C  →  Interrogator \n\nRules:\n\nGenders of  A  and  B  are hidden to  C \n C  interrogates them\nResponses are typewritten\n\n\nObjectives:\n\nFor  C :\n\nDetermine the Gender of  A  and  B \n\nFor  A : Deceive  C \nFor  B : Assist  C"
-  },
-  {
-    "objectID": "part0.html#what-if-a-is-a-machine",
-    "href": "part0.html#what-if-a-is-a-machine",
-    "title": "Machine Learning Techniques - 0",
-    "section": "What if A is a machine ?",
-    "text": "What if A is a machine ?\nWould C be as often wrong ?"
-  },
-  {
-    "objectID": "part0.html#a-modern-experiment-the-imitation-game-revisited",
-    "href": "part0.html#a-modern-experiment-the-imitation-game-revisited",
-    "title": "Machine Learning Techniques - 0",
-    "section": "A Modern Experiment: The Imitation Game Revisited",
-    "text": "A Modern Experiment: The Imitation Game Revisited\nHuman or Not? A Gamified Approach to the Turing Test2\nOnline 2-player game:\n\nOne player asks questions and must guess “Human” or “Bot”\nThe other player responds and might be substituted by a bot\nBots are advanced LLM models (e.g., GPT-3)"
-  },
-  {
-    "objectID": "part0.html#turing-test-current-outcomes",
-    "href": "part0.html#turing-test-current-outcomes",
-    "title": "Machine Learning Techniques - 0",
-    "section": "Turing test: Current outcomes",
-    "text": "Turing test: Current outcomes\n\n73% Chance to recognize a real person\n\n\n60% chance to recognize a bot\n\nIneffective strategies:\n\nChecking grammar, spelling, recent events\n\nEffective strategies:\n\nRecognizing known issues and biases\nIdentifying hallucinations"
-  },
-  {
-    "objectID": "part0.html#beyond-the-turing-test",
-    "href": "part0.html#beyond-the-turing-test",
-    "title": "Machine Learning Techniques - 0",
-    "section": "Beyond The Turing test",
-    "text": "Beyond The Turing test"
-  },
-  {
-    "objectID": "part0.html#pionneered-definitions-of-ai-dartmouth1955",
-    "href": "part0.html#pionneered-definitions-of-ai-dartmouth1955",
-    "title": "Machine Learning Techniques - 0",
-    "section": "Pionneered Definitions of AI3",
-    "text": "Pionneered Definitions of AI3\n\n\n\n“Artificial Intelligence is the science and engineering of making intelligent machines, especially intelligent computer programs.”\n\nFrom John McCarty (2007). Stanford University.\n\n\nArtificial Intelligence is “the science of making machines do things that would require intelligence if done by men.”\n\nfrom Marvin Minsky (1968). MIT Press."
-  },
-  {
-    "objectID": "part0.html#alternative-definitions",
-    "href": "part0.html#alternative-definitions",
-    "title": "Machine Learning Techniques - 0",
-    "section": "Alternative definitions",
-    "text": "Alternative definitions\n\n\nHuman-oriented\n\n\n“We call programs intelligent if they exhibit behaviors that would be regarded intelligent if they were exhibited by human beings.” - Herbert Simon\n“AI is the attempt to make computers do what people think computers cannot do.” – Douglas Baker\n“AI is the study of how to make computers do things at which, at the moment, people are better.” – Elaine Rich and Kevin Knight\n\n\nMathematics-oriented\n\n\n“AI is the study of techniques for solving exponentially hard problems in polynomial time by exploiting knowledge about the problem domain.” – Elaine Rich\n“There is no intelligence in AI. It’s just pure mathematical optimization.” – Julia Luc\n\n\nIntelligence-oriented\n\n\n“Physicists ask what kind of place this universe is and seek to characterize its behavior systematically. Biologists ask what it means for a physical system to be living. We in AI wonder what kind of information-processing system can ask such questions.” – Avron Barr and Edward Feigenbaum"
-  },
-  {
-    "objectID": "part0.html#levels-of-ai",
-    "href": "part0.html#levels-of-ai",
-    "title": "Machine Learning Techniques - 0",
-    "section": "Levels of AI",
-    "text": "Levels of AI\n\nNarrow AI: Specialized in one task. Translation\nBroad AI: Multimodel/Multitask. ChatBot\nGeneral AI (AGI): Can perform any intellectual task that a human can.\nSuperintelligent AI: Surpasses human abilities. It’s speculative and doesn’t exist yet."
-  },
-  {
-    "objectID": "part0.html#theories-of-intelligence",
-    "href": "part0.html#theories-of-intelligence",
-    "title": "Machine Learning Techniques - 0",
-    "section": "Theories of intelligence",
-    "text": "Theories of intelligence\n\nTwo factor Theory (Spearmann)\nMultiple Intelligence (Gardner)\nEmotional Intelligence (Goleman)\nFluid vs. Crystallized Intelligence (Cattell)"
-  },
-  {
-    "objectID": "part0.html#what-makes-human-intelligence-unique",
-    "href": "part0.html#what-makes-human-intelligence-unique",
-    "title": "Machine Learning Techniques - 0",
-    "section": "What Makes Human Intelligence Unique ?",
-    "text": "What Makes Human Intelligence Unique ?\n\n\nInstinct: Innate behaviour Respiration\nMemory: The capacity to recall knowledge and events.\nLearn: The capability to acquire knowledge and skills.\nLogic and Reason: Ability to apply rules of logic to reach conclusions.\nEmotional Intelligence: Recognizing and understanding emotions in oneself and others.\nAbstraction/Concepts: Conceptualizing ideas and making connections between unrelated domains.\nCreativity: Generating novel ideas and solutions.\nAnd so on …\n\n\n→ Human intelligence is multifaceted."
-  },
-  {
-    "objectID": "part0.html#machine-intelligence",
-    "href": "part0.html#machine-intelligence",
-    "title": "Machine Learning Techniques - 0",
-    "section": "Machine Intelligence",
-    "text": "Machine Intelligence\n\nOperates based on algorithms and data.\nDoesn’t “understand” or “feel” in the way humans do.\nCan process information faster and more accurately than humans."
-  },
-  {
-    "objectID": "part0.html#measuring-human-intelligence",
-    "href": "part0.html#measuring-human-intelligence",
-    "title": "Machine Learning Techniques - 0",
-    "section": "Measuring human intelligence",
-    "text": "Measuring human intelligence\n\nIQ Tests\nComplex and Controversial\nEducational exams\nNo single definitive method"
-  },
-  {
-    "objectID": "part0.html#measuring-narrow-ai",
-    "href": "part0.html#measuring-narrow-ai",
-    "title": "Machine Learning Techniques - 0",
-    "section": "Measuring Narrow AI",
-    "text": "Measuring Narrow AI\n\nPrecision / Specificity for classification\nRegression coefficient for regression\nWill be extensively discussed later."
-  },
-  {
-    "objectID": "part0.html#measuring-artificial-general-intelligence",
-    "href": "part0.html#measuring-artificial-general-intelligence",
-    "title": "Machine Learning Techniques - 0",
-    "section": "Measuring Artificial General intelligence",
-    "text": "Measuring Artificial General intelligence\n\n\nGeneral Tests:\n\nAI2 Reasoning Challenge4\nHellaSwag5\nMMLU6\nTruthfulQA7\n\nField-specific Exams:\n\nUniversity exams (e.g., Bar exam, Math exams)\nMath challenges\n\n\n→ AGI measurement is closer to human intelligence assessment."
-  },
-  {
-    "objectID": "part0.html#definition",
-    "href": "part0.html#definition",
-    "title": "Machine Learning Techniques - 0",
-    "section": "Definition",
-    "text": "Definition\nMachine Learning is a subset of AI where machines can learn from data."
-  },
-  {
-    "objectID": "part0.html#what-is-a-machine",
-    "href": "part0.html#what-is-a-machine",
-    "title": "Machine Learning Techniques - 0",
-    "section": "What is a machine ?",
-    "text": "What is a machine ?\n\nLogical model\nMathematical function\nStatistical model\nRule-based Process"
-  },
-  {
-    "objectID": "part0.html#machine-learning",
-    "href": "part0.html#machine-learning",
-    "title": "Machine Learning Techniques - 0",
-    "section": "Machine Learning",
-    "text": "Machine Learning\n\nMachine learn through optimization.\n\nNumerical optimizations with objective function\nReinforcement learning\nGenetic algorithms\n\n\nThe term optimization is used loosely, i.e. PCA is an optimization to maximize variance."
-  },
-  {
-    "objectID": "part0.html#major-dates-and-periods",
-    "href": "part0.html#major-dates-and-periods",
-    "title": "Machine Learning Techniques - 0",
-    "section": "Major Dates and Periods",
-    "text": "Major Dates and Periods\n\n1950: Turing’s “Computing Machinery and Intelligence”\n1956: Dartmouth Workshop - Birth of AI\n1980s: Rise of Expert Systems\n1990s: Machine Learning Gains Popularity\n2010s: Deep Learning Era Begins\n2020s: Emergence of Large Language Models"
-  },
-  {
-    "objectID": "part0.html#conclusion",
-    "href": "part0.html#conclusion",
-    "title": "Machine Learning Techniques - 0",
-    "section": "Conclusion",
-    "text": "Conclusion\n\nArtificial intelligence is a wide concept with multiple definitions\n\nhuman-oriented\nmathematic-oriented\nintelligence-centered\n\nIntelligence is a a wide notion when applied to humans.\nMachine intelligence"
-  },
-  {
-    "objectID": "part0.html#objectives",
-    "href": "part0.html#objectives",
-    "title": "Machine Learning Techniques - 0",
-    "section": "Objectives",
-    "text": "Objectives\n\nDefinition of Machine Learning\nMathematics and Statistics\nImplement and train models\nKnowledge and best practices\n\nFeature engineering\nModel engineering"
-  },
-  {
-    "objectID": "part0.html#planning",
-    "href": "part0.html#planning",
-    "title": "Machine Learning Techniques - 0",
-    "section": "Planning",
-    "text": "Planning\n\n\n\n\n\n25/10 PM\n\n\nPart 0 Introduction to Artificial Intelligence and Machine Learning : – 1h30\nPart 1 Mathematical foundations to Modelling and ML – 2h30\n\nTheory of probability – 45min\nStatistical modelling – 30min\nModel inference – 45min\nImportant definitions – 30min\n\n\n\n26/10 AM\n\n\nTP 1 Predict medical insurance costs – 4h\n\nImport dataset – 30 min\nSimple Linear Model – 30 min\nNew feature and interactions – 20 min\nstatmodels package – 20 min\nIn-sample and Out-sample errors – 30 min\nScikit-learn pipeline – 1h\nAnomaly detection – 30 min\nConclusion/Discussion – 20 min\n\n\n\n\n\n\n08/11 PM\n\n\nPart 2 Base of Machine Learning 1/2 – 2h\n\nA: Typology and nomenclatures – 30min\nB: Evaluation metrics – 1h\nC: Bottlenecks and Issues – 30min\n\nPart 3 Advanced Machine Learning –2h\n\nA: Feature engineering – 1h\nB: Model engineering 1 – 1h\n\n\n\n09/11 AM\n\n\nTP 3 – 4h"
-  },
-  {
-    "objectID": "part0.html#acknowledgement",
-    "href": "part0.html#acknowledgement",
-    "title": "Machine Learning Techniques - 0",
-    "section": "Acknowledgement",
-    "text": "Acknowledgement\nFor fruitful discussions and corrections.\n\nFelix Geoffroy\nThomas Chaverondier\nGrégory Morel\nJohn Samuel"
-  },
-  {
-    "objectID": "part0.html#references",
-    "href": "part0.html#references",
-    "title": "Machine Learning Techniques - 0",
-    "section": "References",
-    "text": "References\n\n\n\n\n\n\n1. Turing, A. M. I.—COMPUTING MACHINERY AND INTELLIGENCE. Mind LIX, 433–460 (1950).\n\n\n2. Jannai, D., Meron, A., Lenz, B., Levine, Y. & Shoham, Y. Human or not? A gamified approach to the turing test. ArXiv vol. abs/2305.20010 (2023).\n\n\n3. McCarthy, J., Minsky, M., Rochester, N. & Shannon, C. E. A proposal for the dartmouth summer research project on artificial intelligence. (1955).\n\n\n4. Clark, P. et al. Think you have solved question answering? Try ARC, the AI2 reasoning challenge. ArXiv abs/1803.05457, (2018).\n\n\n5. Zellers, R., Holtzman, A., Bisk, Y., Farhadi, A. & Choi, Y. HellaSwag: Can a machine really finish your sentence? (2019).\n\n\n6. Hendrycks, D. et al. Measuring massive multitask language understanding. ArXiv vol. abs/2009.03300 (2020).\n\n\n7. Lin, S. C., Hilton, J. & Evans, O. TruthfulQA: Measuring how models mimic human falsehoods. (2021)."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Machine Learning Techniques",
-    "section": "",
-    "text": "Introduction to Artificial Intelligence and Machine Learning\nMathematical foundations to Modelling and ML\nPractical session 1"
-  },
-  {
     "objectID": "part1.html#table-of-contents",
     "href": "part1.html#table-of-contents",
     "title": "Machine Learning Techniques - 1",
@@ -635,5 +446,446 @@
     "title": "Machine Learning Techniques - 1",
     "section": "References",
     "text": "References\n\n\n\n\n\n\n1. Neyman, J. & Pearson, E. S. On the problem of the most efficient tests of statistical hypotheses. Philosophical Transactions of the Royal Society A 231, 289–337 (1933).\n\n\n2. Student. THE PROBABLE ERROR OF a MEAN. Biometrika 6, 1–25 (1908).\n\n\n3. Nelder, J. A. & Mead, R. A simplex method for function minimization. Comput. J. 7, 308–313 (1965).\n\n\n4. Rosenbrock, H. An automatic method for finding the greatest or least value of a function. Comput. J. 3, 175–184 (1960).\n\n\n5. Broyden, C. G. Quasi-newton methods and their application to function minimisation. Mathematics of Computation 21, 368–381 (1967).\n\n\n6. Kiefer, J. & Wolfowitz, J. Stochastic estimation of the maximum of a regression function. Annals of Mathematical Statistics 23, 462–466 (1952).\n\n\n7. McElreath, R. Statistical rethinking, a bayesian course with example in r and STAN. (CRC Press, 2020)."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Machine Learning Techniques",
+    "section": "",
+    "text": "Introduction to Artificial Intelligence and Machine Learning\nMathematical foundations to Modelling and ML\nML techniques and Good Practices\nPractical session 1"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "part0.html#table-of-contents",
+    "href": "part0.html#table-of-contents",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Table of Contents",
+    "text": "Table of Contents"
+  },
+  {
+    "objectID": "part0.html#can-machines-think-turing1950",
+    "href": "part0.html#can-machines-think-turing1950",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Can Machines Think ?1",
+    "text": "Can Machines Think ?1\n\nDefining a machine\nUnderstanding “thinking”"
+  },
+  {
+    "objectID": "part0.html#the-imitation-game",
+    "href": "part0.html#the-imitation-game",
+    "title": "Machine Learning Techniques - 0",
+    "section": "The Imitation Game",
+    "text": "The Imitation Game\n\n\n\nContext:\n\n A  →  Man \n B  →  Woman \n C  →  Interrogator \n\nRules:\n\nGenders of  A  and  B  are hidden to  C \n C  interrogates them\nResponses are typewritten\n\n\nObjectives:\n\nFor  C :\n\nDetermine the Gender of  A  and  B \n\nFor  A : Deceive  C \nFor  B : Assist  C"
+  },
+  {
+    "objectID": "part0.html#what-if-a-is-a-machine",
+    "href": "part0.html#what-if-a-is-a-machine",
+    "title": "Machine Learning Techniques - 0",
+    "section": "What if A is a machine ?",
+    "text": "What if A is a machine ?\nWould C be as often wrong ?"
+  },
+  {
+    "objectID": "part0.html#a-modern-experiment-the-imitation-game-revisited",
+    "href": "part0.html#a-modern-experiment-the-imitation-game-revisited",
+    "title": "Machine Learning Techniques - 0",
+    "section": "A Modern Experiment: The Imitation Game Revisited",
+    "text": "A Modern Experiment: The Imitation Game Revisited\nHuman or Not? A Gamified Approach to the Turing Test2\nOnline 2-player game:\n\nOne player asks questions and must guess “Human” or “Bot”\nThe other player responds and might be substituted by a bot\nBots are advanced LLM models (e.g., GPT-3)"
+  },
+  {
+    "objectID": "part0.html#turing-test-current-outcomes",
+    "href": "part0.html#turing-test-current-outcomes",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Turing test: Current outcomes",
+    "text": "Turing test: Current outcomes\n\n73% Chance to recognize a real person\n\n\n60% chance to recognize a bot\n\nIneffective strategies:\n\nChecking grammar, spelling, recent events\n\nEffective strategies:\n\nRecognizing known issues and biases\nIdentifying hallucinations"
+  },
+  {
+    "objectID": "part0.html#beyond-the-turing-test",
+    "href": "part0.html#beyond-the-turing-test",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Beyond The Turing test",
+    "text": "Beyond The Turing test"
+  },
+  {
+    "objectID": "part0.html#pionneered-definitions-of-ai-dartmouth1955",
+    "href": "part0.html#pionneered-definitions-of-ai-dartmouth1955",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Pionneered Definitions of AI3",
+    "text": "Pionneered Definitions of AI3\n\n\n\n“Artificial Intelligence is the science and engineering of making intelligent machines, especially intelligent computer programs.”\n\nFrom John McCarty (2007). Stanford University.\n\n\nArtificial Intelligence is “the science of making machines do things that would require intelligence if done by men.”\n\nfrom Marvin Minsky (1968). MIT Press."
+  },
+  {
+    "objectID": "part0.html#alternative-definitions",
+    "href": "part0.html#alternative-definitions",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Alternative definitions",
+    "text": "Alternative definitions\n\n\nHuman-oriented\n\n\n“We call programs intelligent if they exhibit behaviors that would be regarded intelligent if they were exhibited by human beings.” - Herbert Simon\n“AI is the attempt to make computers do what people think computers cannot do.” – Douglas Baker\n“AI is the study of how to make computers do things at which, at the moment, people are better.” – Elaine Rich and Kevin Knight\n\n\nMathematics-oriented\n\n\n“AI is the study of techniques for solving exponentially hard problems in polynomial time by exploiting knowledge about the problem domain.” – Elaine Rich\n“There is no intelligence in AI. It’s just pure mathematical optimization.” – Julia Luc\n\n\nIntelligence-oriented\n\n\n“Physicists ask what kind of place this universe is and seek to characterize its behavior systematically. Biologists ask what it means for a physical system to be living. We in AI wonder what kind of information-processing system can ask such questions.” – Avron Barr and Edward Feigenbaum"
+  },
+  {
+    "objectID": "part0.html#levels-of-ai",
+    "href": "part0.html#levels-of-ai",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Levels of AI",
+    "text": "Levels of AI\n\nNarrow AI: Specialized in one task. Translation\nBroad AI: Multimodel/Multitask. ChatBot\nGeneral AI (AGI): Can perform any intellectual task that a human can.\nSuperintelligent AI: Surpasses human abilities. It’s speculative and doesn’t exist yet."
+  },
+  {
+    "objectID": "part0.html#theories-of-intelligence",
+    "href": "part0.html#theories-of-intelligence",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Theories of intelligence",
+    "text": "Theories of intelligence\n\nTwo factor Theory (Spearmann)\nMultiple Intelligence (Gardner)\nEmotional Intelligence (Goleman)\nFluid vs. Crystallized Intelligence (Cattell)"
+  },
+  {
+    "objectID": "part0.html#what-makes-human-intelligence-unique",
+    "href": "part0.html#what-makes-human-intelligence-unique",
+    "title": "Machine Learning Techniques - 0",
+    "section": "What Makes Human Intelligence Unique ?",
+    "text": "What Makes Human Intelligence Unique ?\n\n\nInstinct: Innate behaviour Respiration\nMemory: The capacity to recall knowledge and events.\nLearn: The capability to acquire knowledge and skills.\nLogic and Reason: Ability to apply rules of logic to reach conclusions.\nEmotional Intelligence: Recognizing and understanding emotions in oneself and others.\nAbstraction/Concepts: Conceptualizing ideas and making connections between unrelated domains.\nCreativity: Generating novel ideas and solutions.\nAnd so on …\n\n\n→ Human intelligence is multifaceted."
+  },
+  {
+    "objectID": "part0.html#machine-intelligence",
+    "href": "part0.html#machine-intelligence",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Machine Intelligence",
+    "text": "Machine Intelligence\n\nOperates based on algorithms and data.\nDoesn’t “understand” or “feel” in the way humans do.\nCan process information faster and more accurately than humans."
+  },
+  {
+    "objectID": "part0.html#measuring-human-intelligence",
+    "href": "part0.html#measuring-human-intelligence",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Measuring human intelligence",
+    "text": "Measuring human intelligence\n\nIQ Tests\nComplex and Controversial\nEducational exams\nNo single definitive method"
+  },
+  {
+    "objectID": "part0.html#measuring-narrow-ai",
+    "href": "part0.html#measuring-narrow-ai",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Measuring Narrow AI",
+    "text": "Measuring Narrow AI\n\nPrecision / Specificity for classification\nRegression coefficient for regression\nWill be extensively discussed later."
+  },
+  {
+    "objectID": "part0.html#measuring-artificial-general-intelligence",
+    "href": "part0.html#measuring-artificial-general-intelligence",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Measuring Artificial General intelligence",
+    "text": "Measuring Artificial General intelligence\n\n\nGeneral Tests:\n\nAI2 Reasoning Challenge4\nHellaSwag5\nMMLU6\nTruthfulQA7\n\nField-specific Exams:\n\nUniversity exams (e.g., Bar exam, Math exams)\nMath challenges\n\n\n→ AGI measurement is closer to human intelligence assessment."
+  },
+  {
+    "objectID": "part0.html#definition",
+    "href": "part0.html#definition",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Definition",
+    "text": "Definition\nMachine Learning is a subset of AI where machines can learn from data."
+  },
+  {
+    "objectID": "part0.html#what-is-a-machine",
+    "href": "part0.html#what-is-a-machine",
+    "title": "Machine Learning Techniques - 0",
+    "section": "What is a machine ?",
+    "text": "What is a machine ?\n\nLogical model\nMathematical function\nStatistical model\nRule-based Process"
+  },
+  {
+    "objectID": "part0.html#machine-learning",
+    "href": "part0.html#machine-learning",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Machine Learning",
+    "text": "Machine Learning\n\nMachine learn through optimization.\n\nNumerical optimizations with objective function\nReinforcement learning\nGenetic algorithms\n\n\nThe term optimization is used loosely, i.e. PCA is an optimization to maximize variance."
+  },
+  {
+    "objectID": "part0.html#major-dates-and-periods",
+    "href": "part0.html#major-dates-and-periods",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Major Dates and Periods",
+    "text": "Major Dates and Periods\n\n1950: Turing’s “Computing Machinery and Intelligence”\n1956: Dartmouth Workshop - Birth of AI\n1980s: Rise of Expert Systems\n1990s: Machine Learning Gains Popularity\n2010s: Deep Learning Era Begins\n2020s: Emergence of Large Language Models"
+  },
+  {
+    "objectID": "part0.html#conclusion",
+    "href": "part0.html#conclusion",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nArtificial intelligence is a wide concept with multiple definitions\n\nhuman-oriented\nmathematic-oriented\nintelligence-centered\n\nIntelligence is a a wide notion when applied to humans.\nMachine intelligence"
+  },
+  {
+    "objectID": "part0.html#objectives",
+    "href": "part0.html#objectives",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Objectives",
+    "text": "Objectives\n\nDefinition of Machine Learning\nMathematics and Statistics\nImplement and train models\nKnowledge and best practices\n\nFeature engineering\nModel engineering"
+  },
+  {
+    "objectID": "part0.html#planning",
+    "href": "part0.html#planning",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Planning",
+    "text": "Planning\n\n\n\n\n\n25/10 PM\n\n\nPart 0 Introduction to Artificial Intelligence and Machine Learning : – 1h30\nPart 1 Mathematical foundations to Modelling and ML – 2h30\n\nTheory of probability – 45min\nStatistical modelling – 30min\nModel inference – 45min\nImportant definitions – 30min\n\n\n\n26/10 AM\n\n\nTP 1 Predict medical insurance costs – 4h\n\nImport dataset – 30 min\nSimple Linear Model – 30 min\nNew feature and interactions – 20 min\nstatmodels package – 20 min\nIn-sample and Out-sample errors – 30 min\nScikit-learn pipeline – 1h\nAnomaly detection – 30 min\nConclusion/Discussion – 20 min\n\n\n\n\n\n\n08/11 PM\n\n\nPart 2 Base of Machine Learning 1/2 – 2h\n\nA: Typology and nomenclatures – 30min\nB: Evaluation metrics – 1h\nC: Bottlenecks and Issues – 30min\n\nPart 3 Advanced Machine Learning –2h\n\nA: Feature engineering – 1h\nB: Model engineering 1 – 1h\n\n\n\n09/11 AM\n\n\nTP 3 – 4h"
+  },
+  {
+    "objectID": "part0.html#acknowledgement",
+    "href": "part0.html#acknowledgement",
+    "title": "Machine Learning Techniques - 0",
+    "section": "Acknowledgement",
+    "text": "Acknowledgement\nFor fruitful discussions and corrections.\n\nFelix Geoffroy\nThomas Chaverondier\nGrégory Morel\nJohn Samuel"
+  },
+  {
+    "objectID": "part0.html#references",
+    "href": "part0.html#references",
+    "title": "Machine Learning Techniques - 0",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\n1. Turing, A. M. I.—COMPUTING MACHINERY AND INTELLIGENCE. Mind LIX, 433–460 (1950).\n\n\n2. Jannai, D., Meron, A., Lenz, B., Levine, Y. & Shoham, Y. Human or not? A gamified approach to the turing test. ArXiv vol. abs/2305.20010 (2023).\n\n\n3. McCarthy, J., Minsky, M., Rochester, N. & Shannon, C. E. A proposal for the dartmouth summer research project on artificial intelligence. (1955).\n\n\n4. Clark, P. et al. Think you have solved question answering? Try ARC, the AI2 reasoning challenge. ArXiv abs/1803.05457, (2018).\n\n\n5. Zellers, R., Holtzman, A., Bisk, Y., Farhadi, A. & Choi, Y. HellaSwag: Can a machine really finish your sentence? (2019).\n\n\n6. Hendrycks, D. et al. Measuring massive multitask language understanding. ArXiv vol. abs/2009.03300 (2020).\n\n\n7. Lin, S. C., Hilton, J. & Evans, O. TruthfulQA: Measuring how models mimic human falsehoods. (2021)."
+  },
+  {
+    "objectID": "part2.html#table-of-contents",
+    "href": "part2.html#table-of-contents",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Table of Contents",
+    "text": "Table of Contents"
+  },
+  {
+    "objectID": "part2.html#in-sample-and-out-sample",
+    "href": "part2.html#in-sample-and-out-sample",
+    "title": "Machine Learning Techniques - 2",
+    "section": "In-sample and Out-sample",
+    "text": "In-sample and Out-sample\nIn-sample error: Calculated from data used for training.\nIn-sample error: Calculated from unseen data (not used in training)\n2 sampling with n = 10"
+  },
+  {
+    "objectID": "part2.html#in-sample-and-out-sample-1",
+    "href": "part2.html#in-sample-and-out-sample-1",
+    "title": "Machine Learning Techniques - 2",
+    "section": "In-sample and Out-sample",
+    "text": "In-sample and Out-sample\nImportance of validating using unseen data.\n2 sampling with n = 50"
+  },
+  {
+    "objectID": "part2.html#in-sample-and-out-sample-2",
+    "href": "part2.html#in-sample-and-out-sample-2",
+    "title": "Machine Learning Techniques - 2",
+    "section": "In-sample and Out-sample",
+    "text": "In-sample and Out-sample\nDifference are lower with larger samples.\n2 sampling with n = 500"
+  },
+  {
+    "objectID": "part2.html#mean-squared-error-decomposition",
+    "href": "part2.html#mean-squared-error-decomposition",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Mean Squared Error Decomposition",
+    "text": "Mean Squared Error Decomposition\n\n\n\n\\(\\text{MSE} = \\mathbb{E}[(Y - \\hat{Y})^2]\\)\nThis can be further decomposed as:\n\\[\n\\text{MSE} = \\text{Bias}^2 + \\text{Variance} + \\text{Irreducible Error}\n\\]\nWhere:\n\n\\(\\text{Bias}(\\hat{Y}) = \\mathbb{E}[\\hat{Y}] - Y\\)\n\\(\\text{Variance} = \\mathbb{E}[(\\hat{Y} - \\mathbb{E}[\\hat{Y}])^2]\\)\n\n\n\n\n\n\nBias-Variance Decomposition"
+  },
+  {
+    "objectID": "part2.html#under-and-overfitting",
+    "href": "part2.html#under-and-overfitting",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Under and Overfitting",
+    "text": "Under and Overfitting\n\n\n\n\n\n\ndegree 1: underfit\n\n? data true pattern\nHigher Bias\n\ndegree 8-9: overfit\n\nrandom error pattern\nHigher Variance"
+  },
+  {
+    "objectID": "part2.html#under-over-and-okay--fitting",
+    "href": "part2.html#under-over-and-okay--fitting",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Under, Over and “Okay” -fitting",
+    "text": "Under, Over and “Okay” -fitting\n\n\n\n\nIf decomposed we would see\n\nincreased variance (out) on high degree\nincreased bias (out) on low degree\nWe need a “bias-variance tradeoff”\n\n\nThe Okay-fit is where the model:\n\nLearns data pattern\nCan generalize on unseen data\nDoes not learn the random error pattern\n\n\n\nWARNING: Bias variance decomposition does not always make sense."
+  },
+  {
+    "objectID": "part2.html#mandatory-ml-workflow",
+    "href": "part2.html#mandatory-ml-workflow",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Mandatory ML workflow",
+    "text": "Mandatory ML workflow\n\n\n\n\n\nTraining data → in-sample error\nTest data → in-sample error\nTest data should be without bias\nNo bias = the same error model\nNot required but recommended: adversarial datasets"
+  },
+  {
+    "objectID": "part2.html#importance-of-bias-in-datasets",
+    "href": "part2.html#importance-of-bias-in-datasets",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Importance of bias in datasets",
+    "text": "Importance of bias in datasets\n\nWhat is the pattern of wrong prediction ?"
+  },
+  {
+    "objectID": "part2.html#importance-of-explainable-ai",
+    "href": "part2.html#importance-of-explainable-ai",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Importance of Explainable AI",
+    "text": "Importance of Explainable AI\nTesting is good but explaining is better:"
+  },
+  {
+    "objectID": "part2.html#importance-of-adversarial-datasets",
+    "href": "part2.html#importance-of-adversarial-datasets",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Importance of adversarial datasets",
+    "text": "Importance of adversarial datasets\n\nIMPORTANT: Adversarial datasets should come after testing.\nProper testing is done with the same underlying error.\n\nWhy ? We are looking at different bias:\n\nrelated to over-learning on the random error\nnot related with an error but with new data patterns\n\nAdversarial datasets are datasets where we can expect a new pattern in data\nExamples:\n\nWolf Images from Zoo\nPeople from other countries\nProcess in another factory"
+  },
+  {
+    "objectID": "part2.html#ml-workflow-with-model-selection",
+    "href": "part2.html#ml-workflow-with-model-selection",
+    "title": "Machine Learning Techniques - 2",
+    "section": "ML workflow with model selection",
+    "text": "ML workflow with model selection\nVALIDATION IS NOT TESTING\n\n\n\n\n\n\nModel selection\nHyperparameter tuning\nTraining parameters\nIntroduction of validation data\nTraining split\nRe-training the selected model"
+  },
+  {
+    "objectID": "part2.html#data-driven-vs-theory-driven",
+    "href": "part2.html#data-driven-vs-theory-driven",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Data-Driven vs Theory Driven",
+    "text": "Data-Driven vs Theory Driven\n\n\n\n\nData-driven\n\nRequire lots of data\nLeverage lots of algorithms\nRequire lots of computing power\nImportance of Testing and Validation Framework\nHardly explainable\nOptimizing\nDeep Learning / Scikit-learn Pipelines\nBusiness intelligence / NLP / Image\n\n\n\n\nTheory-driven\n\nCan work with few data\nUnderstanding of a problem\nRequire less computing power\nLimited importance of Testing and Validation\nEasily explainable\nModelling\nField-specific methods and algorithms\nAerodynamics / Molecule modeling / Genomics"
+  },
+  {
+    "objectID": "part2.html#ml-tasks-for-prediction",
+    "href": "part2.html#ml-tasks-for-prediction",
+    "title": "Machine Learning Techniques - 2",
+    "section": "ML tasks for prediction",
+    "text": "ML tasks for prediction\n\nClassification\nRegression\nClustering\nAssociation"
+  },
+  {
+    "objectID": "part2.html#clustering-examples",
+    "href": "part2.html#clustering-examples",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Clustering examples",
+    "text": "Clustering examples\n\n\nmeans: find groups that minimize the within-cluster sum of squares (distance to the centroid)\nClustering\n\nCompute and distance matrix (Euclidean)\nApply an agglomerative clustering (neighbor joining)"
+  },
+  {
+    "objectID": "part2.html#ml-tasks-for-data-transformation",
+    "href": "part2.html#ml-tasks-for-data-transformation",
+    "title": "Machine Learning Techniques - 2",
+    "section": "ML tasks for data transformation",
+    "text": "ML tasks for data transformation\n\nData Encoding: e.g (one hot, Ordinal)\nData Embedding:\n\nVector-representation of complex object\nex: Word2Vec / Encoder deep learning architecture\n\nData projection: Project onto another space\n\nOften based on dimensionality reduction techniques"
+  },
+  {
+    "objectID": "part2.html#learning-strategy",
+    "href": "part2.html#learning-strategy",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Learning strategy",
+    "text": "Learning strategy\n\nSupervised learning\nUnsupervised\nReinforcement learning\nGenetic Algorithm\nTransfer learning"
+  },
+  {
+    "objectID": "part2.html#evaluation-binary-classification",
+    "href": "part2.html#evaluation-binary-classification",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Evaluation / Binary Classification",
+    "text": "Evaluation / Binary Classification\n\n\n\n\n\n\n\n\nsource: wikipédia"
+  },
+  {
+    "objectID": "part2.html#summary-metrics-for-binary-outcome",
+    "href": "part2.html#summary-metrics-for-binary-outcome",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Summary metrics for Binary outcome",
+    "text": "Summary metrics for Binary outcome\n\nBalanced single score : example F1 \\[\nF1 = 2 \\times \\frac{\\text{precision} \\times \\text{recall}}{\\text{precision} + \\text{recall}}\n\\]\nAUC: Area under curve\nROC: Recall = f(FPR) = f(1-specificity)\nPRC: Precision = f(Recall)"
+  },
+  {
+    "objectID": "part2.html#classification-metrics",
+    "href": "part2.html#classification-metrics",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Classification metrics",
+    "text": "Classification metrics\n\nConfusion Matrix\nRand Index"
+  },
+  {
+    "objectID": "part2.html#regression-metrics",
+    "href": "part2.html#regression-metrics",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Regression metrics",
+    "text": "Regression metrics\n\nCorrelation (pearson / spearman)\nDistance metrics"
+  },
+  {
+    "objectID": "part2.html#clustering-metrics",
+    "href": "part2.html#clustering-metrics",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Clustering Metrics",
+    "text": "Clustering Metrics\n\nSilhouette Score\nDavies-Bouldin Index"
+  },
+  {
+    "objectID": "part2.html#association-metrics",
+    "href": "part2.html#association-metrics",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Association Metrics",
+    "text": "Association Metrics\n\nLift\nConfidence\nSupport"
+  },
+  {
+    "objectID": "part2.html#projection-mapping-metrics",
+    "href": "part2.html#projection-mapping-metrics",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Projection / Mapping metrics",
+    "text": "Projection / Mapping metrics\n\nContinuity: Local neighborhoods preserved ?\nMean K-Nearest Neighbors (KNN) Error: distance to centrois before and after the projection ?"
+  },
+  {
+    "objectID": "part2.html#global-structure-preservation",
+    "href": "part2.html#global-structure-preservation",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Global Structure Preservation",
+    "text": "Global Structure Preservation\n\nCorrelation/Error over distance matrix\nPercentage of Variance Explained"
+  },
+  {
+    "objectID": "part2.html#feature-engineering",
+    "href": "part2.html#feature-engineering",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Feature Engineering",
+    "text": "Feature Engineering\n\nFeature Normalization\nFeature Selection/Extraction\nFeature Transformation\nFeature Categorization\nFeature Embedding/Encoding"
+  },
+  {
+    "objectID": "part2.html#dimentionality-reduction",
+    "href": "part2.html#dimentionality-reduction",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Dimentionality Reduction",
+    "text": "Dimentionality Reduction\n\nCurse of dimensionality: more features = more parameters\n\nPCA: Principal component analysis\nPrincipal components (PCs) are linear expressions of features\nPCs fitted so that sample variance is maximal on the first components"
+  },
+  {
+    "objectID": "part2.html#dimensionality-reduction",
+    "href": "part2.html#dimensionality-reduction",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Dimensionality reduction",
+    "text": "Dimensionality reduction\n2 is nearly enough…\n\nHere samples are\nTarget not used in PCA"
+  },
+  {
+    "objectID": "part2.html#working-with-non-regular-data",
+    "href": "part2.html#working-with-non-regular-data",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Working with Non-Regular Data",
+    "text": "Working with Non-Regular Data\n\n\nImbalanced Data\n\nPopulation bias or sample bias ?\nDownsample ?\nWeighting for training and\nUse adapted algorithm (Tree-based)\n\nData with Uncertainties\n\nLeverage statitical models (Bayesian)\nSampling\nAveraging\n\nMissing Data\n\nRemove samples\nUse algorithm tolerating missing data\nPredict missing data"
+  },
+  {
+    "objectID": "part2.html#model-engineering-training-setup",
+    "href": "part2.html#model-engineering-training-setup",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Model Engineering Training Setup",
+    "text": "Model Engineering Training Setup\n\nLoss function and Weights\nSolver / Optimizer\nWeighting\nOther Options (e.g. tree/splits)"
+  },
+  {
+    "objectID": "part2.html#validation-and-test",
+    "href": "part2.html#validation-and-test",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Validation and test",
+    "text": "Validation and test\n\nTraining, Validation and Test Dataset\nCross-validation (K-Fold, Stratification) [scikit-learn]\nChallenging or Adversarial Test Dataset"
+  },
+  {
+    "objectID": "part2.html#k-fold-cross-validation",
+    "href": "part2.html#k-fold-cross-validation",
+    "title": "Machine Learning Techniques - 2",
+    "section": "k-Fold cross-validation",
+    "text": "k-Fold cross-validation"
+  },
+  {
+    "objectID": "part2.html#class-and-group-in-cross-validation",
+    "href": "part2.html#class-and-group-in-cross-validation",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Class and group in cross-validation",
+    "text": "Class and group in cross-validation\n\n\nClass: target\nGroup: feature"
+  },
+  {
+    "objectID": "part2.html#regularization",
+    "href": "part2.html#regularization",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Regularization",
+    "text": "Regularization\n\nLoss penalty\n\nL1, L2 and Elastic-Net\nMax Norm Regularization\n\n(Multivariate) Boundaries for optimization\nEarly Stopping (for complex models)\nDrop Out (In Deep Learning)"
+  },
+  {
+    "objectID": "part2.html#ensemble-learning-methods",
+    "href": "part2.html#ensemble-learning-methods",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Ensemble Learning Methods",
+    "text": "Ensemble Learning Methods\n\nPrinciple: Aggregate Predictions\nBagging : Bootstrap aggregating; averages predictions to reduce overfitting. (Random Forest)\nBoosting : Sequentially focuses on misclassified instances to improve accuracy. (Gradient Boosting)\nVoting : Multiple models vote on output; majority or average wins. (Decision Forest)\nStacking : Learns from model predictions to make a final prediction. (PCA and then regression)"
+  },
+  {
+    "objectID": "part2.html#stochastic-methods",
+    "href": "part2.html#stochastic-methods",
+    "title": "Machine Learning Techniques - 2",
+    "section": "Stochastic Methods",
+    "text": "Stochastic Methods\n\nChanging the seed in a Random algorithm (SGD)\nChanging the seed for random initialization\nBoostraping\nOthers: Monte Carlo simulation (Bayesian sampling)"
   }
 ]

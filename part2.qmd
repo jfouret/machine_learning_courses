@@ -1,0 +1,477 @@
+---
+title: "Machine Learning Techniques - 2"
+subtitle: "ML techniques and Good practices"
+bibliography: biblio.bib
+csl: nature.csl
+format:
+  revealjs:
+    title-slide-attributes:
+        data-state: "hide-menubar"
+    center: true
+    transition: slide
+    slide-number: true
+    background-transition: fade
+    controls-layout: bottom-right
+    menu: false
+    css: style.css
+    section-divs: true
+    simplemenu:
+        barhtml:
+            header: "<div class='menubar'><ul class='menu'></ul><div>"
+        scale: 0.67
+revealjs-plugins:
+  - simplemenu
+---
+
+## Table of Contents {data-state="hide-menubar"}
+<ul class="menu"><ul>
+
+# A: All models are wrong {data-stack-name="All models are wrong"}
+
+## In-sample and Out-sample
+
+In-sample error: Calculated from data used for training.
+
+In-sample error: Calculated from unseen data (not used in training)
+
+2 sampling with n = 10
+
+![](img/in_out_errors_k10.png)
+
+## In-sample and Out-sample
+
+Importance of validating using unseen data.
+
+2 sampling with n = 50
+
+![](img/in_out_errors_k50.png)
+
+## In-sample and Out-sample
+
+Difference are lower with larger samples.
+
+2 sampling with n = 500
+
+![](img/in_out_errors_k500.png)
+
+## Mean Squared Error Decomposition
+
+::: columns
+
+:::: column
+<div style="font-size: 60%;">
+$\text{MSE} = \mathbb{E}[(Y - \hat{Y})^2]$
+
+This can be further decomposed as:
+
+$$
+\text{MSE} = \text{Bias}^2 + \text{Variance} + \text{Irreducible Error}
+$$
+
+Where:
+
+- $\text{Bias}(\hat{Y}) = \mathbb{E}[\hat{Y}] - Y$
+- $\text{Variance} = \mathbb{E}[(\hat{Y} - \mathbb{E}[\hat{Y}])^2]$
+
+</div>
+
+::::
+
+:::: column
+![Bias-Variance Decomposition](img/bias-variance-targets.svg)
+::::
+
+:::
+
+## Under and Overfitting
+
+::: columns
+
+:::: {.column width="60%"}
+
+![](img/poly_19_overfit.png)
+
+::::
+
+:::: {.column width="40%"}
+<div style="font-size: 80%;">
+- degree 1: underfit
+  - ? data true pattern
+  - Higher Bias
+
+- degree 8-9: overfit
+  - random error pattern
+  - Higher Variance
+</div>
+::::
+
+:::
+
+## Under, Over and "Okay" -fitting
+
+<img src="img/poly_19_overfit_MSE.png" alt="" style="border: 2px solid black; display: block; margin: auto;" width="50%" height="auto">
+
+<div style="font-size: 50%;">
+
+::: columns
+
+:::: column
+
+If **decomposed** we would see
+
+- increased variance (out) on high degree
+- increased bias (out) on low degree
+- We need a "bias-variance tradeoff"
+
+::::
+
+:::: column
+
+The **Okay-fit** is where the model:
+
+- Learns data pattern
+- Can generalize on unseen data
+- Does not learn the random error pattern
+
+::::
+
+:::
+
+**WARNING**: Bias variance decomposition does not always make sense.
+
+</div>
+
+## Mandatory ML workflow
+
+::: columns
+
+:::: {.column width="40%"}
+
+![](img/ml_schema1.svg)
+
+::::
+
+:::: {.column width="60%"}
+
+- Training data &rarr; in-sample error
+- Test data &rarr; in-sample error
+
+- Test data should be without bias
+- No bias = the same error model
+
+- Not required but recommended: adversarial datasets
+
+::::
+
+:::
+
+## Importance of bias in datasets
+
+![](img/wolf_husky.png)
+
+What is the pattern of wrong prediction ?
+
+## Importance of Explainable AI
+
+Testing is good but explaining is better:
+
+![](img/wrong_husky.png)
+
+## Importance of adversarial datasets
+
+<div style="font-size: 80%;">
+
+**IMPORTANT:** Adversarial datasets should come after testing.
+
+Proper testing is done with the **same underlying error**.
+
+- Why ? We are looking at different bias:
+  - related to over-learning on the random error
+  - not related with an error but with new data patterns
+
+- Adversarial datasets are datasets where we can expect a new pattern in data
+- Examples: 
+  - Wolf Images from Zoo
+  - People from other countries
+  - Process in another factory
+
+</div>
+
+## ML workflow with model selection
+
+VALIDATION IS NOT TESTING
+
+::: columns
+
+:::: {.column width="60%"}
+
+<img src="img/ml_schema2.svg" alt="" style="border: 2px solid black; display: block; margin: auto;" width="100%" height="auto">
+
+::::
+
+:::: {.column width="40%"}
+
+<div style="font-size: 80%;">
+
+- Model selection
+- Hyperparameter tuning
+- Training parameters
+- Introduction of validation data
+- Training split
+- Re-training the selected model
+
+</div>
+
+::::
+:::
+
+## Data-Driven vs Theory Driven
+
+<div style="font-size: 75%;">
+::: columns
+
+:::: column
+
+- Data-driven
+  - Require **lots of data**
+  - Leverage lots of **algorithms**
+  - Require **lots of computing power**
+  - **Importance of Testing** and Validation Framework
+  - **Hardly explainable**
+  - **Optimizing**
+  - Deep Learning / Scikit-learn Pipelines
+  - Business intelligence / NLP / Image
+
+::::
+
+:::: column
+
+- Theory-driven
+  - Can work with **few data**
+  - **Understanding** of a problem
+  - Require **less computing power**
+  - **Limited importance of Testing** and Validation
+  - **Easily explainable**
+  - **Modelling**
+  - Field-specific methods and algorithms
+  - Aerodynamics / Molecule modeling / Genomics
+
+::::
+
+:::
+
+</div>
+
+# B: Learning and Evaluation {data-stack-name="Learn and Eval"}
+
+## ML tasks for prediction
+
+- Classification
+- Regression
+- Clustering
+- Association
+
+## Clustering examples
+
+<div style="font-size: 60%;">
+
+- means: find groups that minimize the within-cluster sum of squares (distance to the centroid)
+- Clustering
+  - Compute and distance matrix (Euclidean)
+  - Apply an agglomerative clustering (neighbor joining)
+
+</div>
+
+<img src="img/kmans_hclust.png" alt="" style="border: 2px solid black; display: block; margin: auto;" width="100%" height="auto">
+
+## ML tasks for data transformation
+
+- Data Encoding: e.g (one hot, Ordinal)
+
+- Data Embedding:
+  - Vector-representation of complex object
+  - ex: Word2Vec / Encoder deep learning architecture
+
+- Data projection: Project onto another space
+  - Often based on dimensionality reduction techniques
+
+## Learning strategy
+
+- Supervised learning
+- Unsupervised 
+- Reinforcement learning
+- Genetic Algorithm
+- Transfer learning
+
+## Evaluation / Binary Classification
+
+::: columns
+
+:::: column
+
+<img src="img/Sensitivity_and_specificity_1.01.svg.png" alt="" style="border: 2px solid black; display: block; margin: auto;" width="50%" height="auto">
+
+::::
+
+:::: column
+
+<img src="img/Precisionrecall.svg.png" alt="" style="border: 2px solid black; display: block; margin: auto;" width="50%" height="auto">
+
+::::
+
+:::
+<div style="font-size: 60%;">
+source: wikipédia
+</div>
+
+## Summary metrics for Binary outcome
+
+- Balanced single score : example F1
+$$
+F1 = 2 \times \frac{\text{precision} \times \text{recall}}{\text{precision} + \text{recall}}
+$$
+
+
+- AUC: Area under curve
+- ROC: Recall = f(FPR) = f(1-specificity)
+- PRC: Precision = f(Recall)
+
+## Classification metrics
+
+- Confusion Matrix
+- Rand Index
+
+## Regression metrics
+
+- Correlation (pearson / spearman)
+- Distance metrics
+
+## Clustering Metrics
+
+- Silhouette Score
+- Davies-Bouldin Index
+
+## Association Metrics
+
+- Lift
+- Confidence
+- Support
+
+## Projection / Mapping metrics
+
+- Continuity: Local neighborhoods preserved ?
+
+- Mean K-Nearest Neighbors (KNN) Error: distance to centrois before and after the projection ?
+
+## Global Structure Preservation
+
+- Correlation/Error over distance matrix
+
+- Percentage of Variance Explained
+
+# C: ML techniques {data-stack-name="ML techniques"}
+
+## Feature Engineering
+
+- Feature Normalization
+- Feature Selection/Extraction
+- Feature Transformation
+- Feature Categorization
+- Feature Embedding/Encoding
+
+## Dimentionality Reduction
+
+<div style="font-size: 80%;">
+
+**Curse of dimensionality**: more features = more parameters
+
+- PCA: Principal component analysis
+- Principal components (PCs) are linear expressions of features
+- PCs fitted so that sample variance is maximal on the first components
+
+</div>
+
+<img src="img/pca_cancer1.png" alt="" style="border: 2px solid black; display: block; margin: auto;" width="100%" height="auto">
+
+## Dimensionality reduction
+
+2 is nearly enough...
+
+- Here samples are 
+- Target not used in PCA
+
+<img src="img/pca_cancer2.png" alt="" style="border: 2px solid black; display: block; margin: auto;" width="100%" height="auto">
+
+## Working with Non-Regular Data
+
+<div style="font-size: 60%;">
+
+- Imbalanced Data
+  - Population bias or sample bias ?
+  - Downsample ?
+  - Weighting for training and 
+  - Use adapted algorithm (Tree-based)
+
+- Data with Uncertainties
+  - Leverage statitical models (Bayesian)
+  - Sampling
+  - Averaging
+
+- Missing Data
+  - Remove samples
+  - Use algorithm tolerating missing data
+  - Predict missing data
+
+</div>
+
+## Model Engineering Training Setup
+
+- Loss function and Weights
+- Solver / Optimizer
+- Weighting
+- Other Options (e.g. tree/splits)
+
+## Validation and test
+
+- Training, Validation and Test Dataset
+- Cross-validation (K-Fold, Stratification) [scikit-learn]
+- Challenging or Adversarial Test Dataset
+
+## k-Fold cross-validation
+
+<img src="img/grid_search_cross_validation.png" alt="" style="border: 2px solid black; display: block; margin: auto;" width="80%" height="auto">
+
+## Class and group in cross-validation
+
+<div style="font-size: 60%;">
+
+- Class: target
+- Group: feature
+
+</div>
+
+<img src="img/ml_schema3.png" alt="" style="border: 2px solid black; display: block; margin: auto;" width="70%" height="auto">
+
+## Regularization
+
+- Loss penalty
+  - L1, L2 and Elastic-Net
+  - Max Norm Regularization
+- (Multivariate) Boundaries for optimization
+
+- Early Stopping (for complex models)
+- Drop Out (In Deep Learning)
+
+## Ensemble Learning Methods
+- Principle: Aggregate Predictions
+- Bagging : Bootstrap aggregating; averages predictions to reduce overfitting. (Random Forest)
+- Boosting : Sequentially focuses on misclassified instances to improve accuracy. (Gradient Boosting)
+- Voting : Multiple models vote on output; majority or average wins. (Decision Forest)
+- Stacking : Learns from model predictions to make a final prediction. (PCA and then regression)
+
+## Stochastic Methods
+
+- Changing the seed in a Random algorithm (SGD)
+- Changing the seed for random initialization
+- Boostraping
+- Others: Monte Carlo simulation (Bayesian sampling)
