@@ -346,7 +346,7 @@
 <section id="in-sample-and-out-sample" class="slide level2 center">
 <h2>In-sample and Out-sample</h2>
 <p>In-sample error: Calculated from data used for training.</p>
-<p>In-sample error: Calculated from unseen data (not used in training)</p>
+<p>Out-sample error: Calculated from unseen data (not used in training)</p>
 <p>2 sampling with n = 10</p>
 
 <img data-src="img/in_out_errors_k10.png" class="r-stretch"></section>
@@ -443,7 +443,7 @@
 </div><div class="column" style="width:60%;">
 <ul>
 <li><p>Training data → in-sample error</p></li>
-<li><p>Test data → in-sample error</p></li>
+<li><p>Test data → out-sample error</p></li>
 <li><p>Test data should be without bias</p></li>
 <li><p>No bias = the same error model</p></li>
 <li><p>Not required but recommended: adversarial datasets</p></li>
@@ -638,11 +638,23 @@ F1 = 2 \times \frac{\text{precision} \times \text{recall}}{\text{precision} + \t
 </section>
 <section id="association-metrics" class="slide level2 center">
 <h2>Association Metrics</h2>
+<div style="font-size: 60%;">
 <ul>
-<li>Lift</li>
-<li>Confidence</li>
-<li>Support</li>
+<li><p>Support measures the frequency of the rule in the dataset. <span class="math display">\[
+\text{Support}(A \Rightarrow B) = \mathbb{P}(A \cap B)
+\]</span></p></li>
+<li><p>Confidence measures how often items in <span class="math inline">\(B\)</span> appear in transactions that contain <span class="math inline">\(A\)</span>.</p></li>
 </ul>
+<p><span class="math display">\[
+\text{Confidence}(A \Rightarrow B) = \mathbb{P}(B | A) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(A)}
+\]</span></p>
+<ul>
+<li>Lift: how much more often <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> occur together than expected if they were statistically independent.</li>
+</ul>
+<p><span class="math display">\[
+\text{Lift}(A \Rightarrow B) = \frac{\mathbb{P}(B | A)}{\mathbb{P}(B)} = \frac{\mathbb{P}(B \cap A)}{\mathbb{P}(A) \mathbb{P}(B)}
+\]</span></p>
+</div>
 </section>
 <section id="projection-mapping-metrics" class="slide level2 center">
 <h2>Projection / Mapping metrics</h2>

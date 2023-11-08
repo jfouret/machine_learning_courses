@@ -32,7 +32,7 @@ revealjs-plugins:
 
 In-sample error: Calculated from data used for training.
 
-In-sample error: Calculated from unseen data (not used in training)
+Out-sample error: Calculated from unseen data (not used in training)
 
 2 sampling with n = 10
 
@@ -154,7 +154,7 @@ The **Okay-fit** is where the model:
 :::: {.column width="60%"}
 
 - Training data &rarr; in-sample error
-- Test data &rarr; in-sample error
+- Test data &rarr; out-sample error
 
 - Test data should be without bias
 - No bias = the same error model
@@ -353,9 +353,26 @@ $$
 
 ## Association Metrics
 
-- Lift
-- Confidence
-- Support
+<div style="font-size: 60%;">
+
+- Support measures the frequency of the rule in the dataset.
+$$
+\text{Support}(A \Rightarrow B) = \mathbb{P}(A \cap B)
+$$
+
+- Confidence measures how often items in $B$ appear in transactions that contain $A$.
+
+$$
+\text{Confidence}(A \Rightarrow B) = \mathbb{P}(B | A) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(A)}
+$$
+
+- Lift: how much more often $A$ and $B$ occur together than expected if they were statistically independent.
+
+$$
+\text{Lift}(A \Rightarrow B) = \frac{\mathbb{P}(B | A)}{\mathbb{P}(B)} = \frac{\mathbb{P}(B \cap A)}{\mathbb{P}(A) \mathbb{P}(B)}
+$$
+
+</div>
 
 ## Projection / Mapping metrics
 

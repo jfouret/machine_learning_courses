@@ -648,7 +648,7 @@
     "href": "part2.html#in-sample-and-out-sample",
     "title": "Machine Learning Techniques - 2",
     "section": "In-sample and Out-sample",
-    "text": "In-sample and Out-sample\nIn-sample error: Calculated from data used for training.\nIn-sample error: Calculated from unseen data (not used in training)\n2 sampling with n = 10"
+    "text": "In-sample and Out-sample\nIn-sample error: Calculated from data used for training.\nOut-sample error: Calculated from unseen data (not used in training)\n2 sampling with n = 10"
   },
   {
     "objectID": "part2.html#in-sample-and-out-sample-1",
@@ -690,7 +690,7 @@
     "href": "part2.html#mandatory-ml-workflow",
     "title": "Machine Learning Techniques - 2",
     "section": "Mandatory ML workflow",
-    "text": "Mandatory ML workflow\n\n\n\n\n\nTraining data → in-sample error\nTest data → in-sample error\nTest data should be without bias\nNo bias = the same error model\nNot required but recommended: adversarial datasets"
+    "text": "Mandatory ML workflow\n\n\n\n\n\nTraining data → in-sample error\nTest data → out-sample error\nTest data should be without bias\nNo bias = the same error model\nNot required but recommended: adversarial datasets"
   },
   {
     "objectID": "part2.html#importance-of-bias-in-datasets",
@@ -795,7 +795,7 @@
     "href": "part2.html#association-metrics",
     "title": "Machine Learning Techniques - 2",
     "section": "Association Metrics",
-    "text": "Association Metrics\n\nLift\nConfidence\nSupport"
+    "text": "Association Metrics\n\n\nSupport measures the frequency of the rule in the dataset. \\[\n\\text{Support}(A \\Rightarrow B) = \\mathbb{P}(A \\cap B)\n\\]\nConfidence measures how often items in \\(B\\) appear in transactions that contain \\(A\\).\n\n\\[\n\\text{Confidence}(A \\Rightarrow B) = \\mathbb{P}(B | A) = \\frac{\\mathbb{P}(A \\cap B)}{\\mathbb{P}(A)}\n\\]\n\nLift: how much more often \\(A\\) and \\(B\\) occur together than expected if they were statistically independent.\n\n\\[\n\\text{Lift}(A \\Rightarrow B) = \\frac{\\mathbb{P}(B | A)}{\\mathbb{P}(B)} = \\frac{\\mathbb{P}(B \\cap A)}{\\mathbb{P}(A) \\mathbb{P}(B)}\n\\]"
   },
   {
     "objectID": "part2.html#projection-mapping-metrics",
